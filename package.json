@@ -27,6 +27,7 @@
   "scripts": {
     "predeploy": "pnpm build",
     "deploy": "gh-pages -d dist",
+    "postbuild": "cp CNAME dist/",
     "dev": "vite --host --no-open",
     "build": "vite build",
     "serve": "vite preview",
@@ -54,6 +55,7 @@
   "devDependencies": {
     "@vitejs/plugin-react": "^4.3.1",
     "depcheck": "^1.4.7",
+    "gh-pages": "^6.3.0",
     "prop-types": "^15.8.1",
     "vite": "^5.3.3"
   },
