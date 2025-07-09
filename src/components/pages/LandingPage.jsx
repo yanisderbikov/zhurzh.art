@@ -1,7 +1,12 @@
 import styles from '../../styles/pages/LandingPage.module.css';
 import Text from "../common/Text.jsx";
+import { useNavigate } from "react-router-dom";
+
 
 export default function LandingPage() {
+
+    const navigate = useNavigate();
+
     return (
         <section className={styles.wrapper}>
             <div className={styles.container}>
@@ -10,7 +15,7 @@ export default function LandingPage() {
                     <Text children={'Устройство общин'} variant={'h2'} color={'rgba(255,255,255,0.7)'}/>
                 </div>
                 <div className={styles.bottomBlock}>
-                    <button className={styles.cta}>Читать</button>
+                    <button className={styles.cta} onClick={() => {navigate('/articles/community')}}>Читать</button>
                     <div className={styles.bottomFooter}>
                         <Text children={'Обновление от 14 июля 2025'} color={'rgba(255,255,255,0.3)'}/>
                     </div>
