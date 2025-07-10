@@ -6,6 +6,7 @@ import {
     Routes
 } from 'react-router-dom';
 import ArticleCommunity from "./components/pages/articles/ArticleCommunity.jsx";
+import PageNotFound from "./components/pages/PageNotFound.jsx";
 
 export default function App({}) {
     return (
@@ -14,6 +15,7 @@ export default function App({}) {
                 <Routes>
                     <Route path="/" element={<LandingPage/>}/>
                     <Route path="/articles/community" element={<ArticleCommunity/>}/>
+                    <Route path="*" element={<PageNotFound />} />
                 </Routes>
             </Router>
         </>

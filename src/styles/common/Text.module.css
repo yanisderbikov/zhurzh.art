@@ -28,6 +28,12 @@
     font-size: 30px;
 }
 
+.h3 {
+    font-family: 'Spectral SC', serif;
+    font-weight: 400;          /* Regular */
+    font-size: 25px;
+}
+
 .h4 {
     font-family: 'Source Serif Pro', serif;
     font-weight: 400;          /* «Semi Regular» ≈ Regular */
@@ -36,6 +42,6 @@
 
 .body {
     font-family: 'Source Serif Pro', serif;
-    font-weight: 400;          /* Regular */
+    font-weight: 200;          /* Regular */
     font-size: 16px;
 }

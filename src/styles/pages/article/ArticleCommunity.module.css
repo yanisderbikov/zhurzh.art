@@ -1,0 +1,93 @@
+.wrap {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    background-color: #232835;
+}
+.wrap {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    background-color: #232835;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    background-image: url('/images/article/community/community_main.png');
+    background-size: cover; /* Растягивает */
+    background-position: top center; /* Центрирует по горизонтали, привязывает к верху */
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 500px; /* Минимальная высота */
+    padding: 0 50px 50px 50px;
+    align-items: center;
+}
+
+.main {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding: 30px 30px 0 30px;
+    gap: 30px;
+    width: 100%;
+    max-width: 800px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 30px;
+    max-width: 800px;
+    padding-top: 400px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.image {
+    display: flex;
+    width: 100vw;
+}
+
+.alignCenterText {
+    text-align: center;
+}
+
+.halfContainer {
+    max-width: 400px;
+}
+
+.rowToColumn {
+    display: flex;
+    flex-direction: row;
+    gap: 70px;
+}
+
+@media (max-width: 768px) {
+    .rowToColumn {
+        flex-direction: column;
+        gap: 30px;
+    }
+}
+
+.points {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.headerAndBody {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.bodyHeadAndBody {
+    display: flex;
+    flex-direction: column;
+    padding-left: 17px;
+}
