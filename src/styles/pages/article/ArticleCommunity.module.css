@@ -5,18 +5,11 @@
     align-items: center;
     background-color: #232835;
 }
-.wrap {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    align-items: center;
-    background-color: #232835;
-}
 
 .container {
     display: flex;
     flex-direction: column;
-    background-image: url('/images/article/community/community_main.png');
+    background-image: url('/images/article/community/BackgroundNo.png');
     background-size: cover; /* Растягивает */
     background-position: top center; /* Центрирует по горизонтали, привязывает к верху */
     background-repeat: no-repeat;
@@ -24,14 +17,15 @@
     min-height: 500px; /* Минимальная высота */
     padding: 0 50px 50px 50px;
     align-items: center;
+    background-color: #232835;
 }
 
 .main {
     align-items: center;
     display: flex;
     flex-direction: column;
-    padding: 30px 30px 0 30px;
-    gap: 30px;
+    padding: 0 30px 0 30px;
+    gap: var(--gap);
     width: 100%;
     max-width: 800px;
 }
@@ -41,20 +35,28 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
-    gap: 30px;
+    gap: var(--gap);
     max-width: 800px;
-    padding-top: 400px;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding: 400px var(--non-work-zone) var(--gapHalf);
 }
 
 .image {
     display: flex;
-    width: 100vw;
+    width: 100%;
+    padding-top: var(--gapHalf);
+}
+
+.imageNoGap {
+    display: flex;
+    width: 100%;
 }
 
 .alignCenterText {
     text-align: center;
+}
+
+.alignJustifiedText {
+    text-align: justify;
 }
 
 .halfContainer {
@@ -64,20 +66,20 @@
 .rowToColumn {
     display: flex;
     flex-direction: row;
-    gap: 70px;
+    gap: var(--gapx3);
 }
 
 @media (max-width: 768px) {
     .rowToColumn {
         flex-direction: column;
-        gap: 30px;
+        gap: var(--gap);
     }
 }
 
 .points {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: var(--gap);
 }
 
 .headerAndBody {

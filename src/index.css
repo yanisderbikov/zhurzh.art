@@ -21,18 +21,16 @@
 
 /* --- Размеры, отступы, радиусы -------------------------------------- */
 :root {
-  --border-radius:          7px;
-  --border-radius-double:  14px;
-  --gap:                    7px;
-  --gap-2:                 14px;
-  --gap-3:                 21px;
-  --gap-4:                 28px;
-  --gap-5:                 35px;
-  --gap-6:                 42px;
-  --gap-7:                 49px;
-  --gap-8:                 56px;
+  --border-radius: 7px;
+  --border-radius-double: 14px;
+  --gapHalf: 15px;
+  --gap: 30px;
+  --gapx2: 45px;
+  --gapx3: 50px;
+  --gapx4: 65px;
+  --gapx5: 80px;
 
-  --non-work-zone:         32px;
+  --non-work-zone: 32px;
 }
 
 @media (min-width:400px) { :root { --non-work-zone: 36px; } }
