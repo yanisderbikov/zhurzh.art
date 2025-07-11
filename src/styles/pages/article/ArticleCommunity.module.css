@@ -79,18 +79,24 @@
     display: flex;
     flex-direction: column;
 
-    /* Фон */
-    background-image: url('/images/article/community/ass2.png');
-    background-size: auto; /* Ширина 100%, высота авто */
-    background-position: bottom center; /* Прилипает к верху, центрируется по горизонтали */
-    background-repeat: no-repeat; /* Не повторяется */
+    background-image:
+            linear-gradient(
+                    to bottom,
+                    #232835 30%,
+                    #4E3159 50%,
+                    #954D51 93%
+            );
+
+    background-size: 100% 100%;   /* градиент растягивается на весь блок; картинка — как есть */
+    background-position: bottom center;
+    background-repeat: no-repeat;
 
     width: 100%;
     min-height: 500px;
     align-items: center;
     padding: var(--gap) var(--non-work-zone) var(--gapx2) var(--non-work-zone);
 
-    background-color: #232835; /* Фон под картинкой */
+    background-color: #232835; /* Подложка под тем, где нет картинки */
 }
 
 .assIn {
@@ -98,12 +104,10 @@
     flex-direction: column;
     gap: var(--gapx2);
     max-width: 800px;
-    padding: 0 var(--non-work-zone);
     justify-content: flex-end;
     align-items: center;
     height: 100%;
-    padding-bottom: 530px;
-
+    /*padding-bottom: 530px;*/
 }
 
 .footerWrapper {
@@ -172,6 +176,15 @@
 
     .imageNoGap {
         width: 100vw;
+    }
+
+    .ass {
+        background-size: 100% auto;
+        background-image: url('/images/article/community/assMobile.png');
+    }
+
+    .assIn {
+        padding-bottom: 200px;
     }
 }
 

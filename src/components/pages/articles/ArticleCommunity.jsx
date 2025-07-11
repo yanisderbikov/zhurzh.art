@@ -522,6 +522,7 @@ export default function ArticleCommunity({}) {
                                       className={styles.alignCenterText}/>
                             </div>
                         </div>
+                        <img src={'/images/article/community/mokup.png'} className={styles.imageNoGap}/>
                     </div>
                 </div>
             </div>
