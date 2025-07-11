@@ -15,9 +15,11 @@ export default function LandingPage() {
                     <Text children={'Устройство общин'} variant={'h2'} color={'rgba(255,255,255,0.7)'}/>
                 </div>
                 <div className={styles.bottomBlock}>
-                    <button className={styles.cta} onClick={() => {navigate('/articles/community')}}>Читать</button>
+                    <div className={styles.buttonSubscribe} onClick={() => {navigate('/articles/community')}}>
+                        <Text children={'Читать'} variant={'h3'}/>
+                    </div>
                     <div className={styles.bottomFooter}>
-                        <Text children={'Обновление от 14 июля 2025'} color={'rgba(255,255,255,0.3)'}/>
+                        <Text children={'Обновление от 14 июля 2025'} variant={'sign'} color={'rgba(255,255,255,0.3)'}/>
                     </div>
                 </div>
             </div>

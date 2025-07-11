@@ -29,14 +29,29 @@
   --gapx3: 50px;
   --gapx4: 65px;
   --gapx5: 80px;
+}
 
+:root {
   --non-work-zone: 32px;
 }
 
-@media (min-width:400px) { :root { --non-work-zone: 36px; } }
-@media (min-width:428px) { :root { --non-work-zone: 40px; } }
-@media (min-width:834px) { :root { --non-work-zone: 56px; } }
+@media (max-width: 400px) {
+  :root {
+    --non-work-zone: 16px; /* Очень маленький экран — 5px */
+  }
+}
 
+/*@media (max-width: 600px) {*/
+/*  :root {*/
+/*    --non-work-zone: 20px; !* Все экраны до 834px — 50px *!*/
+/*  }*/
+/*}*/
+
+/*@media (max-width: 800px) {*/
+/*  :root {*/
+/*    --non-work-zone: 40px; !* Все экраны до 834px — 50px *!*/
+/*  }*/
+/*}*/
 /* --- Нормализуем отступы ------------------------------------------- */
 *,
 *::before,

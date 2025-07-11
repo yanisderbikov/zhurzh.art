@@ -45,3 +45,24 @@
     font-weight: 200;          /* Regular */
     font-size: 16px;
 }
+
+.sign {
+    font-family: 'Source Serif Pro', serif;
+    font-weight: 200;          /* Regular */
+    font-size: 12px;
+}
+
+
+@media (max-width: 400px) {
+    .h1 {
+        font-size: 40px;
+    }
+
+    .h2 {
+        font-size: 25px;
+    }
+
+    .h3 {
+        font-size: 20px;
+    }
+}

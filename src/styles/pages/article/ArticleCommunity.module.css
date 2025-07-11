@@ -9,25 +9,18 @@
 .container {
     display: flex;
     flex-direction: column;
-    background-image: url('/images/article/community/BackgroundNo.png');
-    background-size: cover; /* Растягивает */
-    background-position: top center; /* Центрирует по горизонтали, привязывает к верху */
-    background-repeat: no-repeat;
-    width: 100%;
-    min-height: 500px; /* Минимальная высота */
-    padding: 0 50px 50px 50px;
-    align-items: center;
-    background-color: #232835;
-}
 
-.main {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    padding: 0 30px 0 30px;
-    gap: var(--gap);
+    /* Фон */
+    background-image: url('/images/article/community/BackgroundNo.png');
+    background-size: auto; /* Ширина 100%, высота авто */
+    background-position: top center; /* Прилипает к верху, центрируется по горизонтали */
+    background-repeat: no-repeat; /* Не повторяется */
+
     width: 100%;
-    max-width: 800px;
+    min-height: 500px;
+    align-items: center;
+
+    background-color: #232835; /* Фон под картинкой */
 }
 
 .content {
@@ -37,7 +30,17 @@
     width: 100%;
     gap: var(--gap);
     max-width: 800px;
-    padding: 400px var(--non-work-zone) var(--gapHalf);
+    padding: 500px var(--non-work-zone) var(--gapx2) var(--non-work-zone);
+}
+
+.main {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding: 0 var(--non-work-zone) 0 var(--non-work-zone);
+    gap: var(--gap);
+    width: 100%;
+    max-width: 800px;
 }
 
 .image {
@@ -60,7 +63,10 @@
 }
 
 .halfContainer {
+    display: flex;
+    flex-direction: column;
     max-width: 400px;
+    gap: var(--gapHalf);
 }
 
 .rowToColumn {
@@ -69,12 +75,106 @@
     gap: var(--gapx3);
 }
 
+.ass {
+    display: flex;
+    flex-direction: column;
+
+    /* Фон */
+    background-image: url('/images/article/community/ass2.png');
+    background-size: auto; /* Ширина 100%, высота авто */
+    background-position: bottom center; /* Прилипает к верху, центрируется по горизонтали */
+    background-repeat: no-repeat; /* Не повторяется */
+
+    width: 100%;
+    min-height: 500px;
+    align-items: center;
+    padding: var(--gap) var(--non-work-zone) var(--gapx2) var(--non-work-zone);
+
+    background-color: #232835; /* Фон под картинкой */
+}
+
+.assIn {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gapx2);
+    max-width: 800px;
+    padding: 0 var(--non-work-zone);
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+    padding-bottom: 530px;
+
+}
+
+.footerWrapper {
+    display: flex;
+    flex-direction: column;
+    background-color: #0F1112;
+    align-items: center;
+    padding-bottom: var(--gapx2);
+}
+
+.footer {
+    padding: var(--gapx2) var(--non-work-zone) var(--gap) var(--non-work-zone);
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap);
+    max-width: 800px;
+}
+
+.buttonSubscribeWrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 200px;
+
+    background-image: url('/images/article/community/button.png');
+    background-repeat: no-repeat; /* не повторять */
+    background-position: center center; /* по центру блока */
+    background-size: auto; /* не масштабировать, оставить оригинальный размер */
+
+    align-items: center;
+    justify-content: center;
+}
+
+.buttonSubscribe {
+    background: linear-gradient(to bottom, #9F546A, #544691);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    border-radius: 100px;
+    padding: 10px 50px;
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: var(--gapHalf);
+}
+
 @media (max-width: 768px) {
     .rowToColumn {
         flex-direction: column;
         gap: var(--gap);
     }
 }
+
+@media (max-width: 400px) {
+    .container {
+        background-size: 100% auto;
+        background-image: url('/images/article/community/BackgroundNoMobile.png');
+    }
+
+    .content {
+        padding: 150px var(--non-work-zone) var(--gapx2) var(--non-work-zone);
+    }
+
+    .image {
+        width: 100vw;
+    }
+
+    .imageNoGap {
+        width: 100vw;
+    }
+}
+
 
 .points {
     display: flex;
@@ -92,4 +192,5 @@
     display: flex;
     flex-direction: column;
     padding-left: 17px;
+    gap: var(--gapHalf);
 }
