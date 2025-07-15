@@ -24,10 +24,10 @@ export default function ArticleCommunity({}) {
                     <div className={styles.alignCenterText}>
                         <Text variant={'h2'} children={'Что такое община?'}/>
                     </div>
-                    <Text color={'#BABCDB'} className={styles.alignJustifiedText}
-                          children={'... В мире Морской реминисценции подводная община - это группа виверн, живущих на одной территории и помогающих друг другу выживать. Это как большая семья, где каждый ее соплеменник выполняет свою функцию и роль, выбранную по его качествам и умениям. У каждой общины есть свои правила и традиции, соблюдая которые, виверны могут существовать в мире и понимании. При возникновении проблем, виверны собираются вместе и ищут пути их решения. Но главное - это взаимная поддержка и единство, так как только будучи сплоченными, подводные жители могут быть способны справиться с трудностями и опасностями океана. '}/>
-                    <Text color={'#BABCDB'} className={styles.alignJustifiedText}
-                          children={'... У каждой общины есть свои правила и традиции, соблюдая которые, виверны могут существовать в мире и понимании. При возникновении проблем, виверны собираются вместе и ищут пути их решения. Но главное - это взаимная поддержка и единство, так как только будучи сплоченными, подводные жители могут быть способны справиться с трудностями и опасностями океана.'}/>
+                    <Text indent={28} color={'#BABCDB'} className={styles.alignJustifiedText}
+                          children={'В мире Морской реминисценции подводная община - это группа виверн, живущих на одной территории и помогающих друг другу выживать. Это как большая семья, где каждый ее соплеменник выполняет свою функцию и роль, выбранную по его качествам и умениям. '}/>
+                    <Text indent={28} color={'#BABCDB'} className={styles.alignJustifiedText}
+                          children={'У каждой общины есть свои правила и традиции, соблюдая которые, виверны могут существовать в мире и понимании. При возникновении проблем, виверны собираются вместе и ищут пути их решения. Но главное — это взаимная поддержка и единство, так как только будучи сплоченными, подводные жители могут справиться с трудностями и опасностями океана.  '}/>
                 </div>
             </div>
             <div className={styles.wrap}>
@@ -38,10 +38,8 @@ export default function ArticleCommunity({}) {
                     <Text color={'#E6C196'} children={'· ✦ · ✦ · ✦ ·'} className={styles.alignCenterText}/>
 
                     <Text variant={'h2'} children={'Почему община?'} className={styles.alignCenterText}/>
-                    <div className={styles.halfContainer}>
-                        <Text italic={true} color={'#BABCDB'} className={styles.alignCenterText}
-                              children={'Виверны на протяжении веков выживали в суровых условиях подводного мира, ища тот образ жизни, который обеспечил бы им безопасность и благополучие: '}/>
-                    </div>
+                    <Text color={'#BABCDB'} className={styles.alignJustifiedText} indent={28}
+                          children={'Виверны на протяжении веков выживали в суровых условиях подводного мира, ища тот образ жизни, который обеспечил бы им безопасность и благополучие: '}/>
 
                     <div className={styles.rowToColumn}>
                         <div className={styles.points}>
@@ -92,19 +90,21 @@ export default function ArticleCommunity({}) {
                         </div>
                     </div>
                     <img src={'/images/article/community/Picture2.jpg'} className={styles.image}/>
-                    <Text color={'#BABCDB'} className={styles.alignJustifiedText}
-                          children={'На настоящий момент, к сожалению, от социальной памяти Глубоководных виверн осталось совсем немного. Подводная культура жителей воды в упадке, однако, важные этапы их развития, как вида, сохранились в памяти старейшин различных общин по всему Океану. '}/>
+                    <Text color={'#BABCDB'} className={styles.alignJustifiedText} indent={28}
+                          children={'На настоящий момент, от социальной памяти Глубоководных виверн осталось совсем немного. Подводная культура жителей воды в упадке, однако, важные этапы их развития, как вида, сохранились в памяти старейшин различных общин по всему Океану. '}/>
                     <Text color={'#E6C196'} children={'· ✦ · ✦ · ✦ ·'} className={styles.alignCenterText}/>
 
                     <Text variant={'h2'} children={'Устройство'} className={styles.alignCenterText}/>
-                    <Text color={'#BABCDB'} className={styles.alignJustifiedText}
-                          children={'Структуру общин Глубоководных виверн можно назвать “Клановым союзом” или “Союзом гнезд”, где каждая группа виверн берет на себя определенную роль в той сфере, в которой она наиболее успешна. В этой системе все вопросы, касающиеся общего выживания, обсуждаются на равных до тех пор, пока не будет найдено решение. Если же спор заходит в тупик, главные представители кланов (отвечающие за соответствующие сферы) берут на себя роль “голосов” общины и продолжают обсуждение между собой, стремясь найти компромисс.'}/>
+                    <Text color={'#BABCDB'} className={styles.alignJustifiedText} indent={28}
+                          children={'Структуру общин Глубоководных виверн можно назвать “Клановым союзом” или “Союзом гнезд”, где каждая группа виверн берет на себя определенную роль в той сфере, в которой она наиболее успешна. '}/>
+                    <Text color={'#BABCDB'} className={styles.alignJustifiedText} indent={28}
+                          children={'В этой системе все вопросы, касающиеся общего выживания, обсуждаются на равных до тех пор, пока не будет найдено решение. Если же спор заходит в тупик, главные представители кланов (отвечающие за соответствующие сферы) берут на себя роль “голосов” общины и продолжают обсуждение между собой, стремясь найти компромисс.'}/>
                     <img src={'/images/article/community/Picture3.jpg'} className={styles.image}/>
-                    <Text color={'#BABCDB'} className={styles.alignJustifiedText}
+                    <Text color={'#BABCDB'} className={styles.alignJustifiedText} indent={28}
                           children={'Клановая система помогает вивернам жить вместе на взаимовыгодных условиях. Например, виверны, которые не имеют опыта в добыче пищи, компенсируют это благодаря помощи охотников, в то время как сами занимаются разведкой или собирательством. '}/>
 
                     <Text variant={'h2'} children={'Размер общин'} className={styles.alignCenterText}/>
-                    <Text color={'#BABCDB'} className={styles.alignJustifiedText}
+                    <Text color={'#BABCDB'} className={styles.alignJustifiedText} indent={28}
                           children={'Как уже упоминалось, виверны нередко создают сообщества по 25-30 особей, что считается довольно крупными общинами. Существуют и более мелкие или средние группы. И их размер определяется такими факторами, как местоположение, уровень безопасности, доступность пищи и удаленность от других виверн: '}/>
                     <div className={styles.rowToColumn}>
                         <div className={styles.alignCenterText}>
@@ -120,22 +120,24 @@ export default function ArticleCommunity({}) {
                             <Text color={'#BABCDB'} children={'25-30 особей'}/>
                         </div>
                     </div>
-                    <Text color={'#BABCDB'} className={styles.alignJustifiedText}
+                    <Text color={'#BABCDB'} className={styles.alignJustifiedText} indent={28}
                           children={'Численность общины часто меняется, в зависимости от уровня смертности и рождаемости внутри нее. Также, некоторые виверны могут добровольно покидать общины или быть изгнаны за серьезные нарушения правил. Иногда одиночки присоединяются к общинам сами или просто переходят из одной в другую. '}/>
-                    <Text color={'#BABCDB'} className={styles.alignJustifiedText}
+                    <Text color={'#BABCDB'} className={styles.alignJustifiedText} indent={28}
                           children={'Виверны живут в нестабильных условиях из-за частых природных катаклизмов и угроз со стороны. Обычно, большие общины не перемещаются и не кочуют, предпочитая оставаться на месте, несмотря на опасности. В таких сообществах есть как многочисленные семьи, так и одиночки, пришедшие из других регионов. Маленькие общины могут кочевать в поисках более безопасного места для жизни.'}/>
 
                     <img src={'/images/article/community/Picture4.jpg'} className={styles.image}/>
 
                     <Text variant={'h2'} children={'Границы'} className={styles.alignCenterText}/>
-                    <Text color={'#BABCDB'} className={styles.alignJustifiedText}
-                          children={'Территории каждой общины не имеют чётких границ. Виверны опираются на природные ориентиры, такие как коралловые хребты, подводные скалы или поля светящихся водорослей, которые заметны издалека. Кроме того, для обозначения владений используются искусственные метки: оставленные кристаллы, монументы, символы, указывающие на принадлежность территории. Расположение общины напрямую влияет на ее состав. Например, те, кто живут рядом с полями светящихся водорослей, будут богаты этими ресурсами. А общины что соседствуют с незнакомыми территориями будут развивать исследовательские направления. Среда определяет не только доступные ресурсы, но и специализации виверн.'}/>
+                    <Text color={'#BABCDB'} className={styles.alignJustifiedText} indent={28}
+                          children={'Территории каждой общины не имеют чётких границ. Виверны опираются на природные ориентиры, такие как коралловые хребты, подводные скалы или поля светящихся водорослей, которые заметны издалека. Кроме того, для обозначения владений используются искусственные метки: оставленные кристаллы, монументы, символы, указывающие на принадлежность территории.'}/>
+                    <Text color={'#BABCDB'} className={styles.alignJustifiedText} indent={28}
+                          children={'Расположение общины напрямую влияет на ее состав. Например, те, кто живут рядом с полями светящихся водорослей, будут богаты этими ресурсами. А общины что соседствуют с незнакомыми территориями будут развивать исследовательские направления. Среда определяет не только доступные ресурсы, но и специализации виверн.'}/>
                     <Text color={'#E6C196'} children={'· ✦ · ✦ · ✦ ·'} className={styles.alignCenterText}/>
                     <Text variant={'h2'} children={'Клановая система'} className={styles.alignCenterText}/>
-                    <Text color={'#BABCDB'} className={styles.alignJustifiedText}
-                          children={'Территории каждой общины не имеют чётких границ. Виверны опираются на природные ориентиры, такие как коралловые хребты, подводные скалы или поля светящихся водорослей, которые заметны издалека. Кроме того, для обозначения владений используются искусственные метки: оставленные кристаллы, монументы, символы, указывающие на принадлежность территории. Расположение общины напрямую влияет на ее состав. Например, те, кто живут рядом с полями светящихся водорослей, будут богаты этими ресурсами. А общины что соседствуют с незнакомыми территориями будут развивать исследовательские направления. Среда определяет не только доступные ресурсы, но и специализации виверн.'}/>
+                    <Text color={'#BABCDB'} className={styles.alignJustifiedText} indent={28}
+                          children={'Кланы внутри общин основываются на самых важных элементах бытовой жизни. Их состав часто схож между собой, но может меняться в зависимости от потребностей и численности виверн в общине: Охотники (охотники и кузнецы), Собиратели (светлые и темные), Защитники (стражи и странники), Вестники (водные и штормовые), Мастера (мастера, ремесленники и распорядители), Хранители (наставники и жрецы).'}/>
                     <img src={'/images/article/community/Picture5.jpg'} className={styles.image}/>
-                    <Text color={'#BABCDB'} className={styles.alignJustifiedText}
+                    <Text color={'#BABCDB'} className={styles.alignJustifiedText} indent={28}
                           children={'Каждый клан имеет подразделения — группы, в зависимости от их вида деятельности. Чтобы держать всех виверн в коллективном единстве, у каждого клана есть лидер, отвечающий за группы в нем. Он выбирается исходя из лучших проявлений качеств виверны. Отказаться от этой позиции нельзя, пока соплеменники не решат выбрать другую виверну на место предыдущего кланового лидера. '}/>
 
 
@@ -315,90 +317,92 @@ export default function ArticleCommunity({}) {
                         </div>
                     </div>
 
-                    <Text color={'#BABCDB'} className={styles.alignJustifiedText}
-                          children={'Территории каждой общины не имеют чётких границ. Виверны опираются на природные ориентиры, такие как коралловые хребты, подводные скалы или поля светящихся водорослей, которые заметны издалека. Кроме того, для обозначения владений используются искусственные метки: оставленные кристаллы, монументы, символы, указывающие на принадлежность территории. Расположение общины напрямую влияет на ее состав. Например, те, кто живут рядом с полями светящихся водорослей, будут богаты этими ресурсами. А общины что соседствуют с незнакомыми территориями будут развивать исследовательские направления. Среда определяет не только доступные ресурсы, но и специализации виверн.'}/>
+                    <Text color={'#BABCDB'} className={styles.alignJustifiedText} indent={28}
+                          children={'Любая община виверн представляет собой сложную, но гармоничную систему, где каждая группа играет свою роль в поддержании жизни. Каждый клан выполняет свою задачу, и благодаря этому общество виверн остаётся сильным перед лицом даже самых сложных трудностей.'}/>
                     <Text color={'#E6C196'} children={'· ✦ · ✦ · ✦ ·'} className={styles.alignCenterText}/>
                     <Text variant={'h2'} children={'Ресурсы и их ценность'} className={styles.alignCenterText}/>
-                    <Text color={'#BABCDB'} className={styles.alignJustifiedText}
+                    <Text color={'#BABCDB'} className={styles.alignJustifiedText} indent={28}
                           children={'В подводном мире существует очень большое количество разных ресурсов, каждый из которых по-своему полезен. Но есть и те, что ценятся выше остальных - их значимость зависит от сложности добычи и количества в природе. '}/>
 
                     <div className={styles.rowToColumn}>
-                        <div className={styles.points}>
-                            <div className={styles.headerAndBody}>
-                                <Text color={'#E6C196'} children={'✦ Некоторые виды рыб и животных'}/>
-                                <div className={styles.bodyHeadAndBody}>
-                                    <Text color={'#BABCDB'}
-                                          children={'(Громовой скат, Тенебрал, Ночной Карс) — тяжело поймать, но мясо этих существ крайне питательно и полезно;'}/>
-                                </div>
-                            </div>
-                            <div className={styles.headerAndBody}>
-                                <Text color={'#E6C196'} children={'✦  Редкие растения и водоросли'}/>
-                                <div className={styles.bodyHeadAndBody}>
-                                    <Text color={'#BABCDB'}
-                                          children={'(Кровоцвет, Синетравка, Железный Сальвум) — имеют уникальные свойства, богатые полезными нутриентами, используются в лекарствах и микстурах;'}/>
-                                </div>
-                            </div>
-                            <div className={styles.headerAndBody}>
-                                <Text color={'#E6C196'} children={'✦ Костяные кораллы'}/>
-                                <div className={styles.bodyHeadAndBody}>
-                                    <Text color={'#BABCDB'}
-                                          children={'(Фортиллия, Оксирин, Карборр)— отдельная группа кораллов, невероятно твердых но податливых при обработке, прекрасно подходят для изготовления инструментов;'}/>
-                                </div>
-                            </div>
-                            <div className={styles.headerAndBody}>
-                                <Text color={'#E6C196'} children={'✦ Морская древесина'}/>
-                                <div className={styles.bodyHeadAndBody}>
-                                    <Text color={'#BABCDB'}
-                                          children={'(Теневое дерево, Синелист) — кора подводных деревьев редкого цвета, позволяющая строить незаметные дома и скрытые хранилища;'}/>
-                                </div>
+                        <div className={styles.headerAndBody}>
+                            <Text color={'#E6C196'} children={'✦ Некоторые виды рыб и животных'}/>
+                            <div className={styles.bodyHeadAndBody}>
+                                <Text color={'#BABCDB'}
+                                      children={'(Громовой скат, Тенебрал, Ночной Карс) — тяжело поймать, но мясо этих существ крайне питательно и полезно;'}/>
                             </div>
                         </div>
-                        <div className={styles.points}>
-                            <div className={styles.headerAndBody}>
-                                <Text color={'#E6C196'} children={'✦ Кости больших существ'}/>
-                                <div className={styles.bodyHeadAndBody}>
-                                    <Text color={'#BABCDB'}
-                                          children={'(Осколки гигантов, кости Древних Глубоководных виверн) — останки давно вымерших морских чудовищ, чьи кости намного крепче, чем обычные кости китов;'}/>
-                                </div>
+                        <div className={styles.headerAndBody}>
+                            <Text color={'#E6C196'} children={'✦  Редкие растения и водоросли'}/>
+                            <div className={styles.bodyHeadAndBody}>
+                                <Text color={'#BABCDB'}
+                                      children={'(Кровоцвет, Синетравка, Железный Сальвум) — имеют уникальные свойства, богатые полезными нутриентами, используются в лекарствах и микстурах;'}/>
                             </div>
-                            <div className={styles.headerAndBody}>
-                                <Text color={'#E6C196'} children={'✦  Минералы и кристаллы'}/>
-                                <div className={styles.bodyHeadAndBody}>
-                                    <Text color={'#BABCDB'}
-                                          children={'(Лунный кварц, Буревестник, Черный жемчуг, Осколки бездны, Морской сапфир)— ритуальные камни, помогающие в прогнозировании течений, используются в церемониях и праздниках;'}/>
-                                </div>
+                        </div>
+                    </div>
+                    <div className={styles.rowToColumn}>
+                        <div className={styles.headerAndBody}>
+                            <Text color={'#E6C196'} children={'✦ Костяные кораллы'}/>
+                            <div className={styles.bodyHeadAndBody}>
+                                <Text color={'#BABCDB'}
+                                      children={'(Фортиллия, Оксирин, Карборр)— отдельная группа кораллов, невероятно твердых но податливых при обработке, прекрасно подходят для изготовления инструментов;'}/>
                             </div>
-                            <div className={styles.headerAndBody}>
-                                <Text color={'#E6C196'} children={'✦  Морское стекло'}/>
-                                <div className={styles.bodyHeadAndBody}>
-                                    <Text color={'#BABCDB'}
-                                          children={'материал массово используемый в культуре виверн (в витражах, памятниках, реликвиях), сложен в добыче из-за границы с Великим Тягуном;'}/>
-                                </div>
+                        </div>
+                        <div className={styles.headerAndBody}>
+                            <Text color={'#E6C196'} children={'✦ Морская древесина'}/>
+                            <div className={styles.bodyHeadAndBody}>
+                                <Text color={'#BABCDB'}
+                                      children={'(Теневое дерево, Синелист) — кора подводных деревьев редкого цвета, позволяющая строить незаметные дома и скрытые хранилища;'}/>
                             </div>
-                            <div className={styles.headerAndBody}>
-                                <Text color={'#E6C196'} children={'✦  Соль'}/>
-                                <div className={styles.bodyHeadAndBody}>
-                                    <Text color={'#BABCDB'}
-                                          children={'(Огненная, Бездная) — редчайшие виды соли, позволяющие хранить пищу особенным образом в экстремальных условиях;'}/>
-                                </div>
+                        </div>
+                    </div>
+                    <div className={styles.rowToColumn}>
+                        <div className={styles.headerAndBody}>
+                            <Text color={'#E6C196'} children={'✦ Кости больших существ'}/>
+                            <div className={styles.bodyHeadAndBody}>
+                                <Text color={'#BABCDB'}
+                                      children={'(Осколки гигантов, кости Древних Глубоководных виверн) — останки давно вымерших морских чудовищ, чьи кости намного крепче, чем обычные кости китов;'}/>
+                            </div>
+                        </div>
+                        <div className={styles.headerAndBody}>
+                            <Text color={'#E6C196'} children={'✦  Минералы и кристаллы'}/>
+                            <div className={styles.bodyHeadAndBody}>
+                                <Text color={'#BABCDB'}
+                                      children={'(Лунный кварц, Буревестник, Черный жемчуг, Осколки бездны, Морской сапфир)— ритуальные камни, помогающие в прогнозировании течений, используются в церемониях и праздниках;'}/>
+                            </div>
+                        </div>
+                    </div>
+                    <div className={styles.rowToColumn}>
+                        <div className={styles.headerAndBody}>
+                            <Text color={'#E6C196'} children={'✦  Морское стекло'}/>
+                            <div className={styles.bodyHeadAndBody}>
+                                <Text color={'#BABCDB'}
+                                      children={'материал массово используемый в культуре виверн (в витражах, памятниках, реликвиях), сложен в добыче из-за границы с Великим Тягуном;'}/>
+                            </div>
+                        </div>
+                        <div className={styles.headerAndBody}>
+                            <Text color={'#E6C196'} children={'✦  Соль'}/>
+                            <div className={styles.bodyHeadAndBody}>
+                                <Text color={'#BABCDB'}
+                                      children={'(Огненная, Бездная) — редчайшие виды соли, позволяющие хранить пищу особенным образом в экстремальных условиях;'}/>
                             </div>
                         </div>
                     </div>
 
-                    <img src={'/images/article/community/Picture11.jpg'} className={styles.image}/>
-                    <Text color={'#BABCDB'} className={styles.alignJustifiedText}
+                    <img src={'/images/article/community/Picture12.jpg'} className={styles.image}/>
+                    <Text color={'#BABCDB'} className={styles.alignJustifiedText} indent={28}
                           children={'Это лишь некоторые из видов редких ресурсов, которые особенно ценятся Глубоководными вивернами. Их добыча требует времени, усилий и мастерства, ведь многие из этих материалов сложно найти, а некоторые — опасно добывать. Именно поэтому важно не только получать ценные ресурсы, но и грамотно управлять ими.'}/>
 
                     <Text color={'#E6C196'} children={'· ✦ · ✦ · ✦ ·'} className={styles.alignCenterText}/>
                     <Text variant={'h2'} children={'Распределение ресурсов'} className={styles.alignCenterText}/>
-                    <Text color={'#BABCDB'} className={styles.alignJustifiedText}
+                    <Text color={'#BABCDB'} className={styles.alignJustifiedText} indent={28}
                           children={'Все добытые материалы и ресурсы в общине важно отслеживать, чтобы виверны могли учитывать их предотвращая нехватку. Хранением и учетом ресурсов занимаются Распорядители из клана Мастеров. Они отслеживают запасы еды, подсчитывают количество потребляемой пищи, смотрят на затрачиваемые на строительство материалы. На случай катастроф или неудачных охот, умелые Распорядители держат стратегические запасы, храня их в специальных подводных хранилищах. Эта работа незаметна, но именно она делает так, чтобы община не голодала и всегда была готова к неожиданностям. '}/>
-                    <Text color={'#BABCDB'} className={styles.alignJustifiedText}
+                    <Text color={'#BABCDB'} className={styles.alignJustifiedText} indent={28}
                           children={'У Глубоководных виверн есть ежедневная порционная норма еды и она разнится в зависимости от размера, роста и возраста виверны. Каждый член общины может охотиться самостоятельно и добывать ресурсы для личных целей, если это не мешает основному его виду деятельности. Если пищи в общине начинает не хватает, виверны могут ввести ограничения. В таких случаях, частный отлов временно прекращается, а вся самостоятельно добытая еда идет напрямую в общину. В случае острого дефицита еды, в приоритете кормление Охотников и Светлых Собирателей. '}/>
-                    <img src={'/images/article/community/Picture12.jpg'} className={styles.image}/>
-                    <Text color={'#BABCDB'} className={styles.alignJustifiedText}
+                    <img src={'/images/article/community/Picture13.jpg'} className={styles.image}/>
+                    <Text color={'#BABCDB'} className={styles.alignJustifiedText} indent={28}
                           children={'Мастера и Кузнецы получают материалы в первую очередь, затрачивая их на снасти, приманки, орудия для отлова, и создание жилищных пещер. Строительные материалы расходуются по мере необходимости, но в случае, если община в процессе расширения, приоритет отдается Мастерам.'}/>
-                    <Text color={'#BABCDB'} className={styles.alignJustifiedText}
+                    <Text color={'#BABCDB'} className={styles.alignJustifiedText} indent={28}
                           children={'Некоторые виды ресурсов, такие как редкие кристаллы, минералы, глубинные кораллы, целебные растения, расходуются не сразу. Они ждут своего часа либо в подводных хранилищах виверн, либо у Хранителей, занимающихся ритуалами и лечением больных виверн.'}/>
 
 
@@ -439,29 +443,30 @@ export default function ArticleCommunity({}) {
                         </div>
                     </div>
 
-                    <Text color={'#BABCDB'} className={styles.alignJustifiedText}
+                    <img src={'/images/article/community/Picture14.jpg'} className={styles.image}/>
+
+
+                    <Text color={'#BABCDB'} className={styles.alignJustifiedText} indent={28}
                           children={'Переселение - очень сложный, долгий и опасный процесс для любого вида общины. На пути к новым землям часть виверн может погибнуть, особенно если среди них есть много малышей или стариков. Самые древние виверны, чаще всего, принимают самостоятельное решение покинуть общину, чтобы не быть балластом в нелегком пути. Они отправляются на Курган костей - в последний путь. '}/>
 
                     <Text color={'#E6C196'} children={'· ✦ · ✦ · ✦ ·'} className={styles.alignCenterText}/>
 
                     <Text variant={'h2'} children={'Кризис'} className={styles.alignCenterText}/>
-                    <Text color={'#BABCDB'} className={styles.alignJustifiedText}
+                    <Text color={'#BABCDB'} className={styles.alignJustifiedText} indent={28}
                           children={'Насколько бы подготовленной не была община, в любой момент в океане может случиться по-настоящему непредвиденная ситуация: миграция крупных стай хищников через владения виверн, покидание рыбой территорий общины, резкое изменение водных течений, гибель виверн от тяжёлого заболевания и многое другое. В таких ситуациях община должна принимать важные коллективные решения. '}/>
-                    <Text color={'#BABCDB'} className={styles.alignJustifiedText}
-                          children={'У Глубоководных виверн есть ежедневная порционная норма еды и она разнится в зависимости от размера, роста и возраста виверны. Каждый член общины может охотиться самостоятельно и добывать ресурсы для личных целей, если это не мешает основному его виду деятельности. Если пищи в общине начинает не хватает, виверны могут ввести ограничения. В таких случаях, частный отлов временно прекращается, а вся самостоятельно добытая еда идет напрямую в общину. В случае острого дефицита еды, в приоритете кормление Охотников и Светлых Собирателей. '}/>
                     <Text variant={'h2'} children={'Голосование и “Выбор Глав”'} className={styles.alignCenterText}/>
-                    <Text color={'#BABCDB'} className={styles.alignJustifiedText}
-                          children={'В любой системе важен порядок. Хоть среди Глубоководных виверн и царит условное равноправие, а единого письменного документа о законах нет, это не отменяет факта наличия системы суда и голосования, которые помогают решать конфликты. В самых стрессовых ситуациях, когда становится тяжело ориентироваться на мнение большинства, виверны прибегают к “Выбору глав” — голосованию, где в качестве мнений общины выступают самые опытные и мудрые виверны каждого из кланов. К этой системе обращаются в экстренных ситуациях, когда виверны помладше не могут рационально оценить ситуацию в условиях паники. '}/>
-                    <Text color={'#BABCDB'} className={styles.alignJustifiedText}
-                          children={'В самых стрессовых ситуациях, когда становится тяжело ориентироваться на мнение большинства, виверны прибегают к “Выбору глав” — голосованию, где в качестве мнений общины выступают самые опытные и мудрые виверны каждого из кланов. К этой системе обращаются в экстренных ситуациях, когда виверны помладше не могут рационально оценить ситуацию в условиях паники. '}/>
+                    <Text color={'#BABCDB'} className={styles.alignJustifiedText} indent={28}
+                          children={'В любой системе важен порядок. Хоть среди Глубоководных виверн и царит условное равноправие, а единого письменного документа о законах нет, это не отменяет факта наличия системы суда и голосования, которые помогают решать конфликты.'}/>
+                    <Text color={'#BABCDB'} className={styles.alignJustifiedText} indent={28}
+                          children={'В самых стрессовых ситуациях, когда становится тяжело ориентироваться на мнение большинства, виверны прибегают к “Выбору глав” — голосованию, где в качестве мнений общины выступают самые опытные и мудрые виверны каждого из кланов. К этой системе обращаются в экстренных ситуациях, когда виверны помладше не могут рационально оценить ситуацию в условиях паники. '}/>
 
 
-                    <img src={'/images/article/community/Picture13.jpg'} className={styles.image}/>
-                    <Text color={'#BABCDB'} className={styles.alignJustifiedText}
+                    <img src={'/images/article/community/Picture15.jpg'} className={styles.image}/>
+                    <Text color={'#BABCDB'} className={styles.alignJustifiedText} indent={28}
                           children={'Главы кланов - авторитет для всей общины. Решение, принятое в рамках “Выбора глав” обязательно. Неподчинение может расцениваться как угроза итак хрупкому балансу общины. В условиях кризиса, требующего быстрых действий, подобное поведение может повлечь за собой наказание.'}/>
                     <Text color={'#E6C196'} children={'· ✦ · ✦ · ✦ ·'} className={styles.alignCenterText}/>
                     <Text variant={'h2'} children={'Суд и наказания'} className={styles.alignCenterText}/>
-                    <Text color={'#BABCDB'} className={styles.alignJustifiedText}
+                    <Text color={'#BABCDB'} className={styles.alignJustifiedText} indent={28}
                           children={'Каждое действие виверны так или иначе влияет на общину, частью которой она является. Любые неправильные поступки могут негативно повлиять на остальных членов общества. Наказания в данном случае не карают — они воспитывают и напоминают о важности общества и учат ответственности. '}/>
 
                     <div className={styles.points}>
@@ -493,7 +498,9 @@ export default function ArticleCommunity({}) {
                             <Text color={'#E6C196'} children={'✦  Изгнание'}/>
                             <div className={styles.bodyHeadAndBody}>
                                 <Text color={'#BABCDB'} className={styles.alignJustifiedText}
-                                      children={'Действия, которые несовместимы с жизнью внутри общины, а именно: предательство, многократные проступки после предыдущих нарушений или убийство внутри общины. Наказание одно — изгнание. Виверна лишается всякой поддержки и места в общине.  Возвращения не рассматривается '}/>
+                                      children={'Действия, которые несовместимы с жизнью внутри общины, а именно: предательство, многократные проступки после предыдущих нарушений или убийство внутри общины. '}/>
+                                <Text color={'#BABCDB'} className={styles.alignJustifiedText}
+                                      children={'Наказание: Изгнание. Виверна лишается всякой поддержки и места в общине. Возможность возвращения не рассматривается. '}/>
                             </div>
                         </div>
                     </div>
@@ -502,8 +509,10 @@ export default function ArticleCommunity({}) {
                     <div className={styles.assIn}>
                         <Text color={'#E6C196'} children={'· ✦ · ✦ · ✦ ·'} className={styles.alignCenterText}/>
                         <Text variant={'h2'} children={'Культура Океана'} className={styles.alignCenterText}/>
-                        <Text color={'#BABCDB'} className={styles.alignJustifiedText}
-                              children={'Жизнь в недрах Океана — это постоянное испытание. Стихия непредсказуема, ресурсы ограничены, а одиночество часто становится началом конца. В таких условиях община для Глубоководной виверны — не просто укрытие, а живой организм, где взаимная поддержка, ответственность и усилия каждого дают шанс на выживание.  Отдельного внимания заслуживает богатая культура виверн: традиционные обряды, инициации вплетённые в повседневную жизнь. Всё это раскрывает более глубокий смысл существования в общине — и об этом я расскажу в следующих статьях. '}/>
+                        <Text color={'#BABCDB'} className={styles.alignJustifiedText} indent={28}
+                              children={'Жизнь в недрах Океана — это постоянное испытание. Стихия непредсказуема, ресурсы ограничены, а одиночество часто становится началом конца. В таких условиях община для Глубоководной виверны — не просто укрытие, а живой организм, где взаимная поддержка, ответственность и усилия каждого дают шанс на выживание. '}/>
+                        <Text color={'#BABCDB'} className={styles.alignJustifiedText} indent={28}
+                              children={'Отдельного внимания заслуживает богатая культура виверн: традиционные обряды, инициации вплетённые в повседневную жизнь. Всё это раскрывает более глубокий смысл существования в общине — и об этом я расскажу в следующих статьях. '}/>
 
                         <Text color={'#E6C196'} children={'· ✦ · ✦ · ✦ ·'} className={styles.alignCenterText}/>
 
@@ -515,27 +524,40 @@ export default function ArticleCommunity({}) {
                             <Text color={'#E6C196'} italic={true} className={styles.alignCenterText}
                                   children={'Спасибо, что вы со мной!'}/>
                         </div>
-                        <div className={styles.buttonSubscribeWrapper} onClick={() => window.location.href = 'https://t.me/ZhurzhArt'}>
-                            <div className={styles.buttonSubscribe}>
-                                <img src={'/images/article/community/telegram.svg'} />
-                                <Text color={'#E6C196'} variant={'h3'} children={'Подписаться'}
+                        <div className={styles.buttonSubscribeWrapper}>
+                            <button className={styles.buttonSubscribe}
+                                    onClick={() => window.location.href = 'https://t.me/ZhurzhArt'}>
+                                <img src={'/images/article/community/telegram.svg'}/>
+                                <Text color={'#E6C196'} variant={'button'} children={'Подписаться'}
                                       className={styles.alignCenterText}/>
-                            </div>
+                            </button>
                         </div>
-                        <img src={'/images/article/community/mokup.png'} className={styles.imageNoGap}/>
                     </div>
+
+                    <picture>
+                        <source
+                            media="(max-width: 400px)"
+                            srcSet="/images/article/community/mockupMobile.png"
+                        />
+                        <img
+                            src="/images/article/community/mockup.png"
+                            className={styles.imageButton}
+                            alt="Community Mockup"
+                        />
+                    </picture>
+
                 </div>
             </div>
 
             <div className={styles.footerWrapper}>
                 <div className={styles.footer}>
-                    <Text variant={'sign'} color={'#727272'} className={styles.alignJustifiedText}
+                    <Text variant={'sign'} color={'#727272'} className={styles.alignJustifiedText} indent={28}
                           children={'Глубоководные виверны являются закрытым авторским видом. С 1 июня 2023 года их приобретение возможно исключительно путём покупки концептуальных адоптов у правообладателя. Любые существа, созданные по инструкции «Морская Реминисценция» без участия автора, не признаются частью проекта.'}/>
-                    <Text variant={'sign'} color={'#727272'} className={styles.alignJustifiedText}
+                    <Text variant={'sign'} color={'#727272'} className={styles.alignJustifiedText} indent={28}
                           children={'Автор не претендует на исторические образы драконов и не рассматривает их в качестве своей интеллектуальной собственности. На настоящем сайте размещены исключительно оригинальные материалы, созданные в рамках проекта «Морская Реминисценция».'}/>
-                    <Text variant={'sign'} color={'#727272'} className={styles.alignJustifiedText}
+                    <Text variant={'sign'} color={'#727272'} className={styles.alignJustifiedText} indent={28}
                           children={'Все тексты, иллюстрации и иные объекты, размещённые на сайте, являются результатом интеллектуальной деятельности и охраняются авторским правом. Любое воспроизведение, распространение, модификация или использование материалов без письменного согласия автора, включая их использование для обучения нейросетей или создания производных работ, запрещено. Нарушение указанных условий влечёт ответственность в соответствии с действующим законодательством об авторском праве. Для получения разрешений и решения вопросов использования материалов просьба обращаться к автору проекта.'}/>
-                    <Text />
+                    <Text/>
                 </div>
                 <Text variant={'sign'} color={'#727272'} className={styles.alignCenterText}
                       children={'© ZHURZH, «Морская Реминисценция», 2025.'}/>

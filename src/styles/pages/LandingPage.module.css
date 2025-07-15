@@ -30,15 +30,28 @@
 }
 
 .buttonSubscribe {
+    all: unset; /* ← сбрасывает ВСЕ дефолтные стили кнопки */
+    cursor: pointer;
+
     background: linear-gradient(to bottom, #9F546A, #544691);
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
     border-radius: 100px;
-    padding: 10px 50px;
-    width: fit-content;
+    padding: 10px 30px;
+    width: 160px;
+
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: var(--gapHalf);
+    gap: 8px;
+    transition: color 0.8s ease, transform 0.1s ease;
+
+    justify-content: center; /* добавьте это */
+    text-align: center;
+}
+
+
+.buttonSubscribe:hover {
+    transform: translateY(2px); /* смещение вниз на 1 пиксель */
 }
 
 /* затемняем фон для контраста текста */

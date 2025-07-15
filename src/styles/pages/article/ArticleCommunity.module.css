@@ -9,18 +9,17 @@
 .container {
     display: flex;
     flex-direction: column;
-
-    /* Фон */
-    background-image: url('/images/article/community/BackgroundNo.png');
-    background-size: auto; /* Ширина 100%, высота авто */
-    background-position: top center; /* Прилипает к верху, центрируется по горизонтали */
-    background-repeat: no-repeat; /* Не повторяется */
+    align-items: center;
 
     width: 100%;
     min-height: 500px;
-    align-items: center;
 
-    background-color: #232835; /* Фон под картинкой */
+    background-image: url('/images/article/community/Backgroundnew.png');
+    background-size: 100% auto; /* ✅ теперь картинка всегда на весь экран */
+    background-position: top center;
+    background-repeat: no-repeat;
+
+    background-color: #232835; /* fallback фон под картинкой */
 }
 
 .content {
@@ -30,9 +29,53 @@
     width: 100%;
     gap: var(--gap);
     max-width: 800px;
-    padding: 500px var(--non-work-zone) var(--gapx2) var(--non-work-zone);
+
+    padding: 0 var(--non-work-zone) var(--gapx2);
+    padding-top: 600px; /* дефолт для десктопа */
 }
 
+/* === Адаптивная настройка отступа сверху === */
+@media (max-width: 1800px) {
+    .content {
+        padding-top: 500px;
+    }
+}
+
+@media (max-width: 1600px) {
+    .content {
+        padding-top: 450px;
+    }
+}
+
+@media (max-width: 1400px) {
+    .content {
+        padding-top: 400px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .content {
+        padding-top: 350px;
+    }
+}
+
+@media (max-width: 992px) {
+    .content {
+        padding-top: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    .content {
+        padding-top: 200px;
+    }
+}
+
+@media (max-width: 576px) {
+    .content {
+        padding-top: 160px;
+    }
+}
 .main {
     align-items: center;
     display: flex;
@@ -62,6 +105,11 @@
     text-align: justify;
 }
 
+.alignLeft {
+    text-align: left;
+    white-space: nowrap;
+}
+
 .halfContainer {
     display: flex;
     flex-direction: column;
@@ -73,6 +121,7 @@
     display: flex;
     flex-direction: row;
     gap: var(--gapx3);
+    /*width: 100%;*/
 }
 
 .ass {
@@ -94,7 +143,7 @@
     width: 100%;
     min-height: 500px;
     align-items: center;
-    padding: var(--gap) var(--non-work-zone) var(--gapx2) var(--non-work-zone);
+    padding: var(--gap) var(--non-work-zone) 0 var(--non-work-zone);
 
     background-color: #232835; /* Подложка под тем, где нет картинки */
 }
@@ -108,6 +157,17 @@
     align-items: center;
     height: 100%;
     /*padding-bottom: 530px;*/
+}
+
+.imageButton {
+    padding-top: var(--gapHalf);
+    width: 100%;
+    /*max-width: 1000px;*/
+    overflow: hidden;
+}
+
+.imageWrap {
+    overflow: hidden;
 }
 
 .footerWrapper {
@@ -130,9 +190,7 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 200px;
 
-    background-image: url('/images/article/community/button.png');
     background-repeat: no-repeat; /* не повторять */
     background-position: center center; /* по центру блока */
     background-size: auto; /* не масштабировать, оставить оригинальный размер */
@@ -142,16 +200,27 @@
 }
 
 .buttonSubscribe {
+    all: unset; /* ← сбрасывает ВСЕ дефолтные стили кнопки */
+    cursor: pointer;
+
     background: linear-gradient(to bottom, #9F546A, #544691);
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
     border-radius: 100px;
-    padding: 10px 50px;
+    padding: 10px 30px;
     width: fit-content;
+
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: var(--gapHalf);
+    gap: 10px;
+    transition: color 0.8s ease, transform 0.1s ease;
 }
+
+.buttonSubscribe:hover {
+    transform: translateY(2px); /* смещение вниз на 1 пиксель */
+}
+
+
 
 @media (max-width: 768px) {
     .rowToColumn {
@@ -163,7 +232,7 @@
 @media (max-width: 400px) {
     .container {
         background-size: 100% auto;
-        background-image: url('/images/article/community/BackgroundNoMobile.png');
+        background-image: url('/images/article/community/.png');
     }
 
     .content {
@@ -180,16 +249,22 @@
 
     .ass {
         background-size: 100% auto;
-        background-image: url('/images/article/community/assMobile.png');
+        /*background-image: url('/images/article/community/assMobile.png');*/
     }
 
     .assIn {
-        padding-bottom: 200px;
+    }
+
+    .imageButton {
+        height: fit-content;
+        width: 100vw;
+        display: block;
     }
 }
 
 
 .points {
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: var(--gap);
@@ -199,6 +274,7 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
+    width: 100%;
 }
 
 .bodyHeadAndBody {
