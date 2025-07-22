@@ -1,0 +1,75 @@
+/* ====== Шрифты ======
+   (см. подключение в globals.css или _app.js)           */
+
+/* ====== Общие базовые параметры ====== */
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@400;600&family=Spectral+SC:wght@400&display=swap');
+
+
+
+.h1,
+.h2,
+.h4,
+.body {
+    margin: 0;
+    line-height: 1.25;
+    color: #fff;
+}
+
+/* ====== Варианты ====== */
+.h1 {
+    font-family: 'Spectral SC', serif;
+    font-weight: 500;          /* Semi Bold */
+    font-size: 60px;           /* «базовый 16» из ТЗ */
+}
+
+.h2 {
+    font-family: 'Spectral SC', serif;
+    font-weight: 400;          /* Regular */
+    font-size: 30px;
+}
+
+.h3 {
+    font-family: 'Spectral SC', serif;
+    font-weight: 400;          /* Regular */
+    font-size: 25px;
+}
+
+.h4 {
+    font-family: 'Source Serif Pro', serif;
+    font-weight: 400;          /* «Semi Regular» ≈ Regular */
+    font-size: 18px;
+}
+
+.body {
+    font-family: 'Source Serif Pro', serif;
+    font-weight: 200;          /* Regular */
+    font-size: 16px;
+}
+
+.sign {
+    font-family: 'Source Serif Pro', serif;
+    font-weight: 200;          /* Regular */
+    font-size: 12px;
+}
+
+.button {
+    all: unset;
+    font-family: 'Source Serif Pro', serif;
+    font-weight: 200;
+    font-size: 20px;
+}
+
+
+@media (max-width: 400px) {
+    .h1 {
+        font-size: 40px;
+    }
+
+    .h2 {
+        font-size: 25px;
+    }
+
+    .h3 {
+        font-size: 20px;
+    }
+}

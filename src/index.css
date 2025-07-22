@@ -1,0 +1,60 @@
+/* src/index.css */
+
+/* === Google-шрифт Montserrat === */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+/* --- Цвета ----------------------------------------------------------- */
+:root {
+  --black:         #0f0f0f;
+  --dark-gray:     #aaaaaa;
+  --light-gray:    #e6e6e6;
+  --white:         #ffffff;
+  --error-red:     #ff5050;
+
+  --active-session: rgb(205 234 177);
+  --pause-session:  rgb(168 217 236);
+
+  --link-color:  blue;
+  --shadow-color: #bbb;
+  --box-shadow:   0 0 5px var(--shadow-color);
+}
+
+/* --- Размеры, отступы, радиусы -------------------------------------- */
+:root {
+  --border-radius: 7px;
+  --border-radius-double: 14px;
+  --gapHalf: 15px;
+  --gap: 30px;
+  --gapx2: 45px;
+  --gapx3: 50px;
+  --gapx4: 65px;
+  --gapx5: 80px;
+}
+
+:root {
+  --non-work-zone: 32px;
+}
+
+@media (max-width: 400px) {
+  :root {
+    --non-work-zone: 16px; /* Очень маленький экран — 5px */
+  }
+}
+
+/*@media (max-width: 600px) {*/
+/*  :root {*/
+/*    --non-work-zone: 20px; !* Все экраны до 834px — 50px *!*/
+/*  }*/
+/*}*/
+
+/*@media (max-width: 800px) {*/
+/*  :root {*/
+/*    --non-work-zone: 40px; !* Все экраны до 834px — 50px *!*/
+/*  }*/
+/*}*/
+/* --- Нормализуем отступы ------------------------------------------- */
+*,
+*::before,
+*::after { box-sizing:border-box; margin:0; padding:0; }
+
+html, body { width:100%; height:100%; font-family:"Montserrat",sans-serif; }

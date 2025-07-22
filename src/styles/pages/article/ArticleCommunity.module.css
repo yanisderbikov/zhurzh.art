@@ -1,0 +1,285 @@
+.wrap {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    background-color: #232835;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+    min-height: 500px;
+
+    background-image: url('/images/article/community/Backgroundnew.png');
+    background-size: 100% auto; /* ✅ теперь картинка всегда на весь экран */
+    background-position: top center;
+    background-repeat: no-repeat;
+
+    background-color: #232835; /* fallback фон под картинкой */
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: var(--gap);
+    max-width: 800px;
+
+    padding: 0 var(--non-work-zone) var(--gapx2);
+    padding-top: 600px; /* дефолт для десктопа */
+}
+
+/* === Адаптивная настройка отступа сверху === */
+@media (max-width: 1800px) {
+    .content {
+        padding-top: 500px;
+    }
+}
+
+@media (max-width: 1600px) {
+    .content {
+        padding-top: 450px;
+    }
+}
+
+@media (max-width: 1400px) {
+    .content {
+        padding-top: 400px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .content {
+        padding-top: 350px;
+    }
+}
+
+@media (max-width: 992px) {
+    .content {
+        padding-top: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    .content {
+        padding-top: 200px;
+    }
+}
+
+@media (max-width: 576px) {
+    .content {
+        padding-top: 160px;
+    }
+}
+.main {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding: 0 var(--non-work-zone) 0 var(--non-work-zone);
+    gap: var(--gap);
+    width: 100%;
+    max-width: 800px;
+}
+
+.image {
+    display: flex;
+    width: 100%;
+    padding-top: var(--gapHalf);
+}
+
+.imageNoGap {
+    display: flex;
+    width: 100%;
+}
+
+.alignCenterText {
+    text-align: center;
+}
+
+.alignJustifiedText {
+    text-align: justify;
+}
+
+.alignLeft {
+    text-align: left;
+    white-space: nowrap;
+}
+
+.halfContainer {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    gap: var(--gapHalf);
+}
+
+.rowToColumn {
+    display: flex;
+    flex-direction: row;
+    gap: var(--gapx3);
+    /*width: 100%;*/
+}
+
+.ass {
+    display: flex;
+    flex-direction: column;
+
+    background-image:
+            linear-gradient(
+                    to bottom,
+                    #232835 30%,
+                    #4E3159 50%,
+                    #954D51 93%
+            );
+
+    background-size: 100% 100%;   /* градиент растягивается на весь блок; картинка — как есть */
+    background-position: bottom center;
+    background-repeat: no-repeat;
+
+    width: 100%;
+    min-height: 500px;
+    align-items: center;
+    padding: var(--gap) var(--non-work-zone) 0 var(--non-work-zone);
+
+    background-color: #232835; /* Подложка под тем, где нет картинки */
+}
+
+.assIn {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gapx2);
+    max-width: 800px;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+    /*padding-bottom: 530px;*/
+}
+
+.imageButton {
+    padding-top: var(--gapHalf);
+    width: 100%;
+    /*max-width: 1000px;*/
+    overflow: hidden;
+}
+
+.imageWrap {
+    overflow: hidden;
+}
+
+.footerWrapper {
+    display: flex;
+    flex-direction: column;
+    background-color: #0F1112;
+    align-items: center;
+    padding-bottom: var(--gapx2);
+}
+
+.footer {
+    padding: var(--gapx2) var(--non-work-zone) var(--gap) var(--non-work-zone);
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap);
+    max-width: 800px;
+}
+
+.buttonSubscribeWrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    background-repeat: no-repeat; /* не повторять */
+    background-position: center center; /* по центру блока */
+    background-size: auto; /* не масштабировать, оставить оригинальный размер */
+
+    align-items: center;
+    justify-content: center;
+}
+
+.buttonSubscribe {
+    all: unset; /* ← сбрасывает ВСЕ дефолтные стили кнопки */
+    cursor: pointer;
+
+    background: linear-gradient(to bottom, #9F546A, #544691);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    border-radius: 100px;
+    padding: 10px 30px;
+    width: fit-content;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    transition: color 0.8s ease, transform 0.1s ease;
+}
+
+.buttonSubscribe:hover {
+    transform: translateY(2px); /* смещение вниз на 1 пиксель */
+}
+
+
+
+@media (max-width: 768px) {
+    .rowToColumn {
+        flex-direction: column;
+        gap: var(--gap);
+    }
+}
+
+@media (max-width: 400px) {
+    .container {
+        background-size: 100% auto;
+        background-image: url('/images/article/community/.png');
+    }
+
+    .content {
+        padding: 150px var(--non-work-zone) var(--gapx2) var(--non-work-zone);
+    }
+
+    .image {
+        width: 100vw;
+    }
+
+    .imageNoGap {
+        width: 100vw;
+    }
+
+    .ass {
+        background-size: 100% auto;
+        /*background-image: url('/images/article/community/assMobile.png');*/
+    }
+
+    .assIn {
+    }
+
+    .imageButton {
+        height: fit-content;
+        width: 100vw;
+        display: block;
+    }
+}
+
+
+.points {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap);
+}
+
+.headerAndBody {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+.bodyHeadAndBody {
+    display: flex;
+    flex-direction: column;
+    padding-left: 17px;
+    gap: var(--gapHalf);
+}
