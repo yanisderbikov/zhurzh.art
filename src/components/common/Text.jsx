@@ -25,17 +25,14 @@ export default function Text({
     const Tag =
         variant === 'button'
             ? 'button'
-            : variant === 'sign'
-                ? 'sign'
-                : variant === 'h1'
-                    ? 'h1'
-                    : variant === 'h2'
-                        ? 'h2'
-                        : variant === 'h4'
-                            ? 'h4'
-                            : 'p';
+            : variant === 'h1'
+                ? 'h1'
+                : variant === 'h2'
+                    ? 'h2'
+                    : variant === 'h4'
+                        ? 'h4'
+                        : 'p';
 
-    // Приводим числовой indent к пикселям, строковой — оставляем как есть
     const computedIndent =
         indent === undefined || indent === null
             ? undefined
