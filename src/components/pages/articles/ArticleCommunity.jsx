@@ -528,7 +528,7 @@ export default function ArticleCommunity({}) {
                             <button className={styles.buttonSubscribe}
                                     onClick={() => window.location.href = 'https://t.me/ZhurzhArt'}>
                                 <img src={'/images/article/community/telegram.svg'}/>
-                                <Text color={'#E6C196'} variant={'button'} children={'Подписаться'}
+                                <Text color={'#E6C196'} children={'Подписаться'}
                                       className={styles.alignCenterText}/>
                             </button>
                         </div>

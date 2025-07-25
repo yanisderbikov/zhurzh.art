@@ -16,10 +16,10 @@ export default function LandingPage() {
                 </div>
                 <div className={styles.bottomBlock}>
                     <button className={styles.buttonSubscribe} onClick={() => {navigate('/articles/community')}}>
-                        <Text children={'Читать'} variant={'button'} />
+                        <Text children={'Читать'} />
                     </button>
                     <div className={styles.bottomFooter}>
-                        <Text children={'Обновление от 14 июля 2025'} variant={'sign'} color={'rgba(255,255,255,0.3)'}/>
+                        <Text children={'Обновление от 14 июля 2025'} color={'rgba(255,255,255,0.3)'}/>
                     </div>
                 </div>
             </div>
