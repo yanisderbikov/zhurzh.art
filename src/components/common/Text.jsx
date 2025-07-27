@@ -25,13 +25,15 @@ export default function Text({
     const Tag =
         variant === 'button'
             ? 'button'
-            : variant === 'h1'
-                ? 'h1'
-                : variant === 'h2'
-                    ? 'h2'
-                    : variant === 'h4'
-                        ? 'h4'
-                        : 'p';
+            : variant === 'sign'
+                ? 'small'
+                : variant === 'h1'
+                    ? 'h1'
+                    : variant === 'h2'
+                        ? 'h2'
+                        : variant === 'h4'
+                            ? 'h4'
+                            : 'p';
 
     const computedIndent =
         indent === undefined || indent === null
