@@ -525,12 +525,16 @@ export default function ArticleCommunity({}) {
                                   children={'Спасибо, что вы со мной!'}/>
                         </div>
                         <div className={styles.buttonSubscribeWrapper}>
-                            <button className={styles.buttonSubscribe}
-                                    onClick={() => window.location.href = 'https://t.me/ZhurzhArt'}>
-                                <img src={'/images/article/community/telegram.svg'}/>
-                                <Text color={'#E6C196'} children={'Подписаться'}
-                                      className={styles.alignCenterText}/>
-                            </button>
+                            <div>
+                                <Text 
+                                    color={'#E6C196'} 
+                                    onClick={() => window.location.href = 'https://t.me/ZhurzhArt'} 
+                                    variant={'button'} 
+                                    children={'Подписаться'}
+                                    className={styles.buttonSubscribe}
+                                    imageSrc={'/images/article/community/telegram.svg'}
+                                    />
+                            </div>
                         </div>
                     </div>
 

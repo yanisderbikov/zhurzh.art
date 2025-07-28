@@ -208,10 +208,15 @@
     border-radius: 100px;
     padding: 10px 30px;
     width: fit-content;
+    
+    font-family: "Source Serif Pro", serif;
+    font-weight: 200;
+    font-size: 20px;
 
     display: flex;
     flex-direction: row;
     align-items: center;
+    text-align: center;
     gap: 10px;
     transition: color 0.8s ease, transform 0.1s ease;
 }
