@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@400;600&family=Spectral+SC:wght@400&display=swap');
+
+.primary {
+    font-family: 'Source Serif Pro', serif;
+    font-weight: 200;
+    font-size: 20px;
+}
+
+/* Пока так. Если понадобится, то добавлю нужные стили в соответствии с дизайном */
+.subscribe {
+    color: red
+}
+
+.link {
+    color: red
+}

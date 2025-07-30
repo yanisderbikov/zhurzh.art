@@ -1,5 +1,6 @@
 import styles from '../../styles/pages/LandingPage.module.css';
 import Text from "../common/Text.jsx";
+import Button from "../common/Button.jsx";
 import { useNavigate } from "react-router-dom";
 
 
@@ -16,11 +17,10 @@ export default function LandingPage() {
                 </div>
                 <div className={styles.bottomBlock}>
 
-                    <Text 
+                    <Button 
                         children={'Читать'} 
                         className={styles.buttonSubscribe} 
                         onClick={() => {navigate('/articles/community')}} 
-                        variant='button'
                         />
 
                     <div className={styles.bottomFooter}>

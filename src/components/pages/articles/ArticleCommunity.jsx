@@ -1,5 +1,6 @@
 import Text from "../../common/Text.jsx";
 import styles from '../../../styles/pages/article/ArticleCommunity.module.css'
+import Button from "../../common/Button.jsx";
 
 export default function ArticleCommunity({}) {
 
@@ -526,10 +527,8 @@ export default function ArticleCommunity({}) {
                         </div>
                         <div className={styles.buttonSubscribeWrapper}>
                             <div>
-                                <Text 
-                                    color={'#E6C196'} 
+                                <Button 
                                     onClick={() => window.location.href = 'https://t.me/ZhurzhArt'} 
-                                    variant={'button'} 
                                     children={'Подписаться'}
                                     className={styles.buttonSubscribe}
                                     imageSrc={'/images/article/community/telegram.svg'}
