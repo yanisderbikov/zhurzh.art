@@ -1,16 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@400;600&family=Spectral+SC:wght@400&display=swap');
 
 .primary {
-    font-family: 'Source Serif Pro', serif;
+    all: unset;
+    cursor: pointer;
+    background: linear-gradient(to bottom, #9f546a, #544691);
+    box-shadow: 2px 2px 4px #0000004d;
+    border-radius: 100px;
+    padding: 10px 30px;
+    width: fit-content;
+    display: flex;
+    
+    font-family: "Source Serif Pro", serif;
     font-weight: 200;
     font-size: 20px;
+
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    transition: color .8s ease, transform .1s ease;
 }
 
-/* Пока так. Если понадобится, то добавлю нужные стили в соответствии с дизайном */
-.subscribe {
-    color: red
-}
-
-.link {
-    color: red
+.primary:hover {
+    transform: translateY(2px); 
 }

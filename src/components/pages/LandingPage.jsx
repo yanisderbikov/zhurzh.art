@@ -19,8 +19,8 @@ export default function LandingPage() {
 
                     <Button 
                         children={'Читать'} 
-                        className={styles.buttonSubscribe} 
                         onClick={() => {navigate('/articles/community')}} 
+                        style={{width: '160px', gap: '8px', justifyContent: 'center'}}
                         />
 
                     <div className={styles.bottomFooter}>

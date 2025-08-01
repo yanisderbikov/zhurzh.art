@@ -3,8 +3,9 @@ import styles from '../../styles/common/Button.module.css';
 
 /**
  * @param {ReactNode} children 
- * @param {primary | 'subscribe'} variant - на будущее. Пока что к кнопкам применяются стили className, где есть 
+ * @param {primary} variant 
  * @param {string} imageSrc
+ * @param {object} style
  * @param {string} className
  * @param {object} rest
  * @param {object} alt
@@ -13,17 +14,19 @@ import styles from '../../styles/common/Button.module.css';
 export default function Button({
     children,
     variant = 'primary',
-    imageSrc, 
+    imageSrc,
+    style = {},
     className = '',
     alt = '',
     ...rest
 }) {
 
-    const Tag = 'button'; /* Возможно позже добавлю условие и для ссылок, если понадобится */
+    const Tag = 'button'; 
 
     return (
         <Tag
             className={`${styles[variant]} ${className}`}
+            style={{...style}}
             {...rest}
         >
             {imageSrc && (<img src={imageSrc} alt={alt} />)}

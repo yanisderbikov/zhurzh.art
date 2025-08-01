@@ -528,10 +528,10 @@ export default function ArticleCommunity({}) {
                         <div className={styles.buttonSubscribeWrapper}>
                             <div>
                                 <Button 
-                                    onClick={() => window.location.href = 'https://t.me/ZhurzhArt'} 
+                                    onClick={() => window.open('https://t.me/ZhurzhArt', '_blank')}
                                     children={'Подписаться'}
-                                    className={styles.buttonSubscribe}
                                     imageSrc={'/images/article/community/telegram.svg'}
+                                    style={{color: '#E6C196'}}
                                     />
                             </div>
                         </div>
