@@ -22,6 +22,11 @@ export default function LandingPage() {
                         onClick={() => {navigate('/articles/community')}} 
                         style={{width: '160px', gap: '8px', justifyContent: 'center'}}
                         />
+                    <Button 
+                        children={'Все статьи'} 
+                        onClick={() => {navigate('/ArticlesPage')}} 
+                        style={{width: '160px', gap: '8px', justifyContent: 'center'}}
+                        />
 
                     <div className={styles.bottomFooter}>
                         <Text children={'Обновление от 14 июля 2025'} variant={'sign'} color={'rgba(255,255,255,0.3)'}/>
