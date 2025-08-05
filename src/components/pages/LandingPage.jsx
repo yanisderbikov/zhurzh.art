@@ -25,7 +25,6 @@ export default function LandingPage() {
                     <Button 
                         children={'Все статьи'} 
                         onClick={() => {navigate('/ArticlesPage')}} 
-                        style={{width: '160px', gap: '8px', justifyContent: 'center'}}
                         />
 
                     <div className={styles.bottomFooter}>

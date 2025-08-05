@@ -531,7 +531,6 @@ export default function ArticleCommunity({}) {
                                     onClick={() => window.open('https://t.me/ZhurzhArt', '_blank')}
                                     children={'Подписаться'}
                                     imageSrc={'/images/article/community/telegram.svg'}
-                                    style={{color: '#E6C196'}}
                                     />
                             </div>
                         </div>
