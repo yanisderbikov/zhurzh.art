@@ -15,7 +15,6 @@ export default function Button({
     children,
     variant = 'primary',
     imageSrc,
-    style = {},
     className = '',
     alt = '',
     ...rest
@@ -26,7 +25,6 @@ export default function Button({
     return (
         <Tag
             className={`${styles[variant]} ${className}`}
-            style={{...style}}
             {...rest}
         >
             {imageSrc && (<img src={imageSrc} alt={alt} />)}
