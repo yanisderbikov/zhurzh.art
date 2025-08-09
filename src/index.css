@@ -1,20 +1,7 @@
-/* src/index.css */
-
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
 
 :root {
-  --black:         #0f0f0f;
-  --dark-gray:     #aaaaaa;
-  --light-gray:    #e6e6e6;
-  --white:         #ffffff;
-  --error-red:     #ff5050;
-
-  --active-session: rgb(205 234 177);
-  --pause-session:  rgb(168 217 236);
-
-  --link-color:  blue;
-  --shadow-color: #bbb;
-  --box-shadow:   0 0 5px var(--shadow-color);
+  --gold: #E6C196;
 }
 
 :root {
@@ -37,19 +24,6 @@
     --non-work-zone: 16px;
   }
 }
-
-/*@media (max-width: 600px) {*/
-/*  :root {*/
-/*    --non-work-zone: 20px; !* Все экраны до 834px — 50px *!*/
-/*  }*/
-/*}*/
-
-/*@media (max-width: 800px) {*/
-/*  :root {*/
-/*    --non-work-zone: 40px; !* Все экраны до 834px — 50px *!*/
-/*  }*/
-/*}*/
-/* --- Нормализуем отступы ------------------------------------------- */
 *,
 *::before,
 *::after { box-sizing:border-box; margin:0; padding:0; }

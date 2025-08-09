@@ -18,9 +18,9 @@
     align-items: center;
     gap: 10px; /* Нужен для отступа в кнопке Подписатся. Между картинкой и текстом*/
     transition: color .8s ease, transform .1s ease;
-    width: 160px;
+    min-width: 160px;
     justify-content: center;
-    color: #ffffff
+    color: var(--gold);
 }
 
 .primary:hover {
