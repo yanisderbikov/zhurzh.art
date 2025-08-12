@@ -1,5 +1,6 @@
 import Text from "../../common/Text.jsx";
 import styles from '../../../styles/pages/article/ArticleCommunity.module.css'
+import Button from "../../common/Button.jsx";
 
 export default function ArticleCommunity({}) {
 
@@ -525,12 +526,13 @@ export default function ArticleCommunity({}) {
                                   children={'Спасибо, что вы со мной!'}/>
                         </div>
                         <div className={styles.buttonSubscribeWrapper}>
-                            <button className={styles.buttonSubscribe}
-                                    onClick={() => window.location.href = 'https://t.me/ZhurzhArt'}>
-                                <img src={'/images/article/community/telegram.svg'}/>
-                                <Text color={'#E6C196'} variant={'button'} children={'Подписаться'}
-                                      className={styles.alignCenterText}/>
-                            </button>
+                            <div>
+                                <Button 
+                                    onClick={() => window.open('https://t.me/ZhurzhArt', '_blank')}
+                                    children={'Подписаться'}
+                                    imageSrc={'/images/article/community/telegram.svg'}
+                                    />
+                            </div>
                         </div>
                     </div>
 

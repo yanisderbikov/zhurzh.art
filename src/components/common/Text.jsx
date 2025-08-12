@@ -17,25 +17,22 @@ export default function Text({
                                  variant = 'body',
                                  color,
                                  italic = false,
-                                 indent  ,
+                                 indent,
                                  style = {},
                                  className = '',
                                  ...rest
                              }) {
     const Tag =
-        variant === 'button'
-            ? 'button'
-            : variant === 'sign'
-                ? 'sign'
-                : variant === 'h1'
-                    ? 'h1'
-                    : variant === 'h2'
-                        ? 'h2'
-                        : variant === 'h4'
-                            ? 'h4'
-                            : 'p';
+        variant === 'sign'
+            ? 'small'
+            : variant === 'h1'
+                ? 'h1'
+                : variant === 'h2'
+                    ? 'h2'
+                    : variant === 'h4'
+                        ? 'h4'
+                        : 'p';
 
-    // Приводим числовой indent к пикселям, строковой — оставляем как есть
     const computedIndent =
         indent === undefined || indent === null
             ? undefined
@@ -53,7 +50,7 @@ export default function Text({
                 ...style,
             }}
             {...rest}
-        >
+        >   
             {children}
         </Tag>
     );

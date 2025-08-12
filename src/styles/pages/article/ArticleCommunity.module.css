@@ -191,36 +191,13 @@
     flex-direction: column;
     width: 100%;
 
-    background-repeat: no-repeat; /* не повторять */
-    background-position: center center; /* по центру блока */
-    background-size: auto; /* не масштабировать, оставить оригинальный размер */
+    background-repeat: no-repeat; 
+    background-position: center center; 
+    background-size: auto; 
 
     align-items: center;
     justify-content: center;
 }
-
-.buttonSubscribe {
-    all: unset; /* ← сбрасывает ВСЕ дефолтные стили кнопки */
-    cursor: pointer;
-
-    background: linear-gradient(to bottom, #9F546A, #544691);
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-    border-radius: 100px;
-    padding: 10px 30px;
-    width: fit-content;
-
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 10px;
-    transition: color 0.8s ease, transform 0.1s ease;
-}
-
-.buttonSubscribe:hover {
-    transform: translateY(2px); /* смещение вниз на 1 пиксель */
-}
-
-
 
 @media (max-width: 768px) {
     .rowToColumn {
