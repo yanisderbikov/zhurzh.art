@@ -1,35 +1,18 @@
-/* ==== Общая обёртка ==== */
 .wrapper {
     position: relative;
     width: 100%;
-    height: 100vh;           /* экран «на весь вид» */
+    height: 100vh;
     overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
     color: #fff;
 
-    /* фон-картинка (поменяйте путь) */
     background-image: url('/images/landing/bg_wyverns_desert.png');
     background-size: cover;
     background-position: center;
 }
 
-/* затемняем фон для контраста текста */
-/*.wrapper::before {*/
-/*    content: '';*/
-/*    position: absolute;*/
-/*    inset: 0;*/
-/*    background: linear-gradient(*/
-/*            180deg,*/
-/*            rgba(0, 0, 32, 0.55) 0%,*/
-/*            rgba(0, 0, 32, 0.25) 50%,*/
-/*            rgba(0, 0, 32, 0.70) 100%*/
-/*    );*/
-/*    z-index: 0;*/
-/*}*/
-
-/* ==== Контент по центру ==== */
 .content {
     position: relative;
     z-index: 1;
@@ -41,9 +24,7 @@
 .container {
     display: flex;
     flex-direction: column;
-    /*padding-top: 150px;*/
-    /*padding-bottom: 150px;*/
-    padding: 100px var(--non-work-zone) var(--gap) var(--non-work-zone);
+    padding: 50px var(--non-work-zone) var(--gap) var(--non-work-zone); /* Подзаголовок перекрывает часть летящих драконов, выглядит не очень. Приподнял */
     height: 100%;
     align-items: center;
     text-align: center;
@@ -60,13 +41,12 @@
 .bottomBlock {
     display: flex;
     flex-direction: column;
-    /*gap: 30px;*/
+    gap: 15px;
     height: 150px;
     align-items: center;
-    margin-top: auto; /* Автоматический отступ от верхнего блока — прижимает вниз */
+    margin-top: auto; 
 }
 
-/* Заголовок */
 .title {
     font-size: clamp(2.5rem, 4vw + 1rem, 4.5rem);
     font-weight: 700;
@@ -74,20 +54,17 @@
     letter-spacing: 0.08em;
     margin-bottom: .4rem;
 
-    /* «подчёркивание» снизу как в макете */
     border-bottom: 4px solid #3fa1ff;
     display: inline-block;
     padding-bottom: .25rem;
 }
 
-/* Подзаголовок */
 .subtitle {
     font-size: clamp(1.25rem, 1.5vw + .5rem, 1.75rem);
     margin-bottom: 3rem;
     opacity: .9;
 }
 
-/* Кнопка «Читать» */
 .cta {
     padding: .9rem 3rem;
     font-size: 1.15rem;
@@ -104,7 +81,6 @@
     background: transparent;
 }
 
-/* Ссылка «Все статьи» */
 .link {
     display: block;
     margin-top: 1.25rem;
@@ -118,7 +94,6 @@
     opacity: .75;
 }
 
-/* ==== Низ страницы ==== */
 .footer {
     position: absolute;
     left: 50%;
@@ -129,21 +104,19 @@
     z-index: 1;
 }
 
-/* Логотип (иконка) */
 .logo {
     position: absolute;
     right: 1rem;
     bottom: 1rem;
     width: 68px;
     height: 68px;
-    background-image: url('/images/landing/sea_reminiscence_logo.png'); /* свой путь */
+    background-image: url('/images/landing/sea_reminiscence_logo.png');
     background-size: contain;
     background-repeat: no-repeat;
     opacity: .9;
     z-index: 1;
 }
 
-/* ==== Адаптивные мелочи ==== */
 @media (max-width: 480px) {
     .cta {
         width: 100%;

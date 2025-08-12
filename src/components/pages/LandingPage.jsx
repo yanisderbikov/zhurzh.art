@@ -21,6 +21,10 @@ export default function LandingPage() {
                         children={'Читать'} 
                         onClick={() => {navigate('/articles/community')}} 
                         />
+                    <Button 
+                        children={'Все статьи'} 
+                        onClick={() => {navigate('/ArticlesPage')}} 
+                        />
 
                     <div className={styles.bottomFooter}>
                         <Text children={'Обновление от 14 июля 2025'} variant={'sign'} color={'rgba(255,255,255,0.3)'}/>
