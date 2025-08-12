@@ -19,9 +19,12 @@
 
     flex-direction: row;
     align-items: center;
-    gap: 10px;
+    gap: 10px; /* Нужен для отступа в кнопке Подписатся. Между картинкой и текстом*/
     transition: color .8s ease, transform .1s ease;
-    color: #ffffff
+
+    min-width: 160px;
+    justify-content: center;
+    color: var(--gold);
 }
 
 .primary:hover {

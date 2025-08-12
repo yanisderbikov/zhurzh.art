@@ -20,7 +20,6 @@ export default function LandingPage() {
                     <Button 
                         children={'Читать'} 
                         onClick={() => {navigate('/articles/community')}} 
-                        style={{width: '160px', gap: '8px', justifyContent: 'center'}}
                         />
                     <Button 
                         children={'Все статьи'} 
