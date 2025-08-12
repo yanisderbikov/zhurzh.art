@@ -1,32 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@400;600&family=Spectral+SC:wght@400&display=swap');
 
 .primary {
-    all: unset;
     cursor: pointer;
     background: linear-gradient(to bottom, #9f546a, #544691);
     box-shadow: 2px 2px 4px #0000004d;
-    border-radius: 100px;
-    padding: 10px 30px;
+    border-radius: 10px;
+    padding: 45px 170px;
     width: fit-content;
     display: flex;
     
     font-family: "Source Serif Pro", serif;
-    font-weight: 200;
     font-size: 20px;
 
-    width: 160px;
-    justify-content: center;
-
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
-    gap: 10px; /* Нужен для отступа в кнопке Подписатся. Между картинкой и текстом*/
     transition: color .8s ease, transform .1s ease;
-
-    min-width: 160px;
-    justify-content: center;
-    color: var(--gold);
 }
 
 .primary:hover {
-    transform: translateY(2px); 
+    transform: translateY(5px);
+    background: linear-gradient(to bottom, #7b3f54, #3e336e);
+}
+
+.primary:active {
+    background: linear-gradient(to bottom, #95556c, #4f4482);
 }
