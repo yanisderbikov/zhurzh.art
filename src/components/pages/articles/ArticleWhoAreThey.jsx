@@ -96,7 +96,7 @@ export default function ArticleWhoAreThey({}) {
                     <img src={'/images/article/whoAreThey/7.png'} className={styles.image}/>
                     <div className={styles.buttonWrapper}>
                         <Button 
-                            onClick={() => window.location.href = '/ArticlesPage'}
+                            onClick={() => window.location.href = '/articles'}
                             children={'КАТЕГОРИИ'}
                         />
                     </div>

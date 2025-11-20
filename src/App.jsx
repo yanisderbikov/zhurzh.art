@@ -15,7 +15,7 @@ export default function App() {
         <Router>
             <Routes>
                 <Route path="/" element={<LandingPage/>}/>
-                <Route path="/ArticlesPage" element={<ArticlesPage/>}/>
+                <Route path="/articles" element={<ArticlesPage/>}/>
                 <Route path="/articles/community" element={<ArticleCommunity/>}/>
                 <Route path="/articles/whoAreThey" element={<ArticleWhoAreThey/>}/>
                 <Route path="*" element={<PageNotFound/>}/>

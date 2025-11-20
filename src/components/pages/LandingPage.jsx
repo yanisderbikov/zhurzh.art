@@ -23,7 +23,7 @@ export default function LandingPage() {
                         />
                     <Button 
                         children={'Все статьи'} 
-                        onClick={() => {navigate('/ArticlesPage')}} 
+                        onClick={() => {navigate('/articles')}} 
                         />
 
                     <div className={styles.bottomFooter}>
