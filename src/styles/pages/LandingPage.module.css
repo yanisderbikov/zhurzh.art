@@ -1,128 +1,371 @@
 .wrapper {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #0c0e2a;
+    color: #fff;
+    padding-top: var(--header-height);
+}
+
+/* Hero Section */
+.heroSection {
     position: relative;
     width: 100%;
-    height: 100vh;
-    overflow: hidden;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #0c0e2a 0%, #1a1d3a 50%, #2d1a3a 100%);
+    display: flex;
+    align-items: center;
+    padding: var(--gapx3) var(--non-work-zone);
+}
+
+.heroContent {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--gapx3);
+    align-items: center;
+    width: 100%;
+}
+
+.heroText {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap);
+}
+
+.heroTitle {
+    font-size: 48px;
+    line-height: 1.2;
+    margin-bottom: var(--gap);
+    color: #fff;
+}
+
+.heroDescription {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap);
+}
+
+.heroParagraph {
+    color: #fff;
+    line-height: 1.6;
+}
+
+.heroImage {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #fff;
-
-    background-image: url('/images/landing/bg_wyverns_desert.png');
-    background-size: cover;
-    background-position: center;
 }
 
-.content {
+.heroImage img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* История Альтумара */
+.altumarSection {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(180deg, #1a1d3a 0%, #0c0e2a 100%);
+    padding: var(--gapx3) var(--non-work-zone);
+    display: flex;
+    align-items: center;
+}
+
+.altumarContent {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: var(--gapx3);
+    align-items: center;
+    width: 100%;
+}
+
+.altumarComics {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.altumarComics img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.altumarText {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap);
+}
+
+.sectionTitle {
+    font-size: 48px;
+    line-height: 1.2;
+    color: #fff;
+}
+
+.sectionParagraph {
+    color: #fff;
+    line-height: 1.6;
+}
+
+.readButton {
+    align-self: flex-start;
+    margin-top: var(--gap);
+}
+
+/* Еще больше о сеттинге */
+.settingSection {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(180deg, #0c0e2a 0%, #1a1d3a 50%, #2d1a3a 100%);
+    padding: var(--gapx3) var(--non-work-zone);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.settingBackground {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    opacity: 0.3;
+}
+
+.settingBgImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.settingContent {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap);
+    align-items: center;
     position: relative;
     z-index: 1;
-    text-align: center;
-    max-width: 960px;
-    padding: 0 1rem;
 }
 
-.container {
+.articlesButton {
+    margin-top: var(--gap);
+}
+
+/* Поддержите автора */
+.supportSection {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(180deg, #2d1a3a 0%, #1a1d3a 50%, #0c0e2a 100%);
+    padding: var(--gapx3) var(--non-work-zone);
     display: flex;
-    flex-direction: column;
-    padding: 50px var(--non-work-zone) var(--gap) var(--non-work-zone); /* Подзаголовок перекрывает часть летящих драконов, выглядит не очень. Приподнял */
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.supportBackground {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    opacity: 0.3;
+}
+
+.supportBgImage {
+    width: 100%;
     height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.supportContent {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap);
     align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.supportCards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--gap);
+    margin: var(--gap) 0;
+    width: 100%;
+    max-width: 800px;
+}
+
+.supportCard {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gapHalf);
+    align-items: center;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: var(--border-radius-double);
+    padding: var(--gap);
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.supportCard:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.supportCard img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--border-radius);
+    object-fit: cover;
+}
+
+.cardLabel {
+    color: #fff;
     text-align: center;
 }
 
-.topBlock {
-    /* Верхний блок, прилипает к верху */
+.thankYouText {
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.6;
+    margin-top: var(--gap);
 }
 
-.bottomFooter {
-    margin-top: auto;
+.telegramButton {
+    margin-top: var(--gap);
 }
 
-.bottomBlock {
+/* Footer */
+.footer {
+    width: 100%;
+    background-color: #0e3b6e;
+    padding: var(--gapx3) var(--non-work-zone) var(--gap);
     display: flex;
     flex-direction: column;
-    gap: 15px;
-    height: 150px;
-    align-items: center;
-    margin-top: auto; 
+    gap: var(--gapx2);
 }
 
-.title {
-    font-size: clamp(2.5rem, 4vw + 1rem, 4.5rem);
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    margin-bottom: .4rem;
-
-    border-bottom: 4px solid #3fa1ff;
-    display: inline-block;
-    padding-bottom: .25rem;
+.footerContent {
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--gapx2);
 }
 
-.subtitle {
-    font-size: clamp(1.25rem, 1.5vw + .5rem, 1.75rem);
-    margin-bottom: 3rem;
-    opacity: .9;
+.footerColumn {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gapHalf);
 }
 
-.cta {
-    padding: .9rem 3rem;
-    font-size: 1.15rem;
-    font-weight: 600;
-    border-radius: 9999px;
-    border: 2px solid #0e3b6e;
-    background: #0e3b6e;
+.footerTitle {
+    color: #7CB9E8;
+    margin-bottom: var(--gapHalf);
+}
+
+.footerLink {
     color: #fff;
-    cursor: pointer;
-    transition: all .3s ease;
-}
-
-.cta:hover {
-    background: transparent;
-}
-
-.link {
-    display: block;
-    margin-top: 1.25rem;
-    font-size: .95rem;
-    color: #e0e7ff;
     text-decoration: none;
-    transition: opacity .25s;
+    font-family: 'Merriweather', serif;
+    font-size: 16px;
+    transition: opacity 0.3s ease;
 }
 
-.link:hover {
-    opacity: .75;
+.footerLink:hover {
+    opacity: 0.7;
 }
 
-.footer {
-    position: absolute;
-    left: 50%;
-    bottom: 1.5rem;
-    transform: translateX(-50%);
-    font-size: .85rem;
-    color: rgba(255, 255, 255, .75);
-    z-index: 1;
+.footerIcons {
+    display: flex;
+    justify-content: center;
+    gap: var(--gap);
+    margin: var(--gap) 0;
 }
 
-.logo {
-    position: absolute;
-    right: 1rem;
-    bottom: 1rem;
-    width: 68px;
-    height: 68px;
-    background-image: url('/images/landing/sea_reminiscence_logo.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    opacity: .9;
-    z-index: 1;
+.footerIcons img {
+    height: 40px;
+    width: auto;
+    object-fit: contain;
+}
+
+.copyright {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.6);
+    margin-top: var(--gap);
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+    .heroContent,
+    .altumarContent {
+        grid-template-columns: 1fr;
+        gap: var(--gapx2);
+    }
+
+    .heroImage,
+    .altumarComics {
+        order: -1;
+    }
+
+    .footerContent {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .heroTitle,
+    .sectionTitle {
+        font-size: 36px;
+    }
+
+    .supportCards {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+    }
+
+    .footerContent {
+        grid-template-columns: 1fr;
+    }
+
+    .heroSection,
+    .altumarSection,
+    .settingSection,
+    .supportSection {
+        padding: var(--gapx2) var(--non-work-zone);
+        min-height: auto;
+    }
 }
 
 @media (max-width: 480px) {
-    .cta {
-        width: 100%;
-        padding: .85rem 0;
+    .heroTitle,
+    .sectionTitle {
+        font-size: 28px;
     }
-    .link {
-        margin-top: .75rem;
+
+    .heroSection,
+    .altumarSection,
+    .settingSection,
+    .supportSection {
+        padding: var(--gap) var(--non-work-zone);
     }
 }

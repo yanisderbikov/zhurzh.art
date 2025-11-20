@@ -14,7 +14,7 @@ import PageNotFound from './components/pages/PageNotFound.jsx';
 export default function App() {
     return (
         <Router>
-            {/*<Header />*/}
+            <Header />
             <Routes>
                 <Route path="/" element={<LandingPage/>}/>
                 <Route path="/articles" element={<ArticlesPage/>}/>
