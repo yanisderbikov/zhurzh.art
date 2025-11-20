@@ -4,6 +4,7 @@ import {
     Route
 } from 'react-router-dom';
 
+import Header from './components/common/Header.jsx';
 import LandingPage from './components/pages/LandingPage.jsx';
 import ArticlesPage from './components/pages/ArticlesPage.jsx';
 import ArticleCommunity from './components/pages/articles/ArticleCommunity.jsx';
@@ -13,6 +14,7 @@ import PageNotFound from './components/pages/PageNotFound.jsx';
 export default function App() {
     return (
         <Router>
+            {/*<Header />*/}
             <Routes>
                 <Route path="/" element={<LandingPage/>}/>
                 <Route path="/articles" element={<ArticlesPage/>}/>
