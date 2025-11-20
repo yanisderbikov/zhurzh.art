@@ -6,100 +6,84 @@
     padding-top: var(--header-height);
 }
 
-/* Hero Section */
-.heroSection {
+/* Общие стили для полноэкранных секций */
+.fullScreenSection {
     position: relative;
     width: 100%;
     min-height: 100vh;
-    background: linear-gradient(135deg, #0c0e2a 0%, #1a1d3a 50%, #2d1a3a 100%);
     display: flex;
     align-items: center;
-    padding: var(--gapx3) var(--non-work-zone);
-}
-
-.heroContent {
-    max-width: 1400px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: var(--gapx3);
-    align-items: center;
-    width: 100%;
-}
-
-.heroText {
-    display: flex;
-    flex-direction: column;
-    gap: var(--gap);
-}
-
-.heroTitle {
-    font-size: 48px;
-    line-height: 1.2;
-    margin-bottom: var(--gap);
-    color: #fff;
-}
-
-.heroDescription {
-    display: flex;
-    flex-direction: column;
-    gap: var(--gap);
-}
-
-.heroParagraph {
-    color: #fff;
-    line-height: 1.6;
-}
-
-.heroImage {
-    display: flex;
     justify-content: center;
-    align-items: center;
+    overflow: hidden;
 }
 
-.heroImage img {
-    max-width: 100%;
-    height: auto;
-    object-fit: contain;
+.backgroundImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 0;
 }
 
-/* История Альтумара */
-.altumarSection {
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+.contentContainer {
     position: relative;
+    z-index: 2;
     width: 100%;
-    min-height: 100vh;
-    background: linear-gradient(180deg, #1a1d3a 0%, #0c0e2a 100%);
+    max-width: 1600px;
+    margin: 0 auto;
     padding: var(--gapx3) var(--non-work-zone);
     display: flex;
     align-items: center;
-}
-
-.altumarContent {
-    max-width: 1400px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 1.2fr;
-    gap: var(--gapx3);
-    align-items: center;
-    width: 100%;
-}
-
-.altumarComics {
-    display: flex;
     justify-content: center;
+}
+
+.contentWrapper {
+    width: 100%;
+    display: flex;
     align-items: center;
+    justify-content: flex-end;
 }
 
-.altumarComics img {
-    max-width: 100%;
-    height: auto;
-    object-fit: contain;
+/* Первая секция - текст справа */
+.fullScreenSection:nth-of-type(2) .contentWrapper {
+    justify-content: flex-end;
 }
 
-.altumarText {
+/* Вторая секция - текст слева */
+.fullScreenSection:nth-of-type(3) .contentWrapper {
+    justify-content: flex-start;
+}
+
+/* Третья секция - текст по центру */
+.fullScreenSection:nth-of-type(4) .contentWrapper {
+    justify-content: center;
+}
+
+/* Четвертая секция - текст по центру */
+.fullScreenSection:nth-of-type(5) .contentWrapper {
+    justify-content: center;
+}
+
+.textContent {
     display: flex;
     flex-direction: column;
     gap: var(--gap);
+    max-width: 600px;
+    width: 100%;
 }
 
 .sectionTitle {
@@ -108,111 +92,30 @@
     color: #fff;
 }
 
-.sectionParagraph {
+.textParagraphs {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap);
+}
+
+.paragraph {
     color: #fff;
     line-height: 1.6;
 }
 
-.readButton {
+.actionButton {
     align-self: flex-start;
     margin-top: var(--gap);
 }
 
-/* Еще больше о сеттинге */
-.settingSection {
-    position: relative;
-    width: 100%;
-    min-height: 100vh;
-    background: linear-gradient(180deg, #0c0e2a 0%, #1a1d3a 50%, #2d1a3a 100%);
-    padding: var(--gapx3) var(--non-work-zone);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-}
-
-.settingBackground {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 0;
-    opacity: 0.3;
-}
-
-.settingBgImage {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-}
-
-.settingContent {
-    max-width: 1000px;
-    margin: 0 auto;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    gap: var(--gap);
-    align-items: center;
-    position: relative;
-    z-index: 1;
-}
-
-.articlesButton {
-    margin-top: var(--gap);
-}
-
-/* Поддержите автора */
-.supportSection {
-    position: relative;
-    width: 100%;
-    min-height: 100vh;
-    background: linear-gradient(180deg, #2d1a3a 0%, #1a1d3a 50%, #0c0e2a 100%);
-    padding: var(--gapx3) var(--non-work-zone);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-}
-
-.supportBackground {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 0;
-    opacity: 0.3;
-}
-
-.supportBgImage {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-}
-
-.supportContent {
-    max-width: 1200px;
-    margin: 0 auto;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    gap: var(--gap);
-    align-items: center;
-    position: relative;
-    z-index: 1;
-}
-
+/* Секция поддержки автора - карточки */
 .supportCards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-direction: row;
     gap: var(--gap);
     margin: var(--gap) 0;
     width: 100%;
-    max-width: 800px;
+    flex-wrap: wrap;
 }
 
 .supportCard {
@@ -220,15 +123,17 @@
     flex-direction: column;
     gap: var(--gapHalf);
     align-items: center;
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(255, 255, 255, 0.1);
     border-radius: var(--border-radius-double);
     padding: var(--gap);
+    flex: 1;
+    min-width: 150px;
     transition: transform 0.3s ease, background 0.3s ease;
 }
 
 .supportCard:hover {
     transform: translateY(-5px);
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.15);
 }
 
 .supportCard img {
@@ -244,12 +149,8 @@
 }
 
 .thankYouText {
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(255, 255, 255, 0.9);
     line-height: 1.6;
-    margin-top: var(--gap);
-}
-
-.telegramButton {
     margin-top: var(--gap);
 }
 
@@ -264,18 +165,21 @@
 }
 
 .footerContent {
-    max-width: 1400px;
+    max-width: 1600px;
     margin: 0 auto;
     width: 100%;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    display: flex;
+    flex-direction: row;
     gap: var(--gapx2);
+    flex-wrap: wrap;
 }
 
 .footerColumn {
     display: flex;
     flex-direction: column;
     gap: var(--gapHalf);
+    flex: 1;
+    min-width: 200px;
 }
 
 .footerTitle {
@@ -295,77 +199,82 @@
     opacity: 0.7;
 }
 
-.footerIcons {
-    display: flex;
-    justify-content: center;
-    gap: var(--gap);
-    margin: var(--gap) 0;
-}
-
-.footerIcons img {
-    height: 40px;
-    width: auto;
-    object-fit: contain;
-}
-
 .copyright {
     text-align: center;
     color: rgba(255, 255, 255, 0.6);
     margin-top: var(--gap);
 }
 
-/* Responsive */
-@media (max-width: 1200px) {
-    .heroContent,
-    .altumarContent {
-        grid-template-columns: 1fr;
-        gap: var(--gapx2);
-    }
-
-    .heroImage,
-    .altumarComics {
-        order: -1;
-    }
-
-    .footerContent {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
+/* Мобильная версия */
 @media (max-width: 768px) {
-    .heroTitle,
+    .overlay {
+        background: rgba(0, 0, 0, 0.6);
+    }
+
+    .contentContainer {
+        padding: var(--gapx2) var(--non-work-zone);
+    }
+
+    .contentWrapper {
+        justify-content: center !important;
+    }
+
+    .fullScreenSection:nth-of-type(2) .contentWrapper,
+    .fullScreenSection:nth-of-type(3) .contentWrapper,
+    .fullScreenSection:nth-of-type(4) .contentWrapper,
+    .fullScreenSection:nth-of-type(5) .contentWrapper {
+        justify-content: center !important;
+    }
+
+    .textContent {
+        max-width: 100%;
+        width: 100%;
+        text-align: center;
+    }
+
     .sectionTitle {
         font-size: 36px;
+        text-align: center;
+    }
+
+    .paragraph {
+        text-align: center;
+    }
+
+    .actionButton {
+        align-self: center;
     }
 
     .supportCards {
-        grid-template-columns: 1fr;
-        max-width: 400px;
+        flex-direction: column;
+    }
+
+    .supportCard {
+        width: 100%;
     }
 
     .footerContent {
-        grid-template-columns: 1fr;
-    }
-
-    .heroSection,
-    .altumarSection,
-    .settingSection,
-    .supportSection {
-        padding: var(--gapx2) var(--non-work-zone);
-        min-height: auto;
+        flex-direction: column;
     }
 }
 
 @media (max-width: 480px) {
-    .heroTitle,
     .sectionTitle {
         font-size: 28px;
     }
 
-    .heroSection,
-    .altumarSection,
-    .settingSection,
-    .supportSection {
+    .contentContainer {
         padding: var(--gap) var(--non-work-zone);
+    }
+}
+
+/* Для гипер-широких экранов - увеличиваем максимальную ширину контента */
+@media (min-width: 1400px) {
+    .contentContainer {
+        max-width: 1800px;
+    }
+
+    .textContent {
+        max-width: 700px;
     }
 }

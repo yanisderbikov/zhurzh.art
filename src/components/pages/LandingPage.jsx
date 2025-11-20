@@ -13,116 +13,121 @@ export default function LandingPage() {
             <Header />
             
             {/* Hero Section - Мир Морской Реминисценции */}
-            <section className={styles.heroSection}>
-                <div className={styles.heroContent}>
-                    <div className={styles.heroText}>
-                        <Text variant="h1" className={styles.heroTitle}>
-                            МИР МОРСКОЙ РЕМИНИСЦЕНЦИИ
-                        </Text>
-                        <div className={styles.heroDescription}>
-                            <Text variant="body" className={styles.heroParagraph}>
-                                Океаны и моря разделяют материки, а под их гладью скрываются бескрайние просторы. Величественные горы на суше соседствуют с темными глубинами под водой. Здесь живут чешуйчатые создания — от гордых драконов до скрытных виверн.
+            <section className={styles.fullScreenSection}>
+                <div className={styles.backgroundImage} style={{ backgroundImage: 'url(/images/landing/1.png)' }}></div>
+                <div className={styles.overlay}></div>
+                <div className={styles.contentContainer}>
+                    <div className={styles.contentWrapper}>
+                        <div className={styles.textContent}>
+                            <Text variant="h1" className={styles.sectionTitle}>
+                                МИР МОРСКОЙ РЕМИНИСЦЕНЦИИ
                             </Text>
-                            <Text variant="body" className={styles.heroParagraph}>
-                                Но этот мир хранит не только красоту — в его памяти живут отголоски древних конфликтов и загадки, ответ на которые может изменить будущее. Погрузись в мир Морской Реминисценции, чтобы пройти путь рядом с его героями!
-                            </Text>
+                            <div className={styles.textParagraphs}>
+                                <Text variant="body" className={styles.paragraph}>
+                                    Океаны и моря разделяют материки, а под их гладью скрываются бескрайние просторы. Величественные горы на суше соседствуют с темными глубинами под водой. Здесь живут чешуйчатые создания — от гордых драконов до скрытных виверн.
+                                </Text>
+                                <Text variant="body" className={styles.paragraph}>
+                                    Но этот мир хранит не только красоту — в его памяти живут отголоски древних конфликтов и загадки, ответ на которые может изменить будущее. Погрузись в мир Морской Реминисценции, чтобы пройти путь рядом с его героями!
+                                </Text>
+                            </div>
                         </div>
-                    </div>
-                    <div className={styles.heroImage}>
-                        <img src="/images/landing/1.png" alt="Дракон" />
                     </div>
                 </div>
             </section>
 
             {/* История Альтумара */}
-            <section className={styles.altumarSection}>
-                <div className={styles.altumarContent}>
-                    <div className={styles.altumarComics}>
-                        <img src="/images/landing/2.png" alt="Комиксы" />
-                    </div>
-                    <div className={styles.altumarText}>
-                        <Text variant="h1" className={styles.sectionTitle}>
-                            ИСТОРИЯ АЛЬТУМАРА
-                        </Text>
-                        <Text variant="body" className={styles.sectionParagraph}>
-                            В мире, где океаны скрывают тайны прошлого, а суша окутана мифами, начинается история Великого путешествия. Альтумар, рожденный во времена Второго Тягуна, знал лишь глубины и легенды о суше. Но когда воды стихли, ему выпал шанс подняться на поверхность — туда, где реальность оказывается куда жестче сказок.
-                        </Text>
-                        <Button 
-                            onClick={() => navigate('/comic')}
-                            className={styles.readButton}
-                        >
-                            Читать комикс
-                        </Button>
+            <section className={styles.fullScreenSection}>
+                <div className={styles.backgroundImage} style={{ backgroundImage: 'url(/images/landing/2.png)' }}></div>
+                <div className={styles.overlay}></div>
+                <div className={styles.contentContainer}>
+                    <div className={styles.contentWrapper}>
+                        <div className={styles.textContent}>
+                            <Text variant="h1" className={styles.sectionTitle}>
+                                ИСТОРИЯ АЛЬТУМАРА
+                            </Text>
+                            <Text variant="body" className={styles.paragraph}>
+                                В мире, где океаны скрывают тайны прошлого, а суша окутана мифами, начинается история Великого путешествия. Альтумар, рожденный во времена Второго Тягуна, знал лишь глубины и легенды о суше. Но когда воды стихли, ему выпал шанс подняться на поверхность — туда, где реальность оказывается куда жестче сказок.
+                            </Text>
+                            <Button 
+                                onClick={() => navigate('/comic')}
+                                className={styles.actionButton}
+                            >
+                                Читать комикс
+                            </Button>
+                        </div>
                     </div>
                 </div>
             </section>
 
             {/* Еще больше о сеттинге */}
-            <section className={styles.settingSection}>
-                <div className={styles.settingBackground}>
-                    <img src="/images/landing/3.png" alt="Фон" className={styles.settingBgImage} />
-                </div>
-                <div className={styles.settingContent}>
-                    <Text variant="h1" className={styles.sectionTitle}>
-                        ЕЩЕ БОЛЬШЕ О СЕТТИНГЕ
-                    </Text>
-                    <Text variant="body" className={styles.sectionParagraph}>
-                        За пределами комикса мир Морской Реминисценции живёт своей насыщенной жизнью. В статьях ты найдёшь рассказы о вивернах, их анатомии, культуре, подводных кланах и многом другом, вместе с яркими иллюстрациями!
-                    </Text>
-                    <Button 
-                        onClick={() => navigate('/articles')}
-                        className={styles.articlesButton}
-                    >
-                        К статьям
-                    </Button>
+            <section className={styles.fullScreenSection}>
+                <div className={styles.backgroundImage} style={{ backgroundImage: 'url(/images/landing/3.png)' }}></div>
+                <div className={styles.overlay}></div>
+                <div className={styles.contentContainer}>
+                    <div className={styles.contentWrapper}>
+                        <div className={styles.textContent}>
+                            <Text variant="h1" className={styles.sectionTitle}>
+                                ЕЩЕ БОЛЬШЕ О СЕТТИНГЕ
+                            </Text>
+                            <Text variant="body" className={styles.paragraph}>
+                                За пределами комикса мир Морской Реминисценции живёт своей насыщенной жизнью. В статьях ты найдёшь рассказы о вивернах, их анатомии, культуре, подводных кланах и многом другом, вместе с яркими иллюстрациями!
+                            </Text>
+                            <Button 
+                                onClick={() => navigate('/articles')}
+                                className={styles.actionButton}
+                            >
+                                К статьям
+                            </Button>
+                        </div>
+                    </div>
                 </div>
             </section>
 
             {/* Поддержите автора */}
-            <section className={styles.supportSection}>
-                <div className={styles.supportBackground}>
-                    <img src="/images/landing/3.png" alt="Фон" className={styles.supportBgImage} />
-                </div>
-                <div className={styles.supportContent}>
-                    <Text variant="h1" className={styles.sectionTitle}>
-                        ПОДДЕРЖИТЕ АВТОРА!
-                    </Text>
-                    <Text variant="body" className={styles.sectionParagraph}>
-                        Вы можете поддержать автора, оформив подписку на каналы с эксклюзивными материалами: ранним
-                        доступом к комиксу, иллюстрациями, спидпейнтами. А для особой связи с миром, приобрести
-                        адопт-виверну — собственного персонажа, который станет вашим проводником в сеттинге!
-                    </Text>
-                    <div className={styles.supportCards}>
-                        <div className={styles.supportCard}>
-                            <img src="/images/landing/group1.png" alt="Эксклюзив"/>
-                            <Text variant="h4" className={styles.cardLabel}>
-                                Эксклюзив
+            <section className={styles.fullScreenSection}>
+                <div className={styles.backgroundImage} style={{ backgroundImage: 'url(/images/landing/4.png)' }}></div>
+                <div className={styles.overlay}></div>
+                <div className={styles.contentContainer}>
+                    <div className={styles.contentWrapper}>
+                        <div className={styles.textContent}>
+                            <Text variant="h1" className={styles.sectionTitle}>
+                                ПОДДЕРЖИТЕ АВТОРА!
                             </Text>
-                        </div>
-                        <div className={styles.supportCard}>
-                            <img src="/images/landing/group2.png" alt="Адопты"/>
-                            <Text variant="h4" className={styles.cardLabel}>
-                                Адопты
+                            <Text variant="body" className={styles.paragraph}>
+                                Вы можете поддержать автора, оформив подписку на каналы с эксклюзивными материалами: ранним доступом к комиксу, иллюстрациями, спидпейнтами. А для особой связи с миром, приобрести адопт-виверну — собственного персонажа, который станет вашим проводником в сеттинге!
                             </Text>
-                        </div>
-                        <div className={styles.supportCard}>
-                            <img src="/images/landing/group3.png" alt="Донат"/>
-                            <Text variant="h4" className={styles.cardLabel}>
-                                Донат
+                            <div className={styles.supportCards}>
+                                <div className={styles.supportCard}>
+                                    <img src="/images/landing/group1.png" alt="Эксклюзив" />
+                                    <Text variant="h4" className={styles.cardLabel}>
+                                        Эксклюзив
+                                    </Text>
+                                </div>
+                                <div className={styles.supportCard}>
+                                    <img src="/images/landing/group2.png" alt="Адопты" />
+                                    <Text variant="h4" className={styles.cardLabel}>
+                                        Адопты
+                                    </Text>
+                                </div>
+                                <div className={styles.supportCard}>
+                                    <img src="/images/landing/group3.png" alt="Донат" />
+                                    <Text variant="h4" className={styles.cardLabel}>
+                                        Донат
+                                    </Text>
+                                </div>
+                            </div>
+                            <Text variant="body" className={styles.thankYouText}>
+                                Благодаря вашей поддержке я могу продолжать развивать мир, наполняя его новыми красками. Спасибо!
                             </Text>
+                            <Button
+                                onClick={() => window.open('https://t.me/your_channel', '_blank')}
+                                className={styles.actionButton}
+                                imageSrc="/images/article/community/telegram.svg"
+                            >
+                                Телеграм
+                            </Button>
                         </div>
                     </div>
-                    <Text variant="body" className={styles.thankYouText}>
-                        Благодаря вашей поддержке я могу продолжать развивать мир, наполняя его новыми красками.
-                        Спасибо!
-                    </Text>
-                    <Button
-                        onClick={() => window.open('https://t.me/your_channel', '_blank')}
-                        className={styles.telegramButton}
-                        imageSrc="/images/article/community/telegram.svg"
-                    >
-                        Телеграм
-                    </Button>
                 </div>
             </section>
 
