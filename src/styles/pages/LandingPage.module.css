@@ -43,15 +43,16 @@
     position: relative;
     z-index: 2;
     width: 100%;
-    max-width: 1600px;
     margin: 0 auto;
-    padding: var(--gapx3) var(--non-work-zone);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    padding: var(--gapx3) var(--grid-margin);
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: var(--grid-gutter);
+    box-sizing: border-box;
 }
 
 .contentWrapper {
+    grid-column: 2 / 12;
     width: 100%;
     display: flex;
     align-items: center;
@@ -63,11 +64,13 @@
 }
 
 .fullScreenSection:nth-of-type(3) .contentWrapper {
+    grid-column: 4 / 10;
     justify-content: center;
     text-align: center;
 }
 
 .fullScreenSection:nth-of-type(4) .contentWrapper {
+    grid-column: 4 / 10;
     justify-content: center;
     text-align: center;
 }
@@ -76,7 +79,6 @@
     display: flex;
     flex-direction: column;
     gap: var(--gap);
-    max-width: 600px;
     width: 100%;
 }
 
@@ -214,10 +216,13 @@
     }
 
     .contentContainer {
+        grid-template-columns: 1fr;
         padding: var(--gapx2) var(--non-work-zone);
+        gap: var(--gap);
     }
 
     .contentWrapper {
+        grid-column: 1 / -1;
         justify-content: center !important;
     }
 
@@ -225,11 +230,11 @@
     .fullScreenSection:nth-of-type(3) .contentWrapper,
     .fullScreenSection:nth-of-type(4) .contentWrapper,
     .fullScreenSection:nth-of-type(5) .contentWrapper {
+        grid-column: 1 / -1;
         justify-content: center !important;
     }
 
     .textContent {
-        max-width: 100%;
         width: 100%;
         text-align: center;
     }
@@ -270,13 +275,3 @@
     }
 }
 
-/* Для гипер-широких экранов - увеличиваем максимальную ширину контента */
-@media (min-width: 1400px) {
-    .contentContainer {
-        max-width: 1800px;
-    }
-
-    .textContent {
-        max-width: 700px;
-    }
-}
