@@ -98,22 +98,28 @@ export default function LandingPage() {
                             </Text>
                             <div className={styles.supportCards}>
                                 <div className={styles.supportCard}>
-                                    <img src="/images/landing/group1.png" alt="Эксклюзив" />
-                                    <Text variant="h4" className={styles.cardLabel}>
-                                        Эксклюзив
-                                    </Text>
+                                    <div className={styles.cardImageWrapper}>
+                                        <img src="/images/landing/group1.png" alt="Эксклюзив" />
+                                        <Text variant="h4" className={styles.cardLabel}>
+                                            Эксклюзив
+                                        </Text>
+                                    </div>
                                 </div>
                                 <div className={styles.supportCard}>
-                                    <img src="/images/landing/group2.png" alt="Адопты" />
-                                    <Text variant="h4" className={styles.cardLabel}>
-                                        Адопты
-                                    </Text>
+                                    <div className={styles.cardImageWrapper}>
+                                        <img src="/images/landing/group2.png" alt="Адопты" />
+                                        <Text variant="h4" className={styles.cardLabel}>
+                                            Адопты
+                                        </Text>
+                                    </div>
                                 </div>
                                 <div className={styles.supportCard}>
-                                    <img src="/images/landing/group3.png" alt="Донат" />
-                                    <Text variant="h4" className={styles.cardLabel}>
-                                        Донат
-                                    </Text>
+                                    <div className={styles.cardImageWrapper}>
+                                        <img src="/images/landing/group3.png" alt="Донат" />
+                                        <Text variant="h4" className={styles.cardLabel}>
+                                            Донат
+                                        </Text>
+                                    </div>
                                 </div>
                             </div>
                             <Text variant="body" className={styles.thankYouText}>

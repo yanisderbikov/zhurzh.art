@@ -151,19 +151,21 @@
 .supportCard {
     display: flex;
     flex-direction: column;
-    gap: var(--gapHalf);
     align-items: center;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: var(--border-radius-double);
-    padding: var(--gap);
     flex: 1;
     min-width: 150px;
-    transition: transform 0.3s ease, background 0.3s ease;
+    transition: transform 0.3s ease;
 }
 
 .supportCard:hover {
     transform: translateY(-5px);
-    background: rgba(255, 255, 255, 0.15);
+}
+
+.cardImageWrapper {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .supportCard img {
@@ -171,11 +173,19 @@
     height: auto;
     border-radius: var(--border-radius);
     object-fit: cover;
+    display: block;
 }
 
 .cardLabel {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
     color: #fff;
     text-align: center;
+    padding: var(--gapHalf);
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
 }
 
 .thankYouText {
