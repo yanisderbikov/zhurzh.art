@@ -197,7 +197,7 @@
 /* Footer */
 .footer {
     width: 100%;
-    background-color: #0e3b6e;
+    background-color: #060606;
     padding: var(--gapx3) var(--non-work-zone) var(--gap);
     display: flex;
     flex-direction: column;
