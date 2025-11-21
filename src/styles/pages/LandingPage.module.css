@@ -59,7 +59,14 @@
     justify-content: flex-start;
 }
 
+/* Первый блок: со 2-й колонки до середины (7-я колонка) */
+.fullScreenSection:nth-of-type(1) .contentWrapper {
+    grid-column: 2 / 7;
+}
+
+/* Второй блок: с середины (7-я колонка) до последней (12-я колонка) */
 .fullScreenSection:nth-of-type(2) .contentWrapper {
+    grid-column: 7 / 12;
     justify-content: flex-end;
 }
 
