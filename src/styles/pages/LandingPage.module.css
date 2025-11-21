@@ -90,7 +90,6 @@
 }
 
 .sectionTitle {
-    font-size: 48px;
     line-height: 1.2;
     color: #fff;
 }
@@ -247,7 +246,6 @@
     }
 
     .sectionTitle {
-        font-size: 36px;
         text-align: center;
     }
 
@@ -273,9 +271,6 @@
 }
 
 @media (max-width: 480px) {
-    .sectionTitle {
-        font-size: 28px;
-    }
 
     .contentContainer {
         padding: var(--gap) var(--non-work-zone);

@@ -25,7 +25,6 @@
 }
 
 .mainTitle {
-    font-size: 48px;
     font-weight: 600;
     letter-spacing: 2px;
     color: #ffffff;
@@ -112,9 +111,6 @@
 }
 
 @media (max-width: 1024px) {
-    .mainTitle {
-        font-size: 36px;
-    }
     
     .articleTitle {
         font-size: 28px;
@@ -136,7 +132,6 @@
     }
     
     .mainTitle {
-        font-size: 28px;
         letter-spacing: 1px;
     }
     
@@ -173,9 +168,6 @@
 }
 
 @media (max-width: 480px) {
-    .mainTitle {
-        font-size: 24px;
-    }
     
     .articleTitle {
         font-size: 20px;
