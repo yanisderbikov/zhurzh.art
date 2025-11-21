@@ -90,8 +90,28 @@
 }
 
 .sectionTitle {
-    line-height: 1.2;
     color: #fff;
+}
+
+/* Специфичные стили для заголовков */
+.titleReminiscence {
+    color: #9dcbff;
+    text-shadow: 0 0 30px #0033ff;
+}
+
+.titleAltumar {
+    color: #9db9ff;
+    text-shadow: 0 0 30px #0033ff;
+}
+
+.titleSetting {
+    color: #b29dff;
+    text-shadow: 0 0 30px #0033ff;
+}
+
+.titleSupport {
+    color: #fd9dff;
+    text-shadow: 0 0 30px #5500ff;
 }
 
 .textParagraphs {

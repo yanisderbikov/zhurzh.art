@@ -19,8 +19,8 @@ export default function LandingPage() {
                 <div className={styles.contentContainer}>
                     <div className={styles.contentWrapper}>
                         <div className={styles.textContent}>
-                            <Text variant="h1" className={styles.sectionTitle}>
-                                МИР МОРСКОЙ РЕМИНИСЦЕНЦИИ
+                            <Text variant="h1" className={`${styles.sectionTitle} ${styles.titleReminiscence}`}>
+                                Мир Морской Реминисценции
                             </Text>
                             <div className={styles.textParagraphs}>
                                 <Text variant="body" className={styles.paragraph}>
@@ -42,8 +42,8 @@ export default function LandingPage() {
                 <div className={styles.contentContainer}>
                     <div className={styles.contentWrapper}>
                         <div className={styles.textContent}>
-                            <Text variant="h1" className={styles.sectionTitle}>
-                                ИСТОРИЯ АЛЬТУМАРА
+                            <Text variant="h1" className={`${styles.sectionTitle} ${styles.titleAltumar}`}>
+                                История Альтумара
                             </Text>
                             <Text variant="body" className={styles.paragraph}>
                                 В мире, где океаны скрывают тайны прошлого, а суша окутана мифами, начинается история Великого путешествия. Альтумар, рожденный во времена Второго Тягуна, знал лишь глубины и легенды о суше. Но когда воды стихли, ему выпал шанс подняться на поверхность — туда, где реальность оказывается куда жестче сказок.
@@ -66,8 +66,8 @@ export default function LandingPage() {
                 <div className={styles.contentContainer}>
                     <div className={styles.contentWrapper}>
                         <div className={styles.textContent}>
-                            <Text variant="h1" className={styles.sectionTitle}>
-                                ЕЩЕ БОЛЬШЕ О СЕТТИНГЕ
+                            <Text variant="h1" className={`${styles.sectionTitle} ${styles.titleSetting}`}>
+                                Еще Больше О Сеттинге
                             </Text>
                             <Text variant="body" className={styles.paragraph}>
                                 За пределами комикса мир Морской Реминисценции живёт своей насыщенной жизнью. В статьях ты найдёшь рассказы о вивернах, их анатомии, культуре, подводных кланах и многом другом, вместе с яркими иллюстрациями!
@@ -90,8 +90,8 @@ export default function LandingPage() {
                 <div className={styles.contentContainer}>
                     <div className={styles.contentWrapper}>
                         <div className={styles.textContent}>
-                            <Text variant="h1" className={styles.sectionTitle}>
-                                ПОДДЕРЖИТЕ АВТОРА!
+                            <Text variant="h1" className={`${styles.sectionTitle} ${styles.titleSupport}`}>
+                                Поддержите Автора!
                             </Text>
                             <Text variant="body" className={styles.paragraph}>
                                 Вы можете поддержать автора, оформив подписку на каналы с эксклюзивными материалами: ранним доступом к комиксу, иллюстрациями, спидпейнтами. А для особой связи с миром, приобрести адопт-виверну — собственного персонажа, который станет вашим проводником в сеттинге!
