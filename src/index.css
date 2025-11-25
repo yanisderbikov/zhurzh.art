@@ -21,14 +21,14 @@
   
   /* Grid system: 12 columns */
   --grid-columns: 12;
-  --grid-margin: 60px;
+  --grid-margin: 75px;
   --grid-gutter: 20px;
 }
 
 @media (max-width: 400px) {
   :root {
     --non-work-zone: 16px;
-    --grid-margin: 16px;
+    --grid-margin: 26px;
     --grid-gutter: 16px;
   }
 }
