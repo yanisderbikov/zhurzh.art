@@ -98,40 +98,48 @@ export default function LandingPage() {
                                 Поддержите Автора!
                             </Text>
                             <Text variant="body" className={styles.paragraph}>
-                                Вы можете поддержать автора, оформив подписку на каналы с эксклюзивными материалами: ранним доступом к комиксу, иллюстрациями, спидпейнтами. А для особой связи с миром, приобрести адопт-виверну — собственного персонажа, который станет вашим проводником в сеттинге!
+                                Вы можете поддержать автора, оформив подписку <span style={{ color: '#fd9dff' }}>на каналы</span> с эксклюзивными материалами: ранним доступом к комиксу, иллюстрациями, спидпейнтами. А для особой связи с миром, приобрести <span style={{ color: '#9dcbff' }}>адопт-виверну</span> — собственного персонажа, который станет вашим проводником в сеттинге!
                             </Text>
-                            <div className={styles.supportCards}>
-                                <div className={styles.supportCard}>
-                                    <div className={styles.cardImageWrapper}>
-                                        <img src="/images/landing/group1.png" alt="Эксклюзив" />
-                                        <Text variant="h4" className={styles.cardLabel}>
-                                            Эксклюзив
-                                        </Text>
-                                    </div>
-                                </div>
-                                <div className={styles.supportCard}>
-                                    <div className={styles.cardImageWrapper}>
-                                        <img src="/images/landing/group2.png" alt="Адопты" />
-                                        <Text variant="h4" className={styles.cardLabel}>
-                                            Адопты
-                                        </Text>
-                                    </div>
-                                </div>
-                                <div className={styles.supportCard}>
-                                    <div className={styles.cardImageWrapper}>
-                                        <img src="/images/landing/group3.png" alt="Донат" />
-                                        <Text variant="h4" className={styles.cardLabel}>
-                                            Донат
-                                        </Text>
-                                    </div>
+                        </div>
+                    </div>
+                    <div className={styles.supportCardsWrapper}>
+                        <div className={styles.supportCards}>
+                            <div className={styles.supportCard}>
+                                <div className={styles.cardImageWrapper}>
+                                    <img src="/images/landing/group1.png" alt="Эксклюзив" />
+                                    <Text variant="h4" className={styles.cardLabel} color={'#99ECFF'}>
+                                        Эксклюзив
+                                    </Text>
                                 </div>
                             </div>
-                            <Text variant="body" className={styles.thankYouText}>
-                                Благодаря вашей поддержке я могу продолжать развивать мир, наполняя его новыми красками. Спасибо!
-                            </Text>
+                            <div className={styles.supportCard}>
+                                <div className={styles.cardImageWrapper}>
+                                    <img src="/images/landing/group2.png" alt="Адопты" />
+                                    <Text variant="h4" className={styles.cardLabel} color={'#99ECFF'}>
+                                        Адопты
+                                    </Text>
+                                </div>
+                            </div>
+                            <div className={styles.supportCard}>
+                                <div className={styles.cardImageWrapper}>
+                                    <img src="/images/landing/group3.png" alt="Донат" />
+                                    <Text variant="h4" className={styles.cardLabel} color={'#99ECFF'}>
+                                        Донат
+                                    </Text>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className={styles.thankYouWrapper}>
+                        <Text variant="body" className={styles.thankYouText} color={'#81a9d8'}>
+                            Благодаря вашей поддержке я могу развивать мир, наполняя его новыми красками. Спасибо!
+                        </Text>
+                    </div>
+                    <div className={styles.contentWrapper}>
+                        <div className={styles.textContent}>
                             <div className={styles.buttonWrapper}>
                                 <Button
-                                    onClick={() => window.open('https://t.me/your_channel', '_blank')}
+                                    onClick={() => window.open('https://t.me/ZhurzhArt', '_blank')}
                                     className={styles.actionButton}
                                     imageSrc="/images/article/community/telegram.svg"
                                 >
