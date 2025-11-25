@@ -48,12 +48,14 @@ export default function LandingPage() {
                             <Text variant="body" className={styles.paragraph}>
                                 В мире, где океаны скрывают тайны прошлого, а суша окутана мифами, начинается история Великого путешествия. Альтумар, рожденный во времена Второго Тягуна, знал лишь глубины и легенды о суше. Но когда воды стихли, ему выпал шанс подняться на поверхность — туда, где реальность оказывается куда жестче сказок.
                             </Text>
-                            <Button 
-                                onClick={() => navigate('/comic')}
-                                className={styles.actionButton}
-                            >
-                                Читать комикс
-                            </Button>
+                            <div className={styles.buttonWrapper}>
+                                <Button 
+                                    onClick={() => navigate('/comic')}
+                                    className={styles.actionButton}
+                                >
+                                    Читать комикс
+                                </Button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -72,12 +74,14 @@ export default function LandingPage() {
                             <Text variant="body" className={styles.paragraph}>
                                 За пределами комикса мир Морской Реминисценции живёт своей насыщенной жизнью. В статьях ты найдёшь рассказы о вивернах, их анатомии, культуре, подводных кланах и многом другом, вместе с яркими иллюстрациями!
                             </Text>
-                            <Button 
-                                onClick={() => navigate('/articles')}
-                                className={styles.actionButton}
-                            >
-                                К статьям
-                            </Button>
+                            <div className={styles.buttonWrapper}>
+                                <Button 
+                                    onClick={() => navigate('/articles')}
+                                    className={styles.actionButton}
+                                >
+                                    К статьям
+                                </Button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -125,13 +129,15 @@ export default function LandingPage() {
                             <Text variant="body" className={styles.thankYouText}>
                                 Благодаря вашей поддержке я могу продолжать развивать мир, наполняя его новыми красками. Спасибо!
                             </Text>
-                            <Button
-                                onClick={() => window.open('https://t.me/your_channel', '_blank')}
-                                className={styles.actionButton}
-                                imageSrc="/images/article/community/telegram.svg"
-                            >
-                                Телеграм
-                            </Button>
+                            <div className={styles.buttonWrapper}>
+                                <Button
+                                    onClick={() => window.open('https://t.me/your_channel', '_blank')}
+                                    className={styles.actionButton}
+                                    imageSrc="/images/article/community/telegram.svg"
+                                >
+                                    Телеграм
+                                </Button>
+                            </div>
                         </div>
                     </div>
                 </div>

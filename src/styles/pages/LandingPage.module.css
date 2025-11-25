@@ -130,12 +130,26 @@
     line-height: 1.6;
 }
 
+.buttonWrapper {
+    margin-top: 10px;
+}
+
 .actionButton {
     align-self: flex-start;
 }
 
+.fullScreenSection:nth-of-type(3) .buttonWrapper {
+    display: flex;
+    justify-content: center;
+}
+
 .fullScreenSection:nth-of-type(3) .actionButton {
     align-self: center;
+}
+
+.fullScreenSection:nth-of-type(4) .buttonWrapper {
+    display: flex;
+    justify-content: center;
 }
 
 .fullScreenSection:nth-of-type(4) .actionButton {
