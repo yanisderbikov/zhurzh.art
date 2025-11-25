@@ -66,6 +66,7 @@
 .fullScreenSection:nth-of-type(2) .contentWrapper {
     grid-column: 7 / 12;
     justify-content: flex-end;
+    transform: translateY(-100px);
 }
 
 .fullScreenSection:nth-of-type(3) .contentWrapper {
