@@ -35,10 +35,9 @@
 
 .pagesGrid {
     display: grid;
-    grid-template-columns: repeat(10, 1fr);
-    gap: 15px;
-    width: 100%;
-    max-width: 900px;
+    grid-template-columns: repeat(10, auto);
+    gap: 0;
+    width: auto;
     margin-bottom: var(--gapx2);
 }
 
@@ -50,7 +49,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0;
+    padding: var(--gapHalf);
 }
 
 .pageButton:hover {
@@ -93,8 +92,8 @@
 
 @media (max-width: 768px) {
     .pagesGrid {
-        grid-template-columns: repeat(5, 1fr);
-        gap: 10px;
+        grid-template-columns: repeat(5, auto);
+        gap: 0;
     }
 
     .title {
@@ -112,8 +111,8 @@
 
 @media (max-width: 480px) {
     .pagesGrid {
-        grid-template-columns: repeat(5, 1fr);
-        gap: 8px;
+        grid-template-columns: repeat(5, auto);
+        gap: 0;
     }
 
     .pageNumber {
