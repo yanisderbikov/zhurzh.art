@@ -10,6 +10,10 @@ import ArticlesPage from './components/pages/ArticlesPage.jsx';
 import ArticleCommunity from './components/pages/articles/ArticleCommunity.jsx';
 import ArticleWhoAreThey from './components/pages/articles/ArticleWhoAreThey.jsx';
 import PageNotFound from './components/pages/PageNotFound.jsx';
+import ComicPage from './components/pages/comic/ComicPage.jsx';
+import ComicArchive from './components/pages/comic/ComicArchive.jsx';
+import ComicViewer from './components/pages/comic/ComicViewer.jsx';
+import ExploreMorePage from './components/pages/comic/ExploreMorePage.jsx';
 
 export default function App() {
     return (
@@ -20,6 +24,10 @@ export default function App() {
                 <Route path="/articles" element={<ArticlesPage/>}/>
                 <Route path="/articles/community" element={<ArticleCommunity/>}/>
                 <Route path="/articles/whoAreThey" element={<ArticleWhoAreThey/>}/>
+                <Route path="/comic" element={<ComicPage/>}/>
+                <Route path="/comic/archive" element={<ComicArchive/>}/>
+                <Route path="/comic/:pageId" element={<ComicViewer/>}/>
+                <Route path="/explore-more" element={<ExploreMorePage/>}/>
                 <Route path="*" element={<PageNotFound/>}/>
             </Routes>
         </Router>
