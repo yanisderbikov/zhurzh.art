@@ -2,13 +2,20 @@ import React, { useState, useEffect, useRef } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import styles from '../../../styles/pages/comic/ComicViewer.module.css';
 import Text from '../../common/Text.jsx';
-import { getPageInfo } from '../../../services/comicService.js';
+import { 
+    getPageInfo, 
+    findNextPublicPage, 
+    findPrevPublicPage, 
+    findLastPublicPage 
+} from '../../../services/comicService.js';
 
 export default function ComicViewer() {
     const { pageId } = useParams();
     const navigate = useNavigate();
     const [pageInfo, setPageInfo] = useState(null);
     const [loading, setLoading] = useState(true);
+    const [hasNextPage, setHasNextPage] = useState(false);
+    const [hasPrevPage, setHasPrevPage] = useState(false);
     const imageRef = useRef(null);
     const containerRef = useRef(null);
 
@@ -87,6 +94,13 @@ export default function ComicViewer() {
             }
             
             setPageInfo(info);
+            
+            // Проверяем наличие следующей и предыдущей публичных страниц
+            const nextPage = await findNextPublicPage(pageIndex);
+            const prevPage = await findPrevPublicPage(pageIndex);
+            
+            setHasNextPage(nextPage !== null);
+            setHasPrevPage(prevPage !== null);
         } catch (error) {
             console.error('Ошибка загрузки страницы:', error);
         } finally {
@@ -101,19 +115,25 @@ export default function ComicViewer() {
         if (direction === 'first') {
             newPage = 1;
         } else if (direction === 'prev') {
-            newPage = Math.max(1, currentPage - 1);
+            // Ищем предыдущую публичную страницу
+            const prevPage = await findPrevPublicPage(currentPage);
+            if (prevPage === null) {
+                // Если предыдущей публичной страницы нет, остаемся на текущей
+                return;
+            }
+            newPage = prevPage;
         } else if (direction === 'next') {
-            newPage = currentPage + 1;
-            // Проверяем доступность следующей страницы
-            const nextPageInfo = await getPageInfo(newPage);
-            if (!nextPageInfo.public) {
+            // Ищем следующую публичную страницу
+            const nextPage = await findNextPublicPage(currentPage);
+            if (nextPage === null) {
+                // Если следующей публичной страницы нет, переходим на explore-more
                 navigate('/explore-more');
                 return;
             }
+            newPage = nextPage;
         } else if (direction === 'last') {
-            // Переходим на последнюю публичную страницу (40)
-            // В будущем получим с бэка
-            newPage = 40;
+            // Находим последнюю публичную страницу
+            newPage = await findLastPublicPage();
         }
         
         navigate(`/comic/${newPage}`);
@@ -168,7 +188,7 @@ export default function ComicViewer() {
                     <button
                         className={styles.navButton}
                         onClick={() => handleNavigation('prev')}
-                        disabled={pageInfo.index === 1}
+                        disabled={!hasPrevPage}
                     >
                         <Text variant="body" color="#92c5ff">НАЗАД</Text>
                     </button>
@@ -183,7 +203,6 @@ export default function ComicViewer() {
                     <button
                         className={styles.navButton}
                         onClick={() => handleNavigation('next')}
-                        disabled={pageInfo.index >= 40} // До 40 страницы доступны
                     >
                         <Text variant="body" color="#92c5ff">ДАЛЬШЕ</Text>
                     </button>

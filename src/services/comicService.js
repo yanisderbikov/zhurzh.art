@@ -60,3 +60,54 @@ export async function getAllPagesInfo() {
     
     return Promise.resolve(pages);
 }
+
+/**
+ * Найти следующую публичную страницу начиная с указанного индекса
+ * @param {number} startIndex - индекс страницы, с которой начинать поиск
+ * @returns {Promise<number|null>} - индекс следующей публичной страницы или null, если не найдена
+ */
+export async function findNextPublicPage(startIndex) {
+    const totalPages = await getTotalPages();
+    
+    for (let i = startIndex + 1; i <= totalPages; i++) {
+        const pageInfo = await getPageInfo(i);
+        if (pageInfo.public) {
+            return i;
+        }
+    }
+    
+    return null;
+}
+
+/**
+ * Найти предыдущую публичную страницу начиная с указанного индекса
+ * @param {number} startIndex - индекс страницы, с которой начинать поиск
+ * @returns {Promise<number|null>} - индекс предыдущей публичной страницы или null, если не найдена
+ */
+export async function findPrevPublicPage(startIndex) {
+    for (let i = startIndex - 1; i >= 1; i--) {
+        const pageInfo = await getPageInfo(i);
+        if (pageInfo.public) {
+            return i;
+        }
+    }
+    
+    return null;
+}
+
+/**
+ * Найти последнюю публичную страницу
+ * @returns {Promise<number>} - индекс последней публичной страницы
+ */
+export async function findLastPublicPage() {
+    const totalPages = await getTotalPages();
+    
+    for (let i = totalPages; i >= 1; i--) {
+        const pageInfo = await getPageInfo(i);
+        if (pageInfo.public) {
+            return i;
+        }
+    }
+    
+    return 1; // Fallback на первую страницу
+}
