@@ -1,0 +1,201 @@
+/* ==== Общая обёртка ==== */
+.wrapper {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    color: #fff;
+    background-color: #0a0e1a;
+    background-image: 
+        radial-gradient(circle at 20% 50%, rgba(30, 50, 100, 0.3) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(20, 30, 60, 0.3) 0%, transparent 50%);
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 20px 60px;
+    text-align: center;
+}
+
+.mainTitle {
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 1400px;
+    padding: 0 40px 80px;
+    gap: 60px;
+}
+
+.articleCard {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 60px;
+    cursor: pointer;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    padding: 40px;
+    border-radius: 12px;
+    overflow: hidden;
+    min-height: 400px;
+}
+
+.articleCard:hover {
+    opacity: 0.9;
+    transform: translateY(-5px);
+}
+
+.articleCard.left {
+    flex-direction: row;
+    text-align: left;
+}
+
+.articleCard.left .articleContent {
+    max-width: 50%;
+}
+
+.articleCard.right {
+    flex-direction: row-reverse;
+    text-align: right;
+}
+
+.articleCard.right .articleContent {
+    max-width: 50%;
+}
+
+.articleContent {
+    position: relative;
+    z-index: 2;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    min-width: 0;
+}
+
+.articleTitle {
+    font-size: 36px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #ffffff;
+    text-transform: uppercase;
+    line-height: 1.2;
+    margin: 0;
+}
+
+.articleDescription {
+    font-size: 18px;
+    font-weight: 400;
+    color: #ffffff;
+    line-height: 1.6;
+    opacity: 0.9;
+    margin: 0;
+}
+
+.articleImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.previewImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+@media (max-width: 1024px) {
+    
+    .articleTitle {
+        font-size: 28px;
+    }
+    
+    .articleDescription {
+        font-size: 16px;
+    }
+    
+    .articleCard {
+        gap: 40px;
+        padding: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 60px 20px 40px;
+    }
+    
+    .mainTitle {
+        letter-spacing: 1px;
+    }
+    
+    .container {
+        padding: 0 20px 60px;
+        gap: 40px;
+    }
+    
+    .articleCard {
+        flex-direction: column !important;
+        text-align: center !important;
+        gap: 30px;
+        padding: 20px;
+        min-height: 300px;
+    }
+    
+    .articleCard.left,
+    .articleCard.right {
+        flex-direction: column;
+    }
+    
+    .articleCard.left .articleContent,
+    .articleCard.right .articleContent {
+        max-width: 100%;
+    }
+    
+    .articleTitle {
+        font-size: 24px;
+        text-align: center;
+    }
+    
+    .articleDescription {
+        font-size: 15px;
+        text-align: center;
+    }
+    
+    .previewImage {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    
+    .articleTitle {
+        font-size: 20px;
+    }
+    
+    .articleDescription {
+        font-size: 14px;
+    }
+}

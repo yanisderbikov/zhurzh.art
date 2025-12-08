@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400&display=swap');
 
 :root {
   --gold: #E6C196;
@@ -17,15 +17,77 @@
 
 :root {
   --non-work-zone: 32px;
+  --header-height: 70px;
+  
+  /* Grid system: 12 columns */
+  --grid-columns: 12;
+  --grid-margin: 75px;
+  --grid-gutter: 20px;
 }
 
 @media (max-width: 400px) {
   :root {
     --non-work-zone: 16px;
+    --grid-margin: 26px;
+    --grid-gutter: 16px;
   }
 }
 *,
 *::before,
 *::after { box-sizing:border-box; margin:0; padding:0; }
 
-html, body { width:100%; height:100%; font-family:"Montserrat",sans-serif; }
+html, body { width:100%; height:100%; font-family:'Merriweather', serif; background-color: #0c0e2a; }
+
+/* Grid system container */
+.gridContainer {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: var(--grid-gutter);
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    padding-left: var(--grid-margin);
+    padding-right: var(--grid-margin);
+    box-sizing: border-box;
+}
+
+/* Article text: 8 columns (2 columns offset on each side) */
+.articleText {
+    grid-column: 3 / 11;
+}
+
+/* Article images: 10 columns (1 column offset on each side) */
+.articleImage {
+    grid-column: 2 / 12;
+}
+
+/* Landing text: 10 columns (1 column offset on each side) */
+.landingText {
+    grid-column: 2 / 12;
+}
+
+/* Landing centered text: 6 columns */
+.landingTextCenter {
+    grid-column: 4 / 10;
+}
+
+/* Mobile: full width */
+@media (max-width: 768px) {
+    .gridContainer {
+        grid-template-columns: 1fr;
+        gap: var(--gap);
+        padding-left: var(--non-work-zone);
+        padding-right: var(--non-work-zone);
+    }
+    
+    .articleText,
+    .articleImage,
+    .landingText,
+    .landingTextCenter {
+        grid-column: 1 / -1;
+    }
+}
+
+/*body {*/
+/*  padding-top: var(--header-height);*/
+/*}*/

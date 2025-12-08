@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@400;600&family=Spectral+SC:wght@400&display=swap');
+
+.primary {
+    cursor: pointer;
+    background: linear-gradient(to bottom, #9f546a, #544691);
+    box-shadow: 2px 2px 4px #0000004d;
+    border-radius: 10px;
+    padding: 45px 170px;
+    width: fit-content;
+    display: flex;
+    
+    font-family: "Source Serif Pro", serif;
+    font-size: 20px;
+
+    flex-direction: column;
+    align-items: center;
+    transition: color .8s ease, transform .1s ease;
+}
+
+.primary:hover {
+    transform: translateY(5px);
+    background: linear-gradient(to bottom, #7b3f54, #3e336e);
+}
+
+.primary:active {
+    background: linear-gradient(to bottom, #95556c, #4f4482);
+}

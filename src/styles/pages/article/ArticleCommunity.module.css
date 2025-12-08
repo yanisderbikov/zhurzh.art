@@ -23,15 +23,14 @@
 }
 
 .content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: var(--grid-gutter);
     width: 100%;
-    gap: var(--gap);
-    max-width: 800px;
-
-    padding: 0 var(--non-work-zone) var(--gapx2);
+    max-width: 100%;
+    padding: 0 var(--grid-margin) var(--gapx2);
     padding-top: 600px; /* дефолт для десктопа */
+    box-sizing: border-box;
 }
 
 /* === Адаптивная настройка отступа сверху === */
@@ -77,31 +76,33 @@
     }
 }
 .main {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    padding: 0 var(--non-work-zone) 0 var(--non-work-zone);
-    gap: var(--gap);
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: var(--grid-gutter);
+    padding: 0 var(--grid-margin);
     width: 100%;
-    max-width: 800px;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 .image {
-    display: flex;
+    grid-column: 2 / 12;
     width: 100%;
     padding-top: var(--gapHalf);
 }
 
 .imageNoGap {
-    display: flex;
+    grid-column: 2 / 12;
     width: 100%;
 }
 
 .alignCenterText {
+    grid-column: 3 / 11;
     text-align: center;
 }
 
 .alignJustifiedText {
+    grid-column: 3 / 11;
     text-align: justify;
 }
 
@@ -111,22 +112,26 @@
 }
 
 .halfContainer {
+    grid-column: 3 / 11;
     display: flex;
     flex-direction: column;
     max-width: 400px;
     gap: var(--gapHalf);
+    justify-self: center;
 }
 
 .rowToColumn {
+    grid-column: 3 / 11;
     display: flex;
     flex-direction: row;
     gap: var(--gapx3);
-    /*width: 100%;*/
+    width: 100%;
 }
 
 .ass {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: var(--grid-gutter);
 
     background-image:
             linear-gradient(
@@ -142,17 +147,16 @@
 
     width: 100%;
     min-height: 500px;
-    align-items: center;
-    padding: var(--gap) var(--non-work-zone) 0 var(--non-work-zone);
+    padding: var(--gap) var(--grid-margin) 0 var(--grid-margin);
 
     background-color: #232835; /* Подложка под тем, где нет картинки */
 }
 
 .assIn {
+    grid-column: 3 / 11;
     display: flex;
     flex-direction: column;
     gap: var(--gapx2);
-    max-width: 800px;
     justify-content: flex-end;
     align-items: center;
     height: 100%;
@@ -160,9 +164,9 @@
 }
 
 .imageButton {
+    grid-column: 2 / 12;
     padding-top: var(--gapHalf);
     width: 100%;
-    /*max-width: 1000px;*/
     overflow: hidden;
 }
 
@@ -179,14 +183,17 @@
 }
 
 .footer {
-    padding: var(--gapx2) var(--non-work-zone) var(--gap) var(--non-work-zone);
-    display: flex;
-    flex-direction: column;
-    gap: var(--gap);
-    max-width: 800px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: var(--grid-gutter);
+    padding: var(--gapx2) var(--grid-margin) var(--gap) var(--grid-margin);
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 .buttonSubscribeWrapper {
+    grid-column: 3 / 11;
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -206,6 +213,23 @@
     }
 }
 
+@media (max-width: 768px) {
+    .content,
+    .main {
+        grid-template-columns: 1fr;
+        padding-left: var(--non-work-zone);
+        padding-right: var(--non-work-zone);
+    }
+    
+    .alignCenterText,
+    .alignJustifiedText,
+    .halfContainer,
+    .image,
+    .imageNoGap {
+        grid-column: 1 / -1;
+    }
+}
+
 @media (max-width: 400px) {
     .container {
         background-size: 100% auto;
@@ -217,11 +241,11 @@
     }
 
     .image {
-        width: 100vw;
+        width: 100%;
     }
 
     .imageNoGap {
-        width: 100vw;
+        width: 100%;
     }
 
     .ass {
@@ -234,7 +258,7 @@
 
     .imageButton {
         height: fit-content;
-        width: 100vw;
+        width: 100%;
         display: block;
     }
 }

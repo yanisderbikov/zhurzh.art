@@ -5,7 +5,7 @@ import styles from '../../styles/common/Text.module.css';
  * Text component
  *
  * @param {ReactNode} children – содержимое
- * @param {'h1'|'h2'|'h4'|'body'|'sign'|'button'} variant – тип текста (по-умолчанию 'body')
+ * @param {'h1'|'h2'|'h3'|'h4'|'body'|'bodyLarge'|'button'|'interaction'|'sign'} variant – тип текста (по-умолчанию 'body')
  * @param {string} color – произвольный цвет (любая CSS-строка)
  * @param {boolean} italic – курсив?
  * @param {number|string} indent – отступ первой строки (например 24 или '2em'). Если не указан, отступ не применяется.
@@ -29,9 +29,11 @@ export default function Text({
                 ? 'h1'
                 : variant === 'h2'
                     ? 'h2'
-                    : variant === 'h4'
-                        ? 'h4'
-                        : 'p';
+                    : variant === 'h3'
+                        ? 'h3'
+                        : variant === 'h4'
+                            ? 'h4'
+                            : 'p';
 
     const computedIndent =
         indent === undefined || indent === null
