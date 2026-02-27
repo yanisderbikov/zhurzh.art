@@ -1,47 +1,45 @@
 import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import styles from '../../styles/common/Header.module.css';
 import Text from './Text.jsx';
+import { useLocale } from '../../context/LocaleContext.jsx';
+import { headerTranslations } from '../../locales/landing.js';
 
 export default function Header() {
-    const location = useLocation();
+    const { isRu } = useLocale();
+    const t = headerTranslations[isRu ? 'ru' : 'en'];
 
-    const navLinks = [
-        { path: '/comic', label: 'Комикс' },
-        { path: '/articles', label: 'Статьи' },
-        { path: '/map', label: 'Карта мира' },
-        { path: '/characters', label: 'Персонажи' },
-        { path: '/about', label: 'Об авторе' },
-    ];
-
-    const isActive = (path) => {
-        if (path === '/') {
-            return location.pathname === '/';
-        }
-        return location.pathname === path || location.pathname.startsWith(path + '/');
-    };
+    const navLinks = isRu
+        ? [
+            { label: t.comic, href: 'https://t.me/ZhurzhArt/30' },
+            { label: t.articles, href: 'https://t.me/ZhurzhArt/30' },
+        ]
+        : [
+            { label: t.comic, href: 'https://www.patreon.com/collection/39648' },
+            { label: t.articles, href: 'https://www.patreon.com/collection/783458' },
+        ];
 
     return (
         <header className={styles.header}>
             <div className={styles.container}>
                 <Link to="/" className={styles.title}>
                     <Text variant="h3" color="#92c5ff" style={{ fontSize: '18px' }}>
-                        МОРСКАЯ РЕМИНИСЦЕНЦИЯ
+                        {t.siteTitle}
                     </Text>
                 </Link>
                 <nav className={styles.nav}>
                     {navLinks.map((link) => (
-                        <Link
-                            key={link.path}
-                            to={link.path}
-                            className={`${styles.navLink} ${
-                                isActive(link.path) ? styles.active : ''
-                            }`}
+                        <a
+                            key={link.href + link.label}
+                            href={link.href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className={styles.navLink}
                         >
                             <Text variant="body" color="#92c5ff">
                                 {link.label}
                             </Text>
-                        </Link>
+                        </a>
                     ))}
                 </nav>
             </div>
