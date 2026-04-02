@@ -12,7 +12,13 @@ export default function ArticlesPage() {
             description:
                 'Общая характеристика, внешность, устройство жизни, общины.',
             image: 'https://storage.yandexcloud.net/zhurzh/articles/main/1.png',
-            path: '/articles/whoAreThey'
+            path: '/articles/whoAreThey',
+            /** Цвет заголовка и описания на карточке */
+            textColor: '#9dcbff',
+            /** Подсветка только у заголовка (полное значение text-shadow) */
+            titleGlow: '0 0 30px #0033ff',
+            /** 'left' | 'right' — выравнивание заголовка и описания на карточке */
+            textAlign: 'left'
         },
         {
             id: 'community',
@@ -20,7 +26,10 @@ export default function ArticlesPage() {
             description:
                 'Понятие взаимоотношений складывается у виверны с детства, что во многом определяет её дальнейшую роль в обществе.',
             image: 'https://storage.yandexcloud.net/zhurzh/articles/main/2.png',
-            path: '/articles/community'
+            path: '/articles/community',
+            textColor: '#9db9ff',
+            titleGlow: '0 0 30px #0033ff',
+            textAlign: 'right'
         }
     ];
 
@@ -48,6 +57,10 @@ export default function ArticlesPage() {
                     <li key={article.id} className={styles.listItem}>
                         <article
                             className={styles.card}
+                            style={{
+                                '--article-text-color': article.textColor,
+                                '--article-title-glow': article.titleGlow
+                            }}
                             tabIndex={0}
                             onClick={() => go(article.path)}
                             onKeyDown={(e) => {
@@ -63,7 +76,13 @@ export default function ArticlesPage() {
                                     alt=""
                                     className={styles.cardImage}
                                 />
-                                <div className={styles.cardContent}>
+                                <div
+                                    className={`${styles.cardContent} ${
+                                        article.textAlign === 'right'
+                                            ? styles.cardContentRight
+                                            : styles.cardContentLeft
+                                    }`}
+                                >
                                     <Text variant={'h2'} className={styles.cardTitle}>
                                         {article.title}
                                     </Text>
