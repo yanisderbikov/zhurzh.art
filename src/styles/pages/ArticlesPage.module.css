@@ -31,7 +31,7 @@
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     gap: var(--grid-gutter);
-    padding: 0 var(--grid-margin);
+    padding: 0 calc(var(--grid-margin) * 2);
     box-sizing: border-box;
 }
 
@@ -139,7 +139,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
-    padding: 20px var(--grid-margin) 22px;
+    padding: 20px calc(var(--grid-margin) * 2) 22px;
     box-sizing: border-box;
     column-gap: 0;
     min-width: 0;
@@ -202,7 +202,7 @@
     }
 
     .headerGrid {
-        padding: 0 var(--non-work-zone);
+        padding: 0 calc(var(--non-work-zone) * 2);
         grid-template-columns: 1fr;
     }
 
@@ -220,7 +220,7 @@
     }
 
     .cardContent {
-        padding: 16px var(--non-work-zone) 18px;
+        padding: 16px calc(var(--non-work-zone) * 2) 18px;
     }
 
     .card .cardDescription {
