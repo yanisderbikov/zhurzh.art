@@ -20,15 +20,43 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 80px 20px 60px;
+    padding: 80px 0 60px;
     text-align: center;
 }
 
-.mainTitle {
+/* Как на лендинге: 12-колоночная сетка, текст по центру (колонки 4–10) */
+.headerGrid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: var(--grid-gutter);
+    padding: 0 var(--grid-margin);
+    box-sizing: border-box;
+}
+
+.headerTextColumn {
+    grid-column: 4 / 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--gap);
+    width: 100%;
+    text-align: center;
+}
+
+.headerTextColumn .mainTitle {
     font-weight: 600;
     letter-spacing: 2px;
-    color: #ffffff;
+    color: #9dcbff;
+    text-shadow: 0 0 30px #0033ff;
     text-transform: uppercase;
+}
+
+.intro {
+    color: #fff;
+    line-height: 1.6;
+    margin: 0;
+    max-width: 100%;
 }
 
 .container {
@@ -144,10 +172,19 @@
 
 @media (max-width: 768px) {
     .header {
-        padding: 60px 20px 40px;
+        padding: 60px 0 40px;
+    }
+
+    .headerGrid {
+        padding: 0 var(--non-work-zone);
+        grid-template-columns: 1fr;
+    }
+
+    .headerTextColumn {
+        grid-column: 1 / -1;
     }
     
-    .mainTitle {
+    .headerTextColumn .mainTitle {
         letter-spacing: 1px;
     }
     

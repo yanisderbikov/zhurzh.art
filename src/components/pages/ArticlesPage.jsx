@@ -31,7 +31,16 @@ export default function ArticlesPage() {
     return (
         <section className={styles.wrapper}>
             <div className={styles.header}>
-                <Text variant={'h1'} children={'БОЛЬШЕ О МИРЕ'} className={styles.mainTitle}/>
+                <div className={styles.headerGrid}>
+                    <div className={styles.headerTextColumn}>
+                        <Text variant={'h1'} children={'БОЛЬШЕ О МИРЕ'} className={styles.mainTitle}/>
+                        <Text variant={'body'} className={styles.intro}>
+                            За пределами комикса мир Морской Реминисценции живёт своей насыщенной жизнью. В статьях вы
+                            найдете рассказы о вивернах, их анатомии, культуре, подводных кланах и многом другом,
+                            вместе с яркими иллюстрациями!
+                        </Text>
+                    </div>
+                </div>
             </div>
             <div className={styles.container}>
                 {articles.map((article) => (
