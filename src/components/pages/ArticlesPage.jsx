@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import styles from '../../styles/pages/ArticlesPage.module.css';
-import Text from "../common/Text.jsx";
+import Text from '../common/Text.jsx';
 
 export default function ArticlesPage() {
     const navigate = useNavigate();
@@ -9,22 +9,22 @@ export default function ArticlesPage() {
         {
             id: 'whoAreThey',
             title: 'ГЛУБОКОВОДНЫЕ ВИВЕРНЫ',
-            description: 'Общая характеристика, внешность, устройство жизни, общины.',
-            image: '/images/article/preview/preview 1.png',
-            path: '/articles/whoAreThey',
-            align: 'left'
+            description:
+                'Общая характеристика, внешность, устройство жизни, общины.',
+            image: 'https://storage.yandexcloud.net/zhurzh/articles/main/1.png',
+            path: '/articles/whoAreThey'
         },
         {
             id: 'community',
             title: 'УСТРОЙСТВО ОБЩИН',
-            description: 'Понятие взаимоотношений складывается у виверны с детства, что во многом определяет её дальнейшую роль в обществе.',
-            image: '/images/article/preview/preview 2.png',
-            path: '/articles/community',
-            align: 'right'
+            description:
+                'Понятие взаимоотношений складывается у виверны с детства, что во многом определяет её дальнейшую роль в обществе.',
+            image: 'https://storage.yandexcloud.net/zhurzh/articles/main/2.png',
+            path: '/articles/community'
         }
     ];
 
-    const handleArticleClick = (path) => {
+    const go = (path) => {
         navigate(path);
     };
 
@@ -42,33 +42,40 @@ export default function ArticlesPage() {
                     </div>
                 </div>
             </div>
-            <div className={styles.container}>
+
+            <ul className={styles.list}>
                 {articles.map((article) => (
-                    <div 
-                        key={article.id} 
-                        className={`${styles.articleCard} ${styles[article.align]}`}
-                        onClick={() => handleArticleClick(article.path)}
-                    >
-                        <div className={styles.articleContent}>
-                            <Text variant={'h2'} children={article.title} className={styles.articleTitle}/>
-                            <Text 
-                                variant={'p'} 
-                                children={article.description}
-                                className={styles.articleDescription}
-                            />
-                        </div>
-                        {article.image && (
-                            <div className={styles.articleImage}>
-                                <img 
-                                    src={article.image} 
-                                    alt={article.title}
-                                    className={styles.previewImage}
+                    <li key={article.id} className={styles.listItem}>
+                        <article
+                            className={styles.card}
+                            tabIndex={0}
+                            onClick={() => go(article.path)}
+                            onKeyDown={(e) => {
+                                if (e.key === 'Enter' || e.key === ' ') {
+                                    e.preventDefault();
+                                    go(article.path);
+                                }
+                            }}
+                        >
+                            <div className={styles.cardMedia}>
+                                <img
+                                    src={article.image}
+                                    alt=""
+                                    className={styles.cardImage}
                                 />
+                                <div className={styles.cardContent}>
+                                    <Text variant={'h2'} className={styles.cardTitle}>
+                                        {article.title}
+                                    </Text>
+                                    <Text variant={'body'} className={styles.cardDescription}>
+                                        {article.description}
+                                    </Text>
+                                </div>
                             </div>
-                        )}
-                    </div>
+                        </article>
+                    </li>
                 ))}
-            </div>
+            </ul>
         </section>
     );
 }
