@@ -10,25 +10,86 @@ export default function ArticlesPage() {
             id: 'whoAreThey',
             title: 'ГЛУБОКОВОДНЫЕ ВИВЕРНЫ',
             description:
-                'Общая характеристика, внешность, устройство жизни, общины.',
-            image: 'https://storage.yandexcloud.net/zhurzh/articles/main/1.png',
+                'Общая характеристика, внешность, устройство жизни, обитание.',
+            image: 'https://storage.yandexcloud.net/zhurzh/articles/main/who%20are%20they.png',
             path: '/articles/whoAreThey',
-            /** Цвет заголовка и описания на карточке */
-            textColor: '#9dcbff',
-            /** Подсветка только у заголовка (полное значение text-shadow) */
-            titleGlow: '0 0 30px #0033ff',
-            /** 'left' | 'right' — выравнивание заголовка и описания на карточке */
+            textColor: '#94DFFF',
+            titleGlow: '0 0 28px #0033ff',
+            textAlign: 'left'
+        },
+        {
+            id: 'physiology',
+            title: 'ФИЗИОЛОГИЯ ВИВЕРН',
+            description:
+                'Строение тела, дыхательная система, органы чувств и психика.',
+            image: 'https://storage.yandexcloud.net/zhurzh/articles/main/physiology.png',
+            path: '/articles/physiology',
+            textColor: '#E2D4C1',
+            titleGlow: '0 0 28px #FF0004',
+            textAlign: 'right'
+        },
+        {
+            id: 'reproduction',
+            title: 'РАЗМНОЖЕНИЕ И СЕМЬЯ',
+            description:
+                'Поиск партнера, гнезда, рождение потомства, воспитание иерархий.',
+            image: 'https://storage.yandexcloud.net/zhurzh/articles/main/reproductive.png',
+            path: '/articles/reproduction',
+            textColor: '#C3BDFF',
+            titleGlow: '0 0 28px #3700FF',
+            textAlign: 'left'
+        },
+        {
+            id: 'names',
+            title: 'ПРОИСХОЖДЕНИЕ ИМЕН ВИВЕРН',
+            description:
+                'Как виверны выбирают имя, и что оно значит для них и их культуры.',
+            image: 'https://storage.yandexcloud.net/zhurzh/articles/main/names.png',
+            path: '/articles/names',
+            textColor: '#E2D4C1',
+            titleGlow: '0 0 28px #0051FF',
+            textAlign: 'right'
+        },
+        {
+            id: 'growth',
+            title: 'ЭТАПЫ РОСТА И ВЗРОСЛЕНИЕ',
+            description:
+                'сколько живут виверны и что происходит на этапах взросления.',
+            image: 'https://storage.yandexcloud.net/zhurzh/articles/main/growth.png',
+            path: '/articles/growth',
+            textColor: '#E2D4C1',
+            titleGlow: '0 0 28px #FF0004',
             textAlign: 'left'
         },
         {
             id: 'community',
-            title: 'УСТРОЙСТВО ОБЩИН',
+            title: 'УСТРОЙСТВО ОБЩИН ВИВЕРН',
             description:
-                'Понятие взаимоотношений складывается у виверны с детства, что во многом определяет её дальнейшую роль в обществе.',
-            image: 'https://storage.yandexcloud.net/zhurzh/articles/main/2.png',
+                'структура вивернового сообщества, законы и диалекты мира.',
+            image: 'https://storage.yandexcloud.net/zhurzh/articles/main/communities.png',
             path: '/articles/community',
-            textColor: '#9db9ff',
-            titleGlow: '0 0 30px #0033ff',
+            textColor: '#E2D4C1',
+            titleGlow: '0 0 28px #0051FF',
+            textAlign: 'right'
+        },
+        {
+            id: 'oceanDangers',
+            title: 'ОПАСНОСТИ ОКЕАНА',
+            description: '[В РАЗРАБОТКЕ]',
+            image: 'https://storage.yandexcloud.net/zhurzh/articles/main/dangerous.png',
+            path: '/articles/ocean-dangers',
+            textColor: '#E2D4C1',
+            titleGlow: '0 0 28px #FF0004',
+            textAlign: 'left'
+        },
+        {
+            id: 'virpulis',
+            title: 'ВИРПУЛИС И СЕКРЕТ ВИВЕРН',
+            description: '[В РАЗРАБОТКЕ]',
+            image: 'https://storage.yandexcloud.net/zhurzh/articles/main/virpulis.png',
+            path: '/articles/virpulis',
+            textColor: '#E2D4C1',
+            titleGlow: '0 0 28px #FF0004',
             textAlign: 'right'
         }
     ];
