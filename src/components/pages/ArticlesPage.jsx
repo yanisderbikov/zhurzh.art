@@ -1,6 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import styles from '../../styles/pages/ArticlesPage.module.css';
 import Text from '../common/Text.jsx';
+import Button from '../common/Button.jsx';
 
 export default function ArticlesPage() {
     const navigate = useNavigate();
@@ -158,6 +159,34 @@ export default function ArticlesPage() {
                     </li>
                 ))}
             </ul>
+
+            <div className={styles.footer}>
+                <div className={styles.headerGrid}>
+                    <div className={styles.headerTextColumn}>
+                        <Text variant={'h2'} className={styles.ctaTitle}>
+                            Ускорьте выход статей
+                        </Text>
+                        <Text variant={'body'} className={styles.ctaSub}>
+                            Вы можете помочь мне ускорить выход статей по миру, подписавшись на мой Патреон. Даже
+                            необязательно оформлять подписку — мне уже важна ваша поддержка и присутствие!
+                        </Text>
+                        <div className={styles.ctaButtonWrap}>
+                            <Button
+                                type="button"
+                                onClick={() =>
+                                    window.open(
+                                        'https://t.me/ZhurzhArt',
+                                        '_blank',
+                                        'noopener,noreferrer'
+                                    )
+                                }
+                            >
+                                Подписаться
+                            </Button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
     );
 }
