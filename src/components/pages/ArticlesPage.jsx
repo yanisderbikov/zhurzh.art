@@ -76,19 +76,21 @@ export default function ArticlesPage() {
                                     alt=""
                                     className={styles.cardImage}
                                 />
-                                <div
-                                    className={`${styles.cardContent} ${
-                                        article.textAlign === 'right'
-                                            ? styles.cardContentRight
-                                            : styles.cardContentLeft
-                                    }`}
-                                >
-                                    <Text variant={'h2'} className={styles.cardTitle}>
-                                        {article.title}
-                                    </Text>
-                                    <Text variant={'body'} className={styles.cardDescription}>
-                                        {article.description}
-                                    </Text>
+                                <div className={styles.cardContent}>
+                                    <div
+                                        className={
+                                            article.textAlign === 'right'
+                                                ? styles.cardContentCellRight
+                                                : styles.cardContentCellLeft
+                                        }
+                                    >
+                                        <Text variant={'h2'} className={styles.cardTitle}>
+                                            {article.title}
+                                        </Text>
+                                        <Text variant={'body'} className={styles.cardDescription}>
+                                            {article.description}
+                                        </Text>
+                                    </div>
                                 </div>
                             </div>
                         </article>
