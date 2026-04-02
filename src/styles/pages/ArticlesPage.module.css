@@ -152,7 +152,7 @@
     max-width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 30px;
     align-items: flex-start;
     text-align: left;
     overflow-wrap: break-word;
@@ -165,14 +165,14 @@
     max-width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 30px;
     align-items: flex-end;
     text-align: right;
     overflow-wrap: break-word;
 }
 
 .card .cardTitle {
-    font-size: clamp(0.95rem, 1.65vw, 1.35rem);
+    font-size: clamp(0.95rem, 1.95vw, 2rem);
     font-weight: 600;
     letter-spacing: 1.5px;
     color: var(--article-text-color, #9dcbff);
