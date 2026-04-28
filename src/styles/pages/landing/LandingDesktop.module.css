@@ -290,83 +290,55 @@
     margin-top: var(--gap);
 }
 
-/* Мобильная версия */
-@media (max-width: 768px) {
-    .overlay {
-        background: rgba(0, 0, 0, 0.6);
-    }
-
-    .contentContainer {
-        grid-template-columns: 1fr;
-        padding: var(--gapx2) var(--non-work-zone);
-        gap: var(--gap);
-    }
-
-    .contentWrapper {
-        grid-column: 1 / -1;
-        justify-content: center !important;
-    }
-
-    .supportCardsWrapper {
-        grid-column: 1 / -1;
-    }
-
-    .thankYouWrapper {
-        grid-column: 1 / -1;
-    }
-
-    .fullScreenSection:nth-of-type(2) .contentWrapper,
-    .fullScreenSection:nth-of-type(3) .contentWrapper,
-    .fullScreenSection:nth-of-type(4) .contentWrapper,
-    .fullScreenSection:nth-of-type(5) .contentWrapper {
-        grid-column: 1 / -1;
-        justify-content: center !important;
-    }
-
-    .textContent {
-        width: 100%;
-        text-align: center;
-    }
-
-    .sectionTitle {
-        text-align: center;
-    }
-
-    .paragraph {
-        text-align: center;
-    }
-
-    .actionButton {
-        align-self: center;
-    }
-
-    .supportCards {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .supportCard {
-        width: 130px;
-    }
-
-    .footerContent {
-        grid-template-columns: 1fr;
-        padding: 0 var(--non-work-zone);
-    }
-
-    .footerColumn:nth-child(1),
-    .footerColumn:nth-child(2),
-    .footerColumn:nth-child(3),
-    .footerColumn:nth-child(4) {
-        grid-column: 1 / -1;
-    }
+.desktopFooter {
+    width: 100%;
+    background: #040507;
+    padding: 56px var(--grid-margin) 32px;
+    box-sizing: border-box;
 }
 
-@media (max-width: 480px) {
-
-    .contentContainer {
-        padding: var(--gap) var(--non-work-zone);
-    }
+.desktopFooterColumns {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
 }
 
+.desktopFooterCol {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.desktopFooterTitle {
+    color: #81A9D8;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+.desktopFooterLink {
+    text-decoration: none;
+    color: #9599C3;
+    opacity: 0.95;
+}
+
+.desktopFooterLink:hover {
+    opacity: 1;
+}
+
+.desktopFooterBottom {
+    margin-top: 56px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.desktopFooterCopy,
+.desktopFooterMeta {
+    color: rgba(255, 255, 255, 0.4);
+    line-height: 1.1;
+}

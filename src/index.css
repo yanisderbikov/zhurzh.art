@@ -17,7 +17,8 @@
 
 :root {
   --non-work-zone: 32px;
-  --header-height: 70px;
+  /* Высота полосы фиксированного хедера (см. Header.module .container + логотип) */
+  --header-height: 64px;
   
   /* Grid system: 12 columns */
   --grid-columns: 12;
