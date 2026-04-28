@@ -23,6 +23,12 @@ export default function Header() {
               { label: t.comic, href: 'https://www.patreon.com/collection/39648' },
               { label: t.articles, href: 'https://www.patreon.com/collection/783458' },
           ];
+    const mobileMenuLinks = [
+        { label: 'Read comic', href: 'https://www.patreon.com/collection/39648' },
+        { label: 'Articles & worlds', href: 'https://www.patreon.com/collection/783458?view=expanded' },
+        { label: 'Lore', href: 'https://www.patreon.com/collection/98091' },
+        { label: 'Adopt', href: 'https://www.patreon.com/collection/784035?view=expanded' },
+    ];
 
     const closeDrawer = useCallback(() => setDrawerOpen(false), []);
     const openDrawer = useCallback(() => setDrawerOpen(true), []);
@@ -103,20 +109,22 @@ export default function Header() {
                         className={`${styles.drawer} ${drawerOpen ? styles.drawerOpen : ''}`}
                         aria-hidden={!drawerOpen}
                     >
-                        {navLinks.map((link) => (
-                            <a
-                                key={link.href + link.label}
-                                href={link.href}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className={styles.drawerNavLink}
-                                onClick={closeDrawer}
-                            >
-                                <Text variant="body" color="#92c5ff">
-                                    {link.label}
-                                </Text>
-                            </a>
-                        ))}
+                        <div className={styles.drawerLinks}>
+                            {mobileMenuLinks.map((link) => (
+                                <a
+                                    key={link.href + link.label}
+                                    href={link.href}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className={styles.drawerNavLink}
+                                    onClick={closeDrawer}
+                                >
+                                    <Text variant="body" color="#9599C3">
+                                        {link.label}
+                                    </Text>
+                                </a>
+                            ))}
+                        </div>
                     </aside>
                 </>
             )}

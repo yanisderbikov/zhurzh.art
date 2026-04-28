@@ -148,7 +148,7 @@
 .drawerNavLink {
     display: block;
     text-decoration: none;
-    padding: 14px 12px;
+    padding: 10px 12px;
     border-radius: var(--border-radius);
     transition: background-color 0.2s ease;
 }
@@ -159,8 +159,10 @@
     outline: none;
 }
 
-.drawerNavLink + .drawerNavLink {
-    margin-top: 4px;
+.drawerLinks {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
 }
 
 @media (min-width: 701px) {
