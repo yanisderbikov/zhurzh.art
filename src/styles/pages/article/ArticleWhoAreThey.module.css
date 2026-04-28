@@ -1,0 +1,126 @@
+.wrap {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    background-color: #232835;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    min-height: 420px;
+    background-color: #232835;
+    background-image: url('/images/article/whoAreThey/1.png');
+    background-size: 100% auto;
+    background-position: top center;
+    background-repeat: no-repeat;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: var(--grid-gutter);
+    width: 100%;
+    max-width: 100%;
+    padding: 0 var(--grid-margin) var(--gapx2);
+    padding-top: 480px;
+    box-sizing: border-box;
+}
+
+@media (max-width: 1400px) {
+    .content {
+        padding-top: 380px;
+    }
+}
+
+@media (max-width: 992px) {
+    .content {
+        padding-top: 280px;
+    }
+}
+
+@media (max-width: 768px) {
+    .content {
+        padding-top: 200px;
+    }
+}
+
+.main {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: var(--grid-gutter);
+    padding: 0 var(--grid-margin) var(--gapx2);
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.image {
+    grid-column: 2 / 12;
+    width: 100%;
+    padding-top: var(--gapHalf);
+}
+
+.alignCenterText {
+    grid-column: 3 / 11;
+    text-align: center;
+}
+
+.alignJustifiedText {
+    grid-column: 3 / 11;
+    text-align: justify;
+}
+
+.halfContainer {
+    grid-column: 3 / 11;
+    display: flex;
+    flex-direction: column;
+    max-width: 520px;
+    gap: var(--gapHalf);
+    justify-self: center;
+}
+
+.buttonWrapper {
+    grid-column: 3 / 11;
+    display: flex;
+    justify-content: center;
+    padding: var(--gap) 0 var(--gapx2);
+}
+
+.footerWrapper {
+    display: flex;
+    flex-direction: column;
+    background-color: #0f1112;
+    align-items: center;
+    padding-bottom: var(--gapx2);
+}
+
+.footer {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: var(--grid-gutter);
+    padding: var(--gapx2) var(--grid-margin) var(--gap) var(--grid-margin);
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+    .content,
+    .main {
+        grid-template-columns: 1fr;
+        padding-left: var(--non-work-zone);
+        padding-right: var(--non-work-zone);
+    }
+
+    .alignCenterText,
+    .alignJustifiedText,
+    .halfContainer,
+    .image,
+    .buttonWrapper {
+        grid-column: 1 / -1;
+    }
+}
