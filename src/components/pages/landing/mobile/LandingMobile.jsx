@@ -4,13 +4,14 @@ import styles from '../../../../styles/pages/landing/LandingMobile.module.css';
 import Text from '../../../common/Text.jsx';
 import Button from '../../../common/Button.jsx';
 import { useLocale } from '../../../../context/LocaleContext.jsx';
-import { landingMobileTranslations } from '../../../../locales/landing.js';
+import { landingMobileTranslations, landingTranslations } from '../../../../locales/landing.js';
 import { landingMobileAssets } from '../../../../content/landing.mobile.assets.js';
 
 export default function LandingMobile() {
     const navigate = useNavigate();
     const { isRu, localizePath } = useLocale();
     const m = landingMobileTranslations[isRu ? 'ru' : 'en'];
+    const footerT = landingTranslations[isRu ? 'ru' : 'en'];
     const assets = landingMobileAssets;
 
     const altumarRef = useRef(null);
@@ -43,6 +44,10 @@ export default function LandingMobile() {
     }, [isRu]);
 
     const articlesPath = localizePath('/articles');
+    const homePath = localizePath('/');
+    const comicHref = isRu
+        ? 'https://t.me/ZhurzhArt/30'
+        : 'https://www.patreon.com/collection/39648';
     const isEn = !isRu;
 
     return (
@@ -186,6 +191,51 @@ export default function LandingMobile() {
                         </div>
                     </div>
                 </section>
+
+                <footer className={styles.footerMenu}>
+                    <div className={styles.footerColumns}>
+                        <div className={styles.footerCol}>
+                            <Text variant="h3" className={styles.footerTitle}>
+                                {footerT.footerMain}
+                            </Text>
+                            <Link to={homePath} className={styles.footerLink}>
+                                <Text variant="body" color="#9599C3" style={{ fontSize: '14px' }}>
+                                    {footerT.footerSeaReminiscence}
+                                </Text>
+                            </Link>
+                            <a
+                                href={comicHref}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className={styles.footerLink}
+                            >
+                                <Text variant="body" color="#9599C3" style={{ fontSize: '14px' }}>
+                                    {footerT.footerReadComic}
+                                </Text>
+                            </a>
+                        </div>
+
+                        <div className={styles.footerCol}>
+                            <Text variant="h3" className={styles.footerTitle}>
+                                {footerT.footerWorld}
+                            </Text>
+                            <Link to={articlesPath} className={styles.footerLink}>
+                                <Text variant="body" color="#9599C3" style={{ fontSize: '14px' }}>
+                                    {footerT.footerArticles}
+                                </Text>
+                            </Link>
+                        </div>
+                    </div>
+
+                    <div className={styles.footerBottom}>
+                        <Text variant="sign" className={styles.footerCopy}>
+                            {footerT.copyright}
+                        </Text>
+                        <Text variant="sign" className={styles.footerMeta}>
+                            {isRu ? 'Политика конфиденциальности | Условия использования' : 'Privacy Policy | Terms of Use'}
+                        </Text>
+                    </div>
+                </footer>
             </main>
         </div>
     );
