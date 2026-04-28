@@ -44,10 +44,10 @@ export default function LandingMobile() {
     }, [isRu]);
 
     const articlesPath = localizePath('/articles');
-    const homePath = localizePath('/');
-    const comicHref = isRu
-        ? 'https://t.me/ZhurzhArt/30'
-        : 'https://www.patreon.com/collection/39648';
+    const patreonReadComic = 'https://www.patreon.com/collection/39648';
+    const patreonArticlesWorlds = 'https://www.patreon.com/collection/783458?view=expanded';
+    const patreonLore = 'https://www.patreon.com/collection/98091';
+    const patreonAdopt = 'https://www.patreon.com/collection/784035?view=expanded';
     const isEn = !isRu;
 
     return (
@@ -196,34 +196,54 @@ export default function LandingMobile() {
                     <div className={styles.footerColumns}>
                         <div className={styles.footerCol}>
                             <Text variant="h3" className={styles.footerTitle}>
-                                {footerT.footerMain}
+                                MAIN
                             </Text>
-                            <Link to={homePath} className={styles.footerLink}>
-                                <Text variant="body" color="#9599C3" style={{ fontSize: '14px' }}>
-                                    {footerT.footerSeaReminiscence}
-                                </Text>
-                            </Link>
                             <a
-                                href={comicHref}
+                                href={patreonReadComic}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className={styles.footerLink}
                             >
                                 <Text variant="body" color="#9599C3" style={{ fontSize: '14px' }}>
-                                    {footerT.footerReadComic}
+                                    Read comic
                                 </Text>
                             </a>
                         </div>
 
                         <div className={styles.footerCol}>
                             <Text variant="h3" className={styles.footerTitle}>
-                                {footerT.footerWorld}
+                                ABOUT THE WORLD
                             </Text>
-                            <Link to={articlesPath} className={styles.footerLink}>
+                            <a
+                                href={patreonArticlesWorlds}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className={styles.footerLink}
+                            >
                                 <Text variant="body" color="#9599C3" style={{ fontSize: '14px' }}>
-                                    {footerT.footerArticles}
+                                    Articles &amp; worlds
                                 </Text>
-                            </Link>
+                            </a>
+                            <a
+                                href={patreonLore}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className={styles.footerLink}
+                            >
+                                <Text variant="body" color="#9599C3" style={{ fontSize: '14px' }}>
+                                    Lore
+                                </Text>
+                            </a>
+                            <a
+                                href={patreonAdopt}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className={styles.footerLink}
+                            >
+                                <Text variant="body" color="#9599C3" style={{ fontSize: '14px' }}>
+                                    Adopt
+                                </Text>
+                            </a>
                         </div>
                     </div>
 

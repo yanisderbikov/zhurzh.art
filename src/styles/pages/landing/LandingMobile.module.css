@@ -30,6 +30,24 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    position: relative;
+    isolation: isolate;
+}
+
+.bgCover::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    background:
+        linear-gradient(to bottom, rgba(12, 14, 42, 0.55) 0%, rgba(12, 14, 42, 0) 12%),
+        linear-gradient(to top, rgba(12, 14, 42, 0.55) 0%, rgba(12, 14, 42, 0) 12%);
+}
+
+.bgCover > * {
+    position: relative;
+    z-index: 1;
 }
 
 .hero {
@@ -119,6 +137,8 @@
     margin-left: calc(50% - 50vw);
     margin-right: calc(50% - 50vw);
     line-height: 0;
+    position: relative;
+    overflow: hidden;
 }
 
 .fullBleed img {
@@ -126,6 +146,16 @@
     height: auto;
     display: block;
     vertical-align: top;
+}
+
+.fullBleed::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background:
+        linear-gradient(to bottom, rgba(12, 14, 42, 0.38) 0%, rgba(12, 14, 42, 0) 10%),
+        linear-gradient(to top, rgba(12, 14, 42, 0.38) 0%, rgba(12, 14, 42, 0) 10%);
 }
 
 .tileGrid {
@@ -186,6 +216,16 @@
     position: relative;
 }
 
+.supportCta::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background:
+        linear-gradient(to bottom, rgba(12, 14, 42, 0.45) 0%, rgba(12, 14, 42, 0) 14%),
+        linear-gradient(to top, rgba(12, 14, 42, 0.45) 0%, rgba(12, 14, 42, 0) 14%);
+}
+
 .supportCtaInner {
     position: absolute;
     top: 0;
@@ -196,6 +236,7 @@
     align-items: flex-start;
     padding-top: 12px;
     box-sizing: border-box;
+    z-index: 1;
 }
 
 .footerMenu {
