@@ -1,7 +1,8 @@
 import {
     BrowserRouter as Router,
     Routes,
-    Route
+    Route,
+    Navigate
 } from 'react-router-dom';
 
 import { LocaleProvider } from './context/LocaleContext.jsx';
@@ -12,19 +13,32 @@ import ArticleCommunity from './components/pages/articles/ArticleCommunity.jsx';
 import ArticleWhoAreThey from './components/pages/articles/ArticleWhoAreThey.jsx';
 import PageNotFound from './components/pages/PageNotFound.jsx';
 
-export default function App() {
+function AppRoutes() {
     return (
-        <LocaleProvider>
-        <Router>
+        <>
             <Header />
             <Routes>
-                <Route path="/" element={<LandingPage/>}/>
-                <Route path="/articles" element={<ArticlesPage/>}/>
-                <Route path="/articles/community" element={<ArticleCommunity/>}/>
-                <Route path="/articles/whoAreThey" element={<ArticleWhoAreThey/>}/>
-                <Route path="*" element={<PageNotFound/>}/>
+                <Route path="/" element={<LandingPage />} />
+                <Route path="/articles" element={<ArticlesPage />} />
+                <Route path="/articles/community" element={<ArticleCommunity />} />
+                <Route path="/articles/whoAreThey" element={<ArticleWhoAreThey />} />
+                <Route path="/ru/" element={<Navigate to="/ru" replace />} />
+                <Route path="/ru" element={<LandingPage />} />
+                <Route path="/ru/articles" element={<ArticlesPage />} />
+                <Route path="/ru/articles/community" element={<ArticleCommunity />} />
+                <Route path="/ru/articles/whoAreThey" element={<ArticleWhoAreThey />} />
+                <Route path="*" element={<PageNotFound />} />
             </Routes>
+        </>
+    );
+}
+
+export default function App() {
+    return (
+        <Router>
+            <LocaleProvider>
+                <AppRoutes />
+            </LocaleProvider>
         </Router>
-        </LocaleProvider>
     );
 }

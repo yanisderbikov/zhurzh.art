@@ -2,9 +2,11 @@ import { useNavigate } from 'react-router-dom';
 import styles from '../../styles/pages/ArticlesPage.module.css';
 import Text from '../common/Text.jsx';
 import Button from '../common/Button.jsx';
+import { useLocale } from '../../context/LocaleContext.jsx';
 
 export default function ArticlesPage() {
     const navigate = useNavigate();
+    const { localizePath } = useLocale();
 
     const articles = [
         {
@@ -96,7 +98,7 @@ export default function ArticlesPage() {
     ];
 
     const go = (path) => {
-        navigate(path);
+        navigate(localizePath(path));
     };
 
     return (

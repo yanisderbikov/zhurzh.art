@@ -6,7 +6,7 @@ import { useLocale } from '../../context/LocaleContext.jsx';
 import { headerTranslations } from '../../locales/landing.js';
 
 export default function Header() {
-    const { isRu } = useLocale();
+    const { isRu, localizePath } = useLocale();
     const t = headerTranslations[isRu ? 'ru' : 'en'];
 
     const navLinks = isRu
@@ -22,7 +22,7 @@ export default function Header() {
     return (
         <header className={styles.header}>
             <div className={styles.container}>
-                <Link to="/" className={styles.title}>
+                <Link to={localizePath('/')} className={styles.title}>
                     <Text variant="h3" color="#92c5ff" style={{ fontSize: '18px' }}>
                         {t.siteTitle}
                     </Text>

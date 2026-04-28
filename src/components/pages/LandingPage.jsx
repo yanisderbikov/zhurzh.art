@@ -9,7 +9,7 @@ import { landingTranslations } from '../../locales/landing.js';
 
 export default function LandingPage() {
     const navigate = useNavigate();
-    const { isRu } = useLocale();
+    const { isRu, localizePath } = useLocale();
     const t = landingTranslations[isRu ? 'ru' : 'en'];
 
     return (
@@ -52,7 +52,7 @@ export default function LandingPage() {
                             </Text>
                             <div className={styles.buttonWrapper}>
                                 <Button
-                                    onClick={() => isRu ? navigate('/comic') : window.open('https://www.patreon.com/collection/39648', '_blank')}
+                                    onClick={() => isRu ? navigate(localizePath('/comic')) : window.open('https://www.patreon.com/collection/39648', '_blank')}
                                     className={styles.actionButton}
                                 >
                                     {t.readComic}
@@ -77,7 +77,7 @@ export default function LandingPage() {
                             </Text>
                             <div className={styles.buttonWrapper}>
                                 <Button
-                                    onClick={() => isRu ? navigate('/articles') : window.open('https://www.patreon.com/collection/783458', '_blank')}
+                                    onClick={() => isRu ? navigate(localizePath('/articles')) : window.open('https://www.patreon.com/collection/783458', '_blank')}
                                     className={styles.actionButton}
                                 >
                                     {t.toArticles}

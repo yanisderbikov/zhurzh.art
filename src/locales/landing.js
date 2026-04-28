@@ -65,7 +65,7 @@ export const landingTranslations = {
         donate: 'Donate',
         thankYou: 'Thanks to your support I can grow the world and fill it with new color. Thank you!',
         telegram: 'Telegram',
-        supportCtaLabel: 'Telegram',
+        supportCtaLabel: 'Go to Patreon',
         footerMain: 'Home',
         footerSeaReminiscence: 'Sea Reminiscence',
         footerReadComic: 'Read comic',

@@ -1,76 +1,48 @@
-import React, { createContext, useContext, useState, useEffect, useCallback } from 'react';
+import React, { createContext, useContext, useMemo, useCallback } from 'react';
+import { useLocation } from 'react-router-dom';
 
-const STORAGE_KEY = 'zhurzh-locale';
-const GEO_API_URL = 'https://ip-api.com/json/?fields=countryCode';
-
-function getStoredLocale() {
-    try {
-        const stored = localStorage.getItem(STORAGE_KEY);
-        if (stored === 'ru' || stored === 'en') return stored;
-    } catch (_) {}
-    return null;
+/** Russian UI when pathname is /ru or anything under /ru/ */
+export function pathIsRussian(pathname) {
+    return pathname === '/ru' || pathname.startsWith('/ru/');
 }
 
-function getNavigatorLocale() {
-    const lang = typeof navigator !== 'undefined' && (navigator.language || navigator.userLanguage || '');
-    if (!lang) return null;
-    const code = lang.toLowerCase().slice(0, 2);
-    if (code === 'ru') return 'ru';
-    if (code === 'en') return 'en';
-    return null;
+/** Prefix target path with /ru when the current route is under /ru. */
+export function localizePath(currentPathname, targetPath) {
+    const p = targetPath.startsWith('/') ? targetPath : `/${targetPath}`;
+    if (pathIsRussian(currentPathname)) {
+        if (p === '/') return '/ru';
+        return `/ru${p}`;
+    }
+    if (p === '/ru' || p === '/ru/') return '/';
+    if (p.startsWith('/ru/')) {
+        const rest = p.slice(3);
+        return rest ? `/${rest}` : '/';
+    }
+    return p;
 }
 
-const defaultLocale = 'en';
 const defaultValue = {
-    locale: defaultLocale,
     isRu: false,
-    ready: false,
-    setLocale: () => {},
+    localizePath: (path) => (path.startsWith('/') ? path : `/${path}`),
 };
 
 const LocaleContext = createContext(defaultValue);
 
 export function LocaleProvider({ children }) {
-    const stored = getStoredLocale();
-    const navLocale = getNavigatorLocale();
-    const needsGeo = !stored && !navLocale;
+    const { pathname } = useLocation();
+    const isRu = pathIsRussian(pathname);
+    const localizePathFn = useCallback(
+        (path) => localizePath(pathname, path),
+        [pathname]
+    );
 
-    const [locale, setLocaleState] = useState(() => stored ?? navLocale ?? defaultLocale);
-    const [ready, setReady] = useState(!needsGeo);
-
-    useEffect(() => {
-        if (!needsGeo) return;
-        let cancelled = false;
-        fetch(GEO_API_URL)
-            .then((res) => res.json())
-            .then((data) => {
-                if (cancelled) return;
-                setLocaleState(data.countryCode === 'RU' ? 'ru' : 'en');
-            })
-            .catch(() => {
-                if (cancelled) return;
-                setLocaleState(navLocale ?? defaultLocale);
-            })
-            .finally(() => {
-                if (!cancelled) setReady(true);
-            });
-        return () => { cancelled = true; };
-    }, [needsGeo, navLocale]);
-
-    const setLocale = useCallback((newLocale) => {
-        if (newLocale !== 'ru' && newLocale !== 'en') return;
-        try {
-            localStorage.setItem(STORAGE_KEY, newLocale);
-        } catch (_) {}
-        setLocaleState(newLocale);
-    }, []);
-
-    const value = {
-        locale,
-        isRu: locale === 'ru',
-        ready,
-        setLocale,
-    };
+    const value = useMemo(
+        () => ({
+            isRu,
+            localizePath: localizePathFn,
+        }),
+        [isRu, localizePathFn]
+    );
 
     return (
         <LocaleContext.Provider value={value}>
