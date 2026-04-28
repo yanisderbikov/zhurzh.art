@@ -4,6 +4,7 @@ import {
     Route
 } from 'react-router-dom';
 
+import { LocaleProvider } from './context/LocaleContext.jsx';
 import Header from './components/common/Header.jsx';
 import LandingPage from './components/pages/LandingPage.jsx';
 import ArticlesPage from './components/pages/ArticlesPage.jsx';
@@ -13,6 +14,7 @@ import PageNotFound from './components/pages/PageNotFound.jsx';
 
 export default function App() {
     return (
+        <LocaleProvider>
         <Router>
             <Header />
             <Routes>
@@ -23,5 +25,6 @@ export default function App() {
                 <Route path="*" element={<PageNotFound/>}/>
             </Routes>
         </Router>
+        </LocaleProvider>
     );
 }
