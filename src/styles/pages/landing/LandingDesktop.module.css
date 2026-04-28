@@ -289,3 +289,56 @@
     color: rgba(255, 255, 255, 0.6);
     margin-top: var(--gap);
 }
+
+.desktopFooter {
+    width: 100%;
+    background: #040507;
+    padding: 56px var(--grid-margin) 32px;
+    box-sizing: border-box;
+}
+
+.desktopFooterColumns {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+}
+
+.desktopFooterCol {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.desktopFooterTitle {
+    color: #81A9D8;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+.desktopFooterLink {
+    text-decoration: none;
+    color: #9599C3;
+    opacity: 0.95;
+}
+
+.desktopFooterLink:hover {
+    opacity: 1;
+}
+
+.desktopFooterBottom {
+    margin-top: 56px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.desktopFooterCopy,
+.desktopFooterMeta {
+    color: rgba(255, 255, 255, 0.4);
+    line-height: 1.1;
+}

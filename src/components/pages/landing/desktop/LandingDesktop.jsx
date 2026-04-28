@@ -12,6 +12,10 @@ export default function LandingDesktop() {
     const { isRu, localizePath } = useLocale();
     const t = landingTranslations[isRu ? 'ru' : 'en'];
     const a = landingAssets;
+    const patreonReadComic = 'https://www.patreon.com/collection/39648';
+    const patreonArticlesWorlds = 'https://www.patreon.com/collection/783458?view=expanded';
+    const patreonLore = 'https://www.patreon.com/collection/98091';
+    const patreonAdopt = 'https://www.patreon.com/collection/784035?view=expanded';
 
     return (
         <div className={styles.wrapper}>
@@ -178,10 +182,69 @@ export default function LandingDesktop() {
                 </div>
             </section>
 
-            <footer className={styles.footer}>
-                <Text variant="sign" className={styles.copyright}>
-                    {t.copyright}
-                </Text>
+            <footer className={styles.desktopFooter}>
+                <div className={styles.desktopFooterColumns}>
+                    <div className={styles.desktopFooterCol}>
+                        <Text variant="h3" className={styles.desktopFooterTitle}>
+                            MAIN
+                        </Text>
+                        <a
+                            href={patreonReadComic}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className={styles.desktopFooterLink}
+                        >
+                            <Text variant="body" color="#9599C3" style={{ fontSize: '14px' }}>
+                                Read comic
+                            </Text>
+                        </a>
+                    </div>
+
+                    <div className={styles.desktopFooterCol}>
+                        <Text variant="h3" className={styles.desktopFooterTitle}>
+                            ABOUT THE WORLD
+                        </Text>
+                        <a
+                            href={patreonArticlesWorlds}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className={styles.desktopFooterLink}
+                        >
+                            <Text variant="body" color="#9599C3" style={{ fontSize: '14px' }}>
+                                Articles &amp; worlds
+                            </Text>
+                        </a>
+                        <a
+                            href={patreonLore}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className={styles.desktopFooterLink}
+                        >
+                            <Text variant="body" color="#9599C3" style={{ fontSize: '14px' }}>
+                                Lore
+                            </Text>
+                        </a>
+                        <a
+                            href={patreonAdopt}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className={styles.desktopFooterLink}
+                        >
+                            <Text variant="body" color="#9599C3" style={{ fontSize: '14px' }}>
+                                Adopt
+                            </Text>
+                        </a>
+                    </div>
+                </div>
+
+                <div className={styles.desktopFooterBottom}>
+                    <Text variant="sign" className={styles.desktopFooterCopy}>
+                        {t.copyright}
+                    </Text>
+                    <Text variant="sign" className={styles.desktopFooterMeta}>
+                        Privacy Policy | Terms of Use
+                    </Text>
+                </div>
             </footer>
         </div>
     );
