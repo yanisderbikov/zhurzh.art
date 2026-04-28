@@ -91,6 +91,54 @@ export const landingTranslations = {
     },
 };
 
+/** Copy and labels for the mobile-only landing stack (≤700px). */
+export const landingMobileTranslations = {
+    ru: {
+        heroTitle: 'Мир Морской Реминисценции',
+        heroLead:
+            'Но этот мир хранит не только красоту — в его памяти живут отголоски древних конфликтов и тайны, от которых может измениться будущее. Погрузись в мир Морской Реминисценции и пройди путь рядом с его героями!',
+        diveIntoWorld: 'Погрузиться в мир',
+        altumarTitle: 'История Альтумара',
+        altumarLead:
+            'В мире, где океаны скрывают тайны прошлого, а суша окутана мифами, начинается история Великого путешествия. Альтумар, рожденный во времена Второго Тягуна, знал лишь глубины и легенды о суше. Но когда воды стихли, ему выпал шанс подняться на поверхность — туда, где реальность оказывается куда жестче сказок.',
+        readComic: 'Читать комикс',
+        moreWorldTitle: 'Ещё больше о мире',
+        moreWorldLead:
+            'За пределами комикса мир Морской Реминисценции живёт своей насыщенной жизнью. В статьях — виверны, анатомия, культура, подводные кланы и многое другое, с яркими иллюстрациями.',
+        goToArticles: 'К статьям',
+        joinCommunityTitle: 'Присоединяйтесь к сообществу!',
+        joinCommunityLead:
+            'Подпишитесь в Telegram, чтобы читать комикс и статьи, видеть иллюстрации и быть ближе к миру проекта. Ваша поддержка очень важна!',
+        tileFullComic: 'Весь комикс',
+        tileWorldLore: 'Лор мира',
+        tileWyverns: 'Виверны',
+        tileCommunity: 'Сообщество',
+        goToPatreon: 'Перейти в Patreon',
+    },
+    en: {
+        heroTitle: 'World of Sea Reminiscence',
+        heroLead:
+            'This world holds more than beauty. Echoes of ancient conflicts and mysteries linger here, and they may change the future. Dive into the world of Sea Reminiscence and follow its heroes!',
+        diveIntoWorld: 'Dive into the world',
+        altumarTitle: 'The Story of Altumar',
+        altumarLead:
+            'In a world of hidden oceans and mythic lands, a great journey begins. Altumar, born during the Second Rip Current, knew only the depths and legends of the land. When the waters fell still, he rose to the surface, where reality is harsher than tales...',
+        readComic: 'Read the comic',
+        moreWorldTitle: 'More about the world',
+        moreWorldLead:
+            'Beyond the comic, Sea Reminiscence has a rich world of its own. Explore articles about wyverns, their anatomy, culture, underwater clans, and many other details, brought to life with vivid illustrations.',
+        goToArticles: 'Go to articles',
+        joinCommunityTitle: 'Join the community!',
+        joinCommunityLead:
+            'Subscribe on Patreon to read over 100 pages of the comic, be the first to discover secrets of the underwater world in articles, and see more than 60 illustrations. Join the Discord server and connect with fellow fans!',
+        tileFullComic: 'Full comic',
+        tileWorldLore: 'World Lore',
+        tileWyverns: 'Wyverns',
+        tileCommunity: 'Community',
+        goToPatreon: 'Go to Patreon',
+    },
+};
+
 export const headerTranslations = {
     ru: {
         siteTitle: 'Морская Реминисценция',
