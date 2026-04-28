@@ -43,6 +43,7 @@ export default function LandingMobile() {
     }, [isRu]);
 
     const articlesPath = localizePath('/articles');
+    const isEn = !isRu;
 
     return (
         <div className={styles.wrapper}>
@@ -57,7 +58,14 @@ export default function LandingMobile() {
                             {m.heroTitle}
                         </Text>
                         <Text variant="body" className={styles.lead}>
-                            {m.heroLead}
+                            {isEn ? (
+                                <>
+                                    This world holds more than beauty. Echoes of{' '}
+                                    <span className={styles.textCream}>ancient conflicts and mysteries</span> linger here, and they may change the future. Dive into the world of Sea Reminiscence and follow its heroes!
+                                </>
+                            ) : (
+                                m.heroLead
+                            )}
                         </Text>
                         <div className={styles.btnRow}>
                             <Button type="button" onClick={scrollToAltumar} className={styles.actionButton}>
@@ -73,7 +81,15 @@ export default function LandingMobile() {
                             {m.altumarTitle}
                         </Text>
                         <Text variant="body" className={styles.lead}>
-                            {m.altumarLead}
+                            {isEn ? (
+                                <>
+                                    In a world of hidden oceans and mythic lands, a great journey begins.{' '}
+                                    <span className={styles.textBlue}>Altumar, born during the Second Rip Current</span>, knew only the depths and legends of the land. When the waters fell still, he{' '}
+                                    <span className={styles.textBlue}>rose to the surface,</span> where reality is harsher than tales...
+                                </>
+                            ) : (
+                                m.altumarLead
+                            )}
                         </Text>
                         <div className={styles.fullBleed}>
                             <img src={assets.altumarBlockImage} alt="" />
@@ -95,7 +111,14 @@ export default function LandingMobile() {
                             {m.moreWorldTitle}
                         </Text>
                         <Text variant="body" className={styles.lead}>
-                            {m.moreWorldLead}
+                            {isEn ? (
+                                <>
+                                    Beyond the comic, Sea Reminiscence has a rich world of its own. Explore{' '}
+                                    <span className={styles.textBlue}>articles about wyverns,</span> their anatomy, culture, underwater clans, and many other details, brought to life with vivid illustrations.
+                                </>
+                            ) : (
+                                m.moreWorldLead
+                            )}
                         </Text>
                         <div className={styles.btnRow}>
                             <Button type="button" onClick={goArticles} className={styles.actionButton}>
@@ -111,7 +134,15 @@ export default function LandingMobile() {
                             {m.joinCommunityTitle}
                         </Text>
                         <Text variant="body" className={styles.lead}>
-                            {m.joinCommunityLead}
+                            {isEn ? (
+                                <>
+                                    Subscribe on Patreon to read{' '}
+                                    <span className={styles.textPink}>over 100 pages of the comic</span>, be the first to discover secrets of the underwater world in articles, and see more than 60 illustrations.{' '}
+                                    <span className={styles.textBlue}>Join the Discord server</span> and connect with fellow fans!
+                                </>
+                            ) : (
+                                m.joinCommunityLead
+                            )}
                         </Text>
                         <div className={styles.tileGrid}>
                             <TileLink
