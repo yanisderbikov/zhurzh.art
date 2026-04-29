@@ -88,6 +88,55 @@
     padding-bottom: var(--gapx2);
 }
 
+/* Плитки сообщества (как на мобильном) */
+.communityTilesWrapper {
+    grid-column: 2 / 12;
+    width: 100%;
+    margin: var(--gap) 0 var(--gapHalf);
+}
+
+.communityTiles {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: var(--gap);
+    width: 100%;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.communityTileLink {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 150px;
+    max-width: 100%;
+    text-decoration: none;
+    color: #fff;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.communityTileLink:hover {
+    transform: translateY(-4px);
+    opacity: 0.95;
+}
+
+.communityTileImage {
+    width: 100%;
+    height: auto;
+    border-radius: var(--border-radius-double);
+    object-fit: cover;
+    display: block;
+}
+
+.communityTileLabel {
+    margin-top: var(--gapHalf);
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.35;
+    font-family: 'Merriweather', serif;
+}
+
 /* Обертка для карточек поддержки - занимает всю ширину */
 .supportCardsWrapper {
     grid-column: 2 / 12;
