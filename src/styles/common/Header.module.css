@@ -159,6 +159,10 @@
     outline: none;
 }
 
+.drawerNavLink :global(p) {
+    font-size: 18px;
+}
+
 .drawerLinks {
     display: flex;
     flex-direction: column;

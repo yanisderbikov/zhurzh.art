@@ -82,28 +82,40 @@
     gap: var(--landing-mobile-gap);
 }
 
+.altumarStackTight {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 0;
+}
+
 .titleHero {
     color: #9DCBFF;
     text-shadow: 0 0 30px #0033ff;
     margin: 0;
+    font-size: 42px;
 }
 
 .titleAltumar {
     color: #9DB9FF;
     text-shadow: 0 0 30px #0033ff;
     margin: 0;
+    font-size: 42px;
 }
 
 .titleWorld {
     color: #B29DFF;
     text-shadow: 0 0 30px #0033ff;
     margin: 0;
+    font-size: 42px;
 }
 
 .titleJoin {
     color: #FD9DFF;
     text-shadow: 0 0 30px #5500ff;
     margin: 0;
+    font-size: 42px;
 }
 
 .lead {
@@ -111,6 +123,7 @@
     line-height: 1.6;
     margin: 0;
     max-width: 26rem;
+    font-size: 18px;
 }
 
 .textBlue {
@@ -146,6 +159,10 @@
     height: auto;
     display: block;
     vertical-align: top;
+}
+
+.fullBleedNoOverlay::after {
+    display: none;
 }
 
 .fullBleed::after {
@@ -191,14 +208,25 @@
     right: 0;
     text-align: center;
     padding: var(--gapHalf);
-    background: linear-gradient(to top, rgb(48, 37, 114), transparent);
-    font-size: 0.9rem;
+    background: none;
+    font-size: calc(0.9rem + 2px);
     font-weight: 600;
     letter-spacing: 0.02em;
+    text-shadow: none;
 }
 
 .actionButton {
     align-self: center;
+    font-size: 18px;
+}
+
+@media (max-width: 400px) {
+    .titleHero,
+    .titleAltumar,
+    .titleWorld,
+    .titleJoin {
+        font-size: 34px;
+    }
 }
 
 .supportCta {
@@ -266,6 +294,7 @@
     text-transform: uppercase;
     letter-spacing: 1px;
     margin-bottom: 8px;
+    font-size: 18px;
 }
 
 .footerLink {
@@ -290,4 +319,10 @@
 .footerMeta {
     color: rgba(255, 255, 255, 0.4);
     line-height: 1.1;
+}
+
+@media (max-width: 400px) {
+    .footerTitle {
+        font-size: 16px;
+    }
 }

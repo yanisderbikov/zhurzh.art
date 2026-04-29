@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import styles from '../../styles/common/Header.module.css';
 import Text from './Text.jsx';
 import { useLocale } from '../../context/LocaleContext.jsx';
@@ -10,9 +10,11 @@ const LOGO_URL = 'https://storage.yandexcloud.net/zhurzh/landing/logo.png';
 
 export default function Header() {
     const isMobile = useIsMobile();
+    const { pathname } = useLocation();
     const { isRu, localizePath } = useLocale();
     const t = headerTranslations[isRu ? 'ru' : 'en'];
     const [drawerOpen, setDrawerOpen] = useState(false);
+    const homePath = localizePath('/');
 
     const navLinks = isRu
         ? [
@@ -24,8 +26,8 @@ export default function Header() {
               { label: t.articles, href: 'https://www.patreon.com/collection/783458' },
           ];
     const mobileMenuLinks = [
-        { label: 'Read comic', href: 'https://www.patreon.com/collection/39648' },
-        { label: 'Articles & worlds', href: 'https://www.patreon.com/collection/783458?view=expanded' },
+        { label: 'Read the Comic', href: 'https://www.patreon.com/collection/39648' },
+        { label: 'Articles', href: 'https://www.patreon.com/collection/783458?view=expanded' },
         { label: 'Lore', href: 'https://www.patreon.com/collection/98091' },
         { label: 'Adopt', href: 'https://www.patreon.com/collection/784035?view=expanded' },
     ];
@@ -58,11 +60,21 @@ export default function Header() {
 
     const menuAria = isRu ? 'Открыть меню' : 'Open menu';
 
+    const onLogoClick = useCallback(
+        (e) => {
+            if (pathname === homePath) {
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        },
+        [pathname, homePath]
+    );
+
     return (
         <>
             <header className={styles.header}>
                 <div className={styles.container}>
-                    <Link to={localizePath('/')} className={styles.logoLink}>
+                    <Link to={homePath} className={styles.logoLink} onClick={onLogoClick}>
                         <img src={LOGO_URL} alt={t.siteTitle} className={styles.logoImg} />
                     </Link>
 

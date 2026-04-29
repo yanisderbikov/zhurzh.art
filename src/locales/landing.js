@@ -161,7 +161,7 @@ export const headerTranslations = {
     },
     en: {
         siteTitle: 'Sea Reminiscence',
-        comic: 'Comic',
+        comic: 'Read the Comic',
         articles: 'Articles',
     },
 };

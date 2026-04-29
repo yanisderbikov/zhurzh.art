@@ -85,24 +85,26 @@ export default function LandingMobile() {
                         <Text variant="h1" className={styles.titleAltumar}>
                             {m.altumarTitle}
                         </Text>
-                        <Text variant="body" className={styles.lead}>
-                            {isEn ? (
-                                <>
-                                    In a world of hidden oceans and mythic lands, a great journey begins.{' '}
-                                    <span className={styles.textBlue}>Altumar, born during the Second Rip Current</span>, knew only the depths and legends of the land. When the waters fell still, he{' '}
-                                    <span className={styles.textBlue}>rose to the surface,</span> where reality is harsher than tales...
-                                </>
-                            ) : (
-                                m.altumarLead
-                            )}
-                        </Text>
-                        <div className={styles.fullBleed}>
-                            <img src={assets.altumarBlockImage} alt="" />
-                        </div>
-                        <div className={styles.btnRow}>
-                            <Button type="button" onClick={openComic} className={styles.actionButton}>
-                                {m.readComic}
-                            </Button>
+                        <div className={styles.altumarStackTight}>
+                            <Text variant="body" className={styles.lead}>
+                                {isEn ? (
+                                    <>
+                                        In a world of hidden oceans and mythic lands, a great journey begins.{' '}
+                                        <span className={styles.textBlue}>Altumar, born during the Second Rip Current</span>, knew only the depths and legends of the land. When the waters fell still, he{' '}
+                                        <span className={styles.textBlue}>rose to the surface,</span> where reality is harsher than tales...
+                                    </>
+                                ) : (
+                                    m.altumarLead
+                                )}
+                            </Text>
+                            <div className={`${styles.fullBleed} ${styles.fullBleedNoOverlay}`}>
+                                <img src={assets.altumarBlockImage} alt="" />
+                            </div>
+                            <div className={styles.btnRow}>
+                                <Button type="button" onClick={openComic} className={styles.actionButton}>
+                                    {m.readComic}
+                                </Button>
+                            </div>
                         </div>
                     </div>
                 </section>
@@ -205,7 +207,7 @@ export default function LandingMobile() {
                                 className={styles.footerLink}
                             >
                                 <Text variant="body" color="#9599C3" style={{ fontSize: '14px' }}>
-                                    Read comic
+                                    Read the Comic
                                 </Text>
                             </a>
                         </div>
@@ -221,7 +223,7 @@ export default function LandingMobile() {
                                 className={styles.footerLink}
                             >
                                 <Text variant="body" color="#9599C3" style={{ fontSize: '14px' }}>
-                                    Articles &amp; worlds
+                                    Articles
                                 </Text>
                             </a>
                             <a
