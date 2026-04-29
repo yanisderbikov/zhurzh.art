@@ -214,7 +214,7 @@ export default function LandingDesktop() {
                             className={styles.desktopFooterLink}
                         >
                             <Text variant="body" color="#9599C3" style={{ fontSize: '14px' }}>
-                                Read comic
+                                Read the Comic
                             </Text>
                         </a>
                     </div>
@@ -230,7 +230,7 @@ export default function LandingDesktop() {
                             className={styles.desktopFooterLink}
                         >
                             <Text variant="body" color="#9599C3" style={{ fontSize: '14px' }}>
-                                Articles &amp; worlds
+                                Articles
                             </Text>
                         </a>
                         <a
