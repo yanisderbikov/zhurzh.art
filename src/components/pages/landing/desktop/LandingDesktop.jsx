@@ -19,11 +19,19 @@ export default function LandingDesktop() {
     const patreonLore = 'https://www.patreon.com/collection/98091';
     const patreonAdopt = 'https://www.patreon.com/collection/784035?view=expanded';
 
-    const altumarSectionRef = useRef(null);
+    const altumarTitleRef = useRef(null);
     const articlesPath = localizePath('/articles');
 
     const scrollToAltumar = useCallback(() => {
-        altumarSectionRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        const el = altumarTitleRef.current;
+        if (!el) {
+            return;
+        }
+        const raw = getComputedStyle(document.documentElement).getPropertyValue('--header-height').trim();
+        const headerPx = Number.parseFloat(raw);
+        const offset = Number.isFinite(headerPx) ? headerPx : 64;
+        const top = el.getBoundingClientRect().top + window.scrollY - offset;
+        window.scrollTo({ top: Math.max(0, top), behavior: 'smooth' });
     }, []);
 
     const openComic = useCallback(() => {
@@ -86,7 +94,7 @@ export default function LandingDesktop() {
                 </div>
             </section>
 
-            <section ref={altumarSectionRef} className={styles.fullScreenSection}>
+            <section className={styles.fullScreenSection}>
                 <div
                     className={styles.backgroundImage}
                     style={{ backgroundImage: `url(${a.altumarBg.desktop})` }}
@@ -95,9 +103,11 @@ export default function LandingDesktop() {
                 <div className={styles.contentContainer}>
                     <div className={styles.contentWrapper}>
                         <div className={styles.textContent}>
-                            <Text variant="h1" className={`${styles.sectionTitle} ${styles.titleAltumar}`}>
-                                {t.altumarTitle}
-                            </Text>
+                            <div ref={altumarTitleRef} className={styles.altumarScrollTarget}>
+                                <Text variant="h1" className={`${styles.sectionTitle} ${styles.titleAltumar}`}>
+                                    {t.altumarTitle}
+                                </Text>
+                            </div>
                             <Text variant="body" className={styles.paragraph}>
                                 {t.altumarP}
                             </Text>

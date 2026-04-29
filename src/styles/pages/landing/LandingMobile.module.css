@@ -61,6 +61,10 @@
     padding-top: var(--landing-mobile-gap);
 }
 
+.altumarScrollTarget {
+    width: 100%;
+}
+
 .moreWorld {
     composes: shell;
     padding-top: var(--landing-mobile-gap2);
