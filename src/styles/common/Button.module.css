@@ -2,18 +2,20 @@
 
 .primary {
     all: unset;
+    box-sizing: border-box;
     cursor: pointer;
     background: linear-gradient(to bottom, #3054f2, #393071);
     box-shadow: 2px 2px 4px #0000004d;
     border-radius: 100px;
     padding: 15px 20px;
-    display: flex;
-    
+    display: inline-flex;
+    width: auto;
+    max-width: 100%;
+
     font-family: 'Merriweather', serif;
     font-weight: 300;
     font-size: 16px;
 
-    width: 160px;
     justify-content: center;
 
     flex-direction: row;
@@ -21,7 +23,6 @@
     gap: 10px;
     transition: color .8s ease, transform .1s ease;
 
-    min-width: 160px;
     color: white;
 }
 

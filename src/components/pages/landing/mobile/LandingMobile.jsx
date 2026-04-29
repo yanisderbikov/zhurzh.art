@@ -14,9 +14,17 @@ export default function LandingMobile() {
     const footerT = landingTranslations[isRu ? 'ru' : 'en'];
     const assets = landingMobileAssets;
 
-    const altumarRef = useRef(null);
+    const altumarTitleRef = useRef(null);
     const scrollToAltumar = useCallback(() => {
-        altumarRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        const el = altumarTitleRef.current;
+        if (!el) {
+            return;
+        }
+        const raw = getComputedStyle(document.documentElement).getPropertyValue('--header-height').trim();
+        const headerPx = Number.parseFloat(raw);
+        const offset = Number.isFinite(headerPx) ? headerPx : 64;
+        const top = el.getBoundingClientRect().top + window.scrollY - offset;
+        window.scrollTo({ top: Math.max(0, top), behavior: 'smooth' });
     }, []);
 
     const openComic = useCallback(() => {
@@ -80,11 +88,13 @@ export default function LandingMobile() {
                     </div>
                 </section>
 
-                <section ref={altumarRef} className={styles.altumar}>
+                <section className={styles.altumar}>
                     <div className={styles.rail}>
-                        <Text variant="h1" className={styles.titleAltumar}>
-                            {m.altumarTitle}
-                        </Text>
+                        <div ref={altumarTitleRef} className={styles.altumarScrollTarget}>
+                            <Text variant="h1" className={styles.titleAltumar}>
+                                {m.altumarTitle}
+                            </Text>
+                        </div>
                         <div className={styles.altumarStackTight}>
                             <Text variant="body" className={styles.lead}>
                                 {isEn ? (
