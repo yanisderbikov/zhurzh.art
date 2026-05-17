@@ -12,10 +12,12 @@ import ArticlesPage from './components/pages/ArticlesPage.jsx';
 import ArticleCommunity from './components/pages/articles/ArticleCommunity.jsx';
 import ArticleWhoAreThey from './components/pages/articles/ArticleWhoAreThey.jsx';
 import PageNotFound from './components/pages/PageNotFound.jsx';
+import CanonicalLink from './components/common/CanonicalLink.jsx';
 
 function AppRoutes() {
     return (
         <>
+            <CanonicalLink />
             <Header />
             <Routes>
                 <Route path="/" element={<LandingPage />} />
