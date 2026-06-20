@@ -177,8 +177,8 @@ export default function LandingMobile() {
                                 s={styles}
                             />
                             <TileLink
-                                to={articlesPath}
-                                external={false}
+                                to={isRu ? articlesPath : patreonArticlesWorlds}
+                                external={!isRu}
                                 src={assets.tileWyverns}
                                 label={m.tileWyverns}
                                 s={styles}
